@@ -15,6 +15,10 @@ A data set is owned by the account that created it\. Owned data sets can be iden
 
 Entitled data sets are a read\-only view of owned data sets\. Entitled data sets are created at time of product publishing and are made available to subscribers who have an active subscription to the product\. Entitled data sets can be identified using the origin parameter, which is set to `ENTITLED`\.
 
+As a data subscriber, you can view and interact with your entitled data sets using the AWS Data Exchange APIs, or in the Console\.
+
+As a data provider, you also have access to the entitled data set view that your subscribers see\. You can do so using the AWS Data Exchange APIs, or the Console, by choosing the data set name in the product page\.
+
 ## AWS Regions and Data Sets<a name="data-set-regions"></a>
 
 Your data sets can be in any supported AWS Region, but all data sets in a single product must be in the same AWS Region\.

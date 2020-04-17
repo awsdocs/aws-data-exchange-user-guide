@@ -15,8 +15,10 @@ You can use the AWS Marketplace Catalog API to view AWS Data Exchange products a
 In order to add revisions to your AWS Data Exchange product, you need to create a change set of type `addRevisions`\. To do so, you can use the `StartChangeSet` API and specify the change type, the product identifier, the product type, and the details including the data set and revision ARNs\.
 
 Keep the following in mind when working with the Catalog API:
++ Each AWS Data Exchange product is represented in the Catalog API as an [https://docs.aws.amazon.com/marketplace-catalog/latest/api-reference/API_Entity.html](https://docs.aws.amazon.com/marketplace-catalog/latest/api-reference/API_Entity.html)\.
++ AWS Data Exchange products have `DataProduct` as the `EntityType`\.
 + You can update multiple products in a single `addRevisions` change set\.
-+ Each change set is scoped to a single data set within a product\. If your product has more than one data set and you need to update all of them, you need to create a separate change set for each data set\.
++ Each change set is scoped to a single data set within a product\. If your product has more than one data set and you need to update all of them, create a separate change set for each data set\.
 + Each product can have only one concurrently running change set at a time\. This means that you can't create a second change set until the first one has stopped running\.
 
 ## AddRevisions Exceptions<a name="add-revision-exceptions"></a>
@@ -43,7 +45,7 @@ This happens when the same revision request occurs more than once\. To resolve t
 
 ## Tutorial: Adding New Data Set Revisions to a Published Data Product<a name="add-revisions-tutorial"></a>
 
-This tutorial walks you through detailed steps to publish new AWS Data Exchange data set revisions to an existing product\. The tutorial has the following high\-level steps:
+This tutorial walks you through detailed steps to publish new AWS Data Exchange data set revisions to an existing product\. The tutorial has the following high\-level steps\.
 
 **Topics**
 + [Set Up IAM Permissions](#catalog-iam-permissions)
@@ -87,13 +89,13 @@ Before you begin, you need IAM permissions for using the AWS Marketplace Catalog
 
 1. Choose **Review policy**\.
 
-1. Provide a name for the policy \(for example, **CatalogAPIFullAccess**\), and choose **Create Policy**\.
+1. Provide a name for the policy \(for example, **CatalogAPIFullAccess**\), and then choose **Create Policy**\.
 
 1. Using the IAM console, choose the users, groups, or roles that you want to attach the policy to\.
 
 ### Access the AWS Marketplace Catalog API<a name="access-catalog-api"></a>
 
-To access the AWS Marketplace Catalog API, use the following HTTP client endpoint:
+To access the AWS Marketplace Catalog API, use the following HTTP client endpoint\.
 
 ```
 catalog.marketplace.us-east-1.amazonaws.com
@@ -101,7 +103,7 @@ catalog.marketplace.us-east-1.amazonaws.com
 
 ### Get Your Product ID from the AWS Data Exchange Console<a name="get-data-exchange-product-id"></a>
 
-Before you can use the AWS Marketplace Catalog API to publish new revisions, get your product ID from the AWS Data Exchange console\. Navigate to the **Product Dashboard** and copy the product you would like to publish revisions\.
+Before you can use the AWS Marketplace Catalog API to publish new revisions, get your product ID from the AWS Data Exchange console\. Navigate to the **Product Dashboard**, and then copy the product you would like to publish revisions for\.
 
 ### Describe Product Details<a name="describe-product-details"></a>
 

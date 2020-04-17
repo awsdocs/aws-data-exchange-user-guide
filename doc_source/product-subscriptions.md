@@ -16,7 +16,7 @@ When you subscribe to a product, you can access all of the data set revisions pu
 
 A product subscription gives you access to all the data set's revisions that have been published to the product you are subscribed to\. If a provider decides to unpublish a product, you still have access to the data sets as long as your subscription is active\. However, you cannot auto\-renew the subscription when it expires\.
 
-You can view all of your active product subscriptions and auto\-renewal status on the **Subscriptions** page of the AWS Data Exchange console\. 
+You can view all of your active product subscriptions and auto\-renewal status on the **Subscriptions** page of the AWS Data Exchange console\. Visit the **Entitled data sets **page to find and access all of your entitiled data sets in a specific AWS region, based on your active subscriptions\.
 
 **Important**  
 If you enable auto\-renew, and the product's offer terms have changed at the time of renewal, then the new product offer terms \(including new price and new DSA\) apply\. This ensures that you keep access to the data regardless of potential offer terms changes\.

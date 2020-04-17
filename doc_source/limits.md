@@ -51,6 +51,6 @@ The following AWS Regions are endpoints are supported for AWS Data Exchange:
 + Asia Pacific \(Seoul\) – `dataexchange.ap-northeast-2.amazonaws.com`
 + Asia Pacific \(Singapore\) – `dataexchange.ap-southeast-1.amazonaws.com`
 + Asia Pacific \(Sydney\) – `dataexchange.ap-southeast-2.amazonaws.com`
-+ EU \(Frankfurt\) – `dataexchange.eu-central-1.amazonaws.com`
-+ EU \(Ireland\) – `dataexchange.eu-west-1.amazonaws.com`
-+ EU \(London\) – `dataexchange.eu-west-2.amazonaws.com`
++ Europe \(Frankfurt\) – `dataexchange.eu-central-1.amazonaws.com`
++ Europe \(Ireland\) – `dataexchange.eu-west-1.amazonaws.com`
++ Europe \(London\) – `dataexchange.eu-west-2.amazonaws.com`

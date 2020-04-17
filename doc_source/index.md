@@ -1,7 +1,7 @@
 # AWS Data Exchange User Guide 
 
 -----
-*****Copyright &copy; 2019 Amazon Web Services, Inc. and/or its affiliates. All rights reserved.*****
+*****Copyright &copy; 2020 Amazon Web Services, Inc. and/or its affiliates. All rights reserved.*****
 
 -----
 Amazon's trademarks and trade dress may not be used in 
@@ -48,6 +48,7 @@ Amazon's trademarks and trade dress may not be used in
    + [Compliance Validation for AWS Data Exchange](compliance-program-info.md)
    + [Resilience in AWS Data Exchange](disaster-recovery-resiliency.md)
    + [Infrastructure Security in AWS Data Exchange](infrastructure-security.md)
+   + [AWS Data Exchange and interface VPC endpoints (AWS PrivateLink)](vpc-interface-endpoints.md)
 + [Document History](doc-history.md)
 + [Using AWS Data Exchange with the AWS Marketplace Catalog API](appendices.md)
 + [AWS Glossary](glossary.md)

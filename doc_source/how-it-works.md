@@ -12,7 +12,9 @@ At a high level, this is how to use AWS Data Exchange as a subscriber\.
 
 1. **Subscriber subscribes to the product** – If you subscribe to a paid product, you are billed on your AWS bill\. You get access to the entitled data set\. For more information, see [Subscribing to Data Products on AWS Data Exchange](subscribe-to-data-sets.md)\.
 
-1. **Subscriber uses the product** – You have access to the data sets in the product according to the terms of the data subscription agreement\. You can export the associated assets to Amazon S3 or you can use jobs with a signed URL\. For more information, see [Jobs](jobs.md)\.
+1. **Subscriber uses the product** – You have access to the product data sets according to the terms of the data subscription agreement\. You can export the associated assets to Amazon S3 or you can use jobs with a signed URL\. For more information, see [Jobs](jobs.md)\.
+
+1. **Request new data products** – If you are not able to find a product in the catalog, you can use the **Request data product page** in the Console to inform AWS of your interest\. AWS will use this information to work with the data provider, and try to get that data added to the catalog\.
 
 ## How to Provide Data Products<a name="high-level-provider"></a>
 

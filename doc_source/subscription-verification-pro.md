@@ -25,3 +25,10 @@ The AWS Data Exchange console maintains a history of requests\. You control when
 
 **Note**  
 Each subscription request is uniquely identified using its ID\. The ID is visible to both the provider and the subscriber\. You can use the subscription request ID in your communications with the subscriber\.
+
+## Email Notifications<a name="email-notifications-pro"></a>
+
+You will receive an email notification to your AWS account's email address when a request is received, or when its status has changed to cancelled or expired\. Although most subscription request status changes result in an email notification, the delivery of these emails is on a best\-effort basis\.
+
+**Note**  
+You will not receive email notifications for subscription request status changes that you have initiated yourself \(for example, when you approve a subscription\)\.

@@ -11,20 +11,20 @@ After you review these topics, you're ready to get started\.
 These topics describe the end\-to\-end process of becoming a data product provider on AWS Data Exchange using the AWS Data Exchange console\. The process has the following steps:
 
 **Topics**
-+ [Confirm Your Elegibility](#provider-prereqs)
++ [Confirm Your Eligibility](#provider-prereqs)
 + [Register to Be a Provider](#provider-registration)
-+ [Confirm Eligibility of Your Data](#confirm-data-elegibility)
++ [Confirm Eligibility of Your Data](#confirm-data-eligibility)
 + [Create a Data Set](#create-products)
 + [Publish a Product](#publish-products)
 + [Unpublish a Product](#unpublish-product)
 + [View Reports](#view-reports)
 + [Related Topics](#provider-related-topics)
 
-### Confirm Your Elegibility<a name="provider-prereqs"></a>
+### Confirm Your Eligibility<a name="provider-prereqs"></a>
 
 Before you can register, you must:
-+ Be a permanent resident of, a citizen of, or a business entity organized or incorporated in the United States of America \(USA\) or the European Union \(EU\)\.
-+ Have a verified US bank account and, where applicable, a valid VAT registration\. 
++ Be a permanent resident of, a citizen of, or a business entity organized or incorporated in the United States of America \(USA\), United Kingdom \(UK\), Australia \(AU\), New Zealand \(NZ\), or a member state of the European Union \(EU\)\.
++ Have a verified US bank account and, where applicable, a valid VAT/GST registration\. 
 
 **Important**  
 There are no exceptions to these requirements\.
@@ -54,7 +54,7 @@ While your tax and banking registration is pending, you cannot submit a public p
 
 1. In addition to being a registered AWS Marketplace seller, you must submit an AWS Data Exchange qualification request\. Access the [AWS Support Dashboard](https://console.aws.amazon.com/support/cases#/create?issueType=customer-service) and create a case in the AWS Management Console\. The AWS Data Exchange team will contact you to complete the qualification and registration process\.
 
-### Confirm Eligibility of Your Data<a name="confirm-data-elegibility"></a>
+### Confirm Eligibility of Your Data<a name="confirm-data-eligibility"></a>
 
 You're limited to distributing data sets that meet the legal eligibility requirements set forth in the Terms and Conditions for AWS Marketplace Sellers\. If a provider breach these terms in any way, the prohibited product is removed from AWS Data Exchange and the provider might be suspended from the service\. For more information, see [Publishing Guidelines](publishing-guidelines.md)\.
 

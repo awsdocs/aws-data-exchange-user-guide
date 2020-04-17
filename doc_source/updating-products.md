@@ -7,10 +7,10 @@ These sections describe how to update your products\. The instructions are writt
 After you publish a product, you can use the AWS Data Exchange console to edit the product details\. You can also edit the product's public or custom offers and change the offer terms\. When you update your product's offer terms, subscribers with an active subscription keep their existing offer terms as long as their subscription is active\. Subscribers who have chosen auto\-renewals use the new offer terms\.
 
 Keep the following in mind when you update products:
-+ You can't remove or edit a subscription duration in your offers\. This ensures that existing subscribers retain the ability to renew\.
++ You can't remove or edit a subscription duration in your offers\. This ensures that existing subscribers retain the ability to renew\. If you no longer want to offer a specific subscription duration, you can un\-publish your existing product and then publish a new product\. For more information, see [Unpublish a Product](providing-data-sets.md#unpublish-product)\.
 + You can't add or remove data sets from a product after it is published, regardless of how many subscribers have subscribed to your product\.
 
-## Using Revisions to Update Products<a name="dynamically-updated-products"></a>
+## Publish New Data to Products using Revisions<a name="dynamically-updated-products"></a>
 
 AWS Data Exchange supports dynamically updated products\. Subscribers subscribe to the product for a certain duration and access all of the published data set revisions as long as their subscription is active\. For example, a provider might want to provide a product that contains daily closing stock prices for U\.S equities, which would be updated every day with the day’s closing prices\.
 

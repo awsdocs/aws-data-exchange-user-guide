@@ -22,7 +22,7 @@ To specify an action, use the `dataexchange:` prefix followed by the API operati
 | ListRevisionAssets | dataexchange:ListRevisionAssets | Revision | aws:RequestTag | 
 | CreateJob | dataexchange:CreateJob | N/A | dataexchange:JobType | 
 | GetJob | dataexchange:GetJob | Job | dataexchange:JobType | 
-| StartJob | dataexchange:StartJob | Job | dataexchange:JobType | 
+| StartJob\*\* | dataexchange:StartJob | Job | dataexchange:JobType | 
 | CancelJob | dataexchange:CancelJob | Job | dataexchange:JobType | 
 | ListJob | dataexchange:ListJob | N/A | N/A | 
 | ListTagsForResource | dataexchange:ListTagsForResource | Revision | aws:RequestTag | 
@@ -32,6 +32,18 @@ To specify an action, use the `dataexchange:` prefix followed by the API operati
 | DeleteAsset | dataexchange:DeleteAsset | Asset | N/A | 
 | GetAsset | dataexchange:GetAsset | Asset | N/A | 
 | UpdateAsset | dataexchange:UpdateAsset | Asset | N/A | 
+
+**\*\*** Additional IAM permissions might be needed depending on the type of the job you are starting\. See the table below for the AWS Data Exchange job types and associated additional IAM permissions\. For more information on jobs, see [Jobs](jobs.md)\.
+
+
+**AWS Data Exchange Job Type Permissions for `StartJob`**  
+
+| Job Type | Additional IAM Permissions Needed | 
+| --- | --- | 
+| IMPORT\_ASSETS\_FROM\_S3 | dataexchange:CreateAsset | 
+| IMPORT\_ASSETS\_FROM\_SIGNED\_URL | dataexchange:CreateAsset | 
+| EXPORT\_ASSETS\_TO\_S3 | dataexchange:GetAsset | 
+| EXPORT\_ASSETS\_TO\_SIGNED\_URL | dataexchange:GetAsset | 
 
 You can scope data set actions to the revision or asset level through the use of wildcards, as in the following example:
 

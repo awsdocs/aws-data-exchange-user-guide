@@ -15,3 +15,10 @@ Each subscription request is uniquely identified by its ID\. The ID is visible t
 
 **Note**  
 You can cancel a pending subscription request at any time as long as it hasn't expired or already been processed\.
+
+## Email Notifications<a name="email-notifications-sub"></a>
+
+You will receive an email notification to your AWS account's email address when your request is approved, declined, or when it expires\. Although most subscription request status changes result in an email notification, the delivery of these emails is on a best\-effort basis\.
+
+**Note**  
+You will not receive email notifications for subscription request status changes that you have initiated yourself \(for example, cancelling a subscription\)\.

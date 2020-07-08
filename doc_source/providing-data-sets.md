@@ -22,12 +22,36 @@ These topics describe the end\-to\-end process of becoming a data product provid
 
 ### Confirm Your Eligibility<a name="provider-prereqs"></a>
 
-Before you can register, you must:
-+ Be a permanent resident of, a citizen of, or a business entity organized or incorporated in the United States of America \(USA\), United Kingdom \(UK\), Australia \(AU\), New Zealand \(NZ\), or a member state of the European Union \(EU\)\.
-+ Have a verified US bank account and, where applicable, a valid VAT/GST registration\. 
+Before you can register, you must meet the following requirements to confirm your eligibility\.
 
-**Important**  
-There are no exceptions to these requirements\.
+#### Seller requirements for publishing data products<a name="seller-requirements-for-publishing-free-products"></a>
+
+ Whether you charge for your AWS Data Exchange data product or not you're selling that product on AWS Marketplace\. To create and offer data products you must: 
++ Have a defined customer support process and support organization\. 
++ Provide a means to keep data regularly updated and free of vulnerabilities\.
++ Follow best practices and guidelines when marketing your product\.
++ Be an AWS customer in good standing and meet the requirements in the terms and conditions for AWS Marketplace sellers and for AWS Data Exchange providers\.
++ You must be a permanent resident or citizen in an [eligible jurisdiction](#eligible-jurisdictions), or a business entity organized or incorporated in one of those areas\.
++  You must provide tax and bank account information\. For US\-based entities, a W\-9 form and a banking account from a US\-based bank are required\.
++ Non\-US sellers are required to provide a \(i\) W\-8 form, value\-added tax \(VAT\) or goods and services tax \(GST\) registration number, and \(ii\) US bank information\. If you don't have a US bank account, you can register for a virtual US bank account from [Hyperwallet](https://wssellers.hyperwallet.com/)\. 
++ To provide data products, you must also request on\-boarding through the [Create case](https://console.aws.amazon.com/support/cases?#/create?issueType=customer-service) wizard for AWS Support\. The AWS Data Exchange team will contact you to complete the qualification and registration process\.
+
+##### Eligible jurisdictions for AWS Data Exchange products<a name="eligible-jurisdictions"></a>
+
+To provide data products on AWS Data Exchange, you must be a permanent resident or citizen in one of the following countries, or a business entity organized or incorporated therein: 
++ Australia¹
++ Bahrain¹²
++ European Union \(EU\) member state¹
++ New Zealand¹
++ Norway¹²
++ Switzerland¹²
++ United Arab Emirates \(UAE\)¹²
++ United Kingdom \(UK\)¹
++ United States \(US\)
+
+¹ Sellers of paid products in these countries must provide VAT information\. For more information, see [Tax Help \- AWS Marketplace Sellers](http://aws.amazon.com/tax-help/marketplace/)\.
+
+² In these countries, sellers may need to provide an invoice to buyers\. For more informations, see [Tax Help \- AWS Marketplace Sellers](http://aws.amazon.com/tax-help/marketplace/)\. 
 
 ### Register to Be a Provider<a name="provider-registration"></a>
 

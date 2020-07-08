@@ -4,6 +4,9 @@ Before you subscribe to a product on AWS Data Exchange, review the following top
 + [How to Subscribe to Products](how-it-works.md#high-level-subscriber)
 + [Setting Up AWS Data Exchange](setting-up.md)
 
+**Note**  
+When subscribing to data products from some non\-US sellers, you might also receive a tax invoice from the seller\. For more information, see [Tax Help \- AWS Marketplace Sellers](http://aws.amazon.com/tax-help/marketplace/)\.
+
 ## Getting Started as a Subscriber<a name="subscriber-getting-started"></a>
 
 AWS Data Exchange Heartbeat is a free product offered by AWS Data Exchange that you can use to subscribe to product\. You can also use it for testing and to familiarize yourself with how to use AWS Data Exchange and its concepts\. For more information, see [What Is AWS Data Exchange Heartbeat?](heartbeat.md)

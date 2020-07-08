@@ -74,7 +74,7 @@ There are two ways you can export assets from a published revision of a product:
 
 When you export to an Amazon S3 bucket, you must create and start a job of type `EXPORT_ASSETS_TO_S3`\. Provide details of the assets you would like to export and the target destination\. By default, the assets are exported to an S3 object using the original asset name as an object key\. You can export up to 100 assets in a single job\.
 
-Jobs do not append Amazon S3 encryption headers when writing to your S3 bucket\. This means that your bucket's default encryption settings apply\.
+AWS Data Exchange supports configurable encryption parameters when exporting data sets to Amazon S3\. In your export job details, you can specify the Amazon S3 server\-side encryption configuration you want to apply to the exported objects\. You can choose to use server\-side encryption with Amazon S3\-Managed Keys \(SSE\-S3\) or server\-side encryption with Customer Master Keys \(CMKs\) stored in AWS Key Management Service \(SSE\-KMS\)\. For more information, see [Protecting data using server\-side encryption](https://docs.aws.amazon.com/AmazonS3/latest/dev/serv-side-encryption.html) in the *Amazon Simple Storage Service Developer Guide*\. 
 
 **Note**  
 When exporting assets to Amazon S3, the IAM permissions you're using must include the ability to read from the AWS Data Exchange service Amazon S3 buckets and to write to the Amazon S3 bucket where your assets are stored\. You can export to any Amazon S3 bucket you have permission to access, regardless of ownership\. For more information, see [Additional Amazon S3 Permissions](access-control.md#additional-s3-permissions)\.

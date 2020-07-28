@@ -31,6 +31,11 @@ As an AWS customer, you are encouraged to conduct your own additional due\-dilig
 
 ## Pricing<a name="pricing"></a>
 
+Your AWS Data Exchange subscriptions are displayed in the currency you specified for your AWS account\. You can change your preferred currency for your AWS account in the AWS Billing and Cost Management console\. For instructions, see [Changing which currency you use to pay your bill](https://docs.aws.amazon.com/awsaccountbilling/latest/aboutv2/manage-account-payment.html#manage-account-payment-change-currency) in the *AWS Billing and Cost Management User Guide*\.
+
+**Note**  
+ Changing your preferred currency changes your remittance instructions\. To view updated remittance instructions, see your AWS Marketplace invoice or view the **Account Settings** page in the [AWS Billing and Cost Management](https://console.aws.amazon.com/billing/home?#account) console\.
+
 For pricing information, see [http://aws.amazon.com/data-exchange/pricing](http://aws.amazon.com/data-exchange/pricing)\.
 
 ## Supported Regions<a name="supported-regions"></a>

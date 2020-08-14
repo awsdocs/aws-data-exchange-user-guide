@@ -59,4 +59,4 @@ You must activate IAM user and role access to Billing before you can use the `Ad
 You can use this same process to create more groups and users and to give your users access to your AWS account resources\. To learn about using policies that restrict user permissions to specific AWS resources, see [Access Management](https://docs.aws.amazon.com/IAM/latest/UserGuide/access.html) and [Example Policies](https://docs.aws.amazon.com/IAM/latest/UserGuide/access_policies_examples.html)\.
 
 **Note**  
-Only AWS accounts that are registered to provide data products on AWS Marketplace and AWS Data Exchange can create data sets and products\.
+Only AWS accounts that are registered to provide data products on AWS Marketplace and AWS Data Exchange can create products\.

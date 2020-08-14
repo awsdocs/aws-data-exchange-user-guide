@@ -8,13 +8,13 @@ After you publish a product, you can use the AWS Data Exchange console to edit t
 
 Keep the following in mind when you update products:
 + You can't remove or edit a subscription duration in your offers\. This ensures that existing subscribers retain the ability to renew\. If you no longer want to offer a specific subscription duration, you can un\-publish your existing product and then publish a new product\. For more information, see [Unpublish a Product](providing-data-sets.md#unpublish-product)\.
-+ You can't add or remove data sets from a product after it is published, regardless of how many subscribers have subscribed to your product\.
++ You can't remove data sets from a product after it is published, regardless of how many subscribers have subscribed to your product\.
 
-## Publish New Data to Products using Revisions<a name="dynamically-updated-products"></a>
+## Publish New Data to Products<a name="dynamically-updated-products"></a>
 
-AWS Data Exchange supports dynamically updated products\. Subscribers subscribe to the product for a certain duration and access all of the published data set revisions as long as their subscription is active\. For example, a provider might want to provide a product that contains daily closing stock prices for U\.S equities, which would be updated every day with the day’s closing prices\.
+AWS Data Exchange supports dynamically updated products\. Subscribers subscribe to the product for a certain duration and access all of the published data sets and revisions as long as their subscription is active\. For example, a provider might want to provide a product that contains daily closing stock prices for U\.S equities, which would be updated every day with the day’s closing prices\. You can dynamically publish additional revisions to your product’s data sets, or add new data sets to your product\. 
 
-You can use the AWS Data Exchange console or the AWS Marketplace Catalog API to publish new revisions to a product\. For more information, see [Using AWS Data Exchange with the AWS Marketplace Catalog API](appendices.md)\.
+You can use the AWS Data Exchange console or the AWS Marketplace Catalog API to update your products\. For more information, see [Using AWS Data Exchange with the AWS Marketplace Catalog API](appendices.md)\.
 
 **Important**  
 Any revision published to a product is immutable and can't be edited, changed, or deleted\. If you need to remove published content for compliance reasons, contact [AWS Support](http://aws.amazon.com/premiumsupport)\.

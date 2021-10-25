@@ -1,96 +1,421 @@
-# Publishing Products<a name="publishing-products"></a>
+# Publishing a new product<a name="publishing-products"></a>
 
-A product is the unit of exchange in AWS Data Exchange that is published by a provider and made available for use to subscribers\. When you publish a product, that product is available on the AWS Data Exchange product catalog as well as the AWS Marketplace\. Each product you publish is uniquely identified by its product ID\.
+
+|  | 
+| --- |
+| The Amazon Redshift data product feature is in preview release for AWS Data Exchange and is subject to change\. | 
+
+The following topics describe the process of publishing a new product on AWS Data Exchange using the AWS Data Exchange console\. 
+
+**Topics**
++ [Publishing a file\-based data product](#publish-data-product)
++ [Publishing a new Amazon Redshift data product \(preview\)](#publish-Redshift-product)
+
+**Important**  
+Beginning July 22, 2021, new and existing providers have the ability to automatically publish revisions to data sets\. All new products on AWS Data Exchange default to automatic revision publishing\. If you have created existing products on AWS Data Exchange before July 22, 2021, you need to migrate them to automatic revision publishing\.   
+For more information, see [Migrating an existing product to automatic revision publishing](updating-products.md#migrate-product)\.
 
 **Note**  
-When a product is initially created and published, all pre\-existing finalized revisions within its data sets are published at the same time\.
+If you are an existing provider and have not yet migrated all of your products to automatic revision publishing, you will need to manually publish your revision\. For more information, see [Publishing a new data set revision using manual revision publishing](updating-products.md#manual-publish-revision)\.
 
-You can publish and view your products using the AWS Data Exchange console\. You can also list and view the details of your existing products using the AWS Marketplace Catalog API\. A product has the following parts:
-+ **Product details** – This information helps potential subscribers understand what the product is\. This includes a name, descriptions \(both short and long\), a logo image, and contact information\. For more information, see [Filling Out Product Details](#fill-out-product-details)\.
-+ **Product offers** – In order to make a product available on AWS Data Exchange, you must define a public offer\. This includes the price, data subscription agreement, refund policy, and more\. Offers define the terms that subscribers are agreeing to when they subscribe to a product\. Each product must have a public offer available to all subscribers\. Providers can also create custom offers to specific subscribers\. For more information, see [Creating an Offer for AWS Data Exchange Products](prepare-offers.md)\.
-+ **Data sets** – A product can contain one or more data sets\. A data set is a dynamic set of ﬁle\-based data content\. As a provider, you create owned data sets, and a subscriber can get access to entitled data sets through a product subscription\. Data sets are dynamic and are versioned using revisions\. You can decide which revisions within a data set are published to a product\. For more information, see [Updating Products](updating-products.md)\.
+## Publishing a file\-based data product<a name="publish-data-product"></a>
 
-**Note**  
-When a subscriber subscribes to your product, they get access to the product’s data sets and all the revisions that have been published to that product for the duration of their subscription\. Subscribers can also access revisions that have been published before their subscription became active\.
+The following topics describe the process of creating a data set and publishing a new file\-based data product on AWS Data Exchange by using the AWS Data Exchange console\. The process has the following steps:
 
-## Sensitive Information<a name="sensitive-information"></a>
+**Topics**
++ [Step 1: Create assets](#create-assets)
++ [Step 2: Create a data set](#create-dataset)
++ [Step 3: Create a revision](#create-revision)
++ [Step 4: Import assets to a revision](#import-assets)
++ [Step 5: Publish a new product](#publish-products)
++ [Step 6: \(Optional\) Copy a product](#copy-product)
 
-Sensitive information is biometric or genetic data; health data; racial or ethnic origin; political opinions; religious or philosophical beliefs; sex or sexual orientation; trade union membership; personal payment or financial information \(for example, credit history\); or other similar categories of information\.
+### Step 1: Create assets<a name="create-assets"></a>
 
-If your product contains sensitive information, you must acknowledge that it cannot be used to identify a person\. You make this acknowledgement on **Step 2: Add data** of the product creation wizard\. If the product doesn't contain sensitive information, choose **No**\. If the selection is **Yes**, then you must ensure that the sensitive data in your product is properly anonymized, de\-identified, or aggregated such that the information is no longer identifying for any individuals\.
+Assets are the *data* in AWS Data Exchange\. For more information, see [Assets](data-sets.md#assets)
 
-Additionally, choosing **Yes** will result in the display of a message on this product's page on AWS Data Exchange\. The message informs potential customers that the product contains sensitive information that has been appropriately anonymized, de\-identified, or aggregated\.
+Before you create and publish a new file\-based data product, you must:
+
+1. Create your files\. 
+
+   AWS Data Exchange supports all file types\.
+
+1. Store your files as objects in Amazon S3 or on your local computer\. 
+
+   For more information about storing files in Amazon S3, see the [Amazon S3 User Guide](https://docs.aws.amazon.com/AmazonS3/latest/userguide/Welcome.html)\.
+
+### Step 2: Create a data set<a name="create-dataset"></a>
+
+Data sets in AWS Data Exchange are dynamic and are versioned using revisions, with each revision containing at least one asset\. For more information, see [Data in AWS Data Exchange](data-sets.md)\.
+
+**To create a data set**
+
+1. Open your web browser and go to the [AWS Data Exchange console](https://console.aws.amazon.com/dataexchange)\.
+
+1.  On the left side navigation pane, under **Publish data**, choose **Owned data sets**\.
+
+1. In **Owned data sets**, choose **Create data set** to open the **Data set creation steps** wizard\.
+
+1. In **Select data set type**, choose **Amazon S3 object**\.
+
+1. In **Define data set**, enter a **Name** and **Description** for your data set\. For more information, see [Data set best practices](data-sets.md#data-set-best-practices)\. 
+
+1. \(Optional\) Under **Add tags – optional**, add tags\.
+
+1. Choose **Create**\. 
+
+### Step 3: Create a revision<a name="create-revision"></a>
+
+In the following procedure, you create a revision after you’ve created a data set in the AWS Data Exchange console\. For more information, see [Revisions](data-sets.md#revisions)\.
+
+**To create a revision**
+
+1. On the **Data set overview** section of the data set details page:
+
+   1. \(Optional\) Choose **Edit name** to edit information about your data set\.
+
+   1. \(Optional\) Choose **Delete** to delete the data set\.
+
+1. On the **Revisions** section, choose **Create revision**\.
+
+1. Under **Revision settings**, provide an optional comment for your revision that describes the purpose of the revision\. 
+
+1. \(Optional\) Under **Add tags – optional**, add tags associated with the resource\.
+
+1. Choose **Create**\.
+
+1. Review, edit, or delete your changes from the previous step\. 
+
+### Step 4: Import assets to a revision<a name="import-assets"></a>
+
+ In the following procedure, you import data assets, and then finalize the revision in the AWS Data Exchange console\. For more information, see [Assets](data-sets.md#assets)\. 
+
+**To import assets to the revision**
+
+1. Under the **Jobs** section of the data set details page, choose either **Import from Amazon S3** or **Upload** \(to upload from your computer\), depending on where the data assets for the data set are currently stored\.
+
+1. Follow the prompts, depending on your selection\. A job is started to import your asset into your data set\. 
+
+1. After the job is finished, the **State** field in the **Jobs** section is updated to **Completed\.**
+
+1. If you have more data to add, repeat Step 1\.
+
+1. Under **Revision overview**, review your revision and its assets\. 
+
+1. Choose **Finalize**\.
+
+You have successfully finalized a revision for a data set\. 
+
+You can edit or delete a revision before you add it to a product\. 
+
+**Topics**
++ [Edit a revision](#edit-revision)
++ [Delete a revision](#delete-revision)
+
+#### Edit a revision<a name="edit-revision"></a>
+
+**To edit the revision after you’ve finalized it**
+
+1. On the **Revision overview**, choose **De\-finalize**\.
+
+   You see a message that the revision is no longer in the finalized state\.
+
+1. To edit the revision, from **Revision overview**, choose **Actions**, **Edit**\.
+
+1. Make your changes, and then choose **Update**\.
+
+1. Review your changes and then choose **Finalize**\.
+
+#### Delete a revision<a name="delete-revision"></a>
+
+**To delete the revision after you’ve finalized it**
+
+1. On the **Revision overview**, choose **Delete**\.
+
+1. Type **Delete** in the **Delete revision** dialog box, and then choose **Delete**\.
 
 **Warning**  
-Listing a product with sensitive information that has not been anonymized, de\-identified, or aggregated, or incorrectly acknowledging the state of sensitive data in your product, is a violation of our [Publishing Guidelines](publishing-guidelines.md)\. AWS removes any product that breaches these guidelines and can suspend the provider from future use of the service\.
+This deletes the revision and all of its assets\. This action cannot be undone\.
 
-## Filling Out Product Details<a name="fill-out-product-details"></a>
+### Step 5: Publish a new product<a name="publish-products"></a>
 
-When you publish a product on the AWS Data Exchange console, you must provide the product's details\. This section covers some best practices to consider when you're preparing product details\.
+After you've created at least one data set and finalized a revision with assets, you're ready to publish that data set as a part of a product\. For more information, see [Product details](product-details.md)\. Make sure that you have all required details about your product and offer\.
 
-### Product Name<a name="best-practices-name"></a>
+**To publish a new product**
 
-Subscribers will search for the names of products, so make your product name something meaningful\.
+1. From the left navigation pane of the [AWS Data Exchange console](https://console.aws.amazon.com/dataexchange), under **Publish data**, choose **Products**\.
 
-### Short Description<a name="best-practices-short-description"></a>
+1. From **Products**, choose **Publish new product** to open the **Publish new product** wizard\.
 
-The product short description text appears on the tiles in the product catalog portion of the AWS Data Exchange console\. We recommend that you provide a concise description of your product for this ﬁeld\.
+1. In the **Product visibility** section, choose your product's **Product visibility options** and **Sensitive information** configuration, and then choose **Next**\. For more information, see [Product visibility](product-details.md#product-visibility) and [Sensitive categories of information](product-details.md#sensitive-information)\.
 
-### Long Description<a name="best-practices-long-description"></a>
+1. In the **Define product** section, enter information about your product, including name, logo, support contact, web address, categories, and descriptions, and then choose **Next**\. For more information, see [Product details](product-details.md)\.
 
-Subscribers see the product long description in the product detail page after the product is published\. We recommend that you list the product's features, beneﬁts, usage, and other information speciﬁc to the product\.
+1. In the **Add data** section, select the check box next to the data sets you want to add\.
+**Note**  
+The data sets you choose must have a finalized revision\. Data sets without finalized revisions won't be added\.
 
-Product information in the description must accurately represent the data being provided to subscribers\. This includes data coverage \(for example, 30,000 financial instruments or 10,000 location coordinates\) and data set update frequency \(for example, daily updates or weekly updates\)\.
+   1. Choose **Add selected**, and then scroll to **Selected data sets** to review your selection\.
 
-#### Provide Additional Information<a name="best-practices-additional-info"></a>
+   1. Scroll to **Select revision access rules**, choose the revision access rules that you want to set for data sets included in this product, and then choose **Next**\. For more details, see [Revision access rules](product-details.md#best-practices-revisions)\.
 
-In order to make your product description compelling to prospective subscribers, we recommend you add the following information to your product description:
-+  *Data due diligence questionnaire \(DDQ\)*: Typically includes responses to questions regarding the firm selling a data set\. Examples of the information in a DDQ includes the process that a provider goes through to collect the data, or quality control procedures and questions regarding regulatory compliance\.
-+  *Data set schemas*: Provide prospective users with detailed descriptions of the structure and format of your data sets\. Examples of the information in a data set schema include the identification of a primary key, field names, field definitions, expected output types for each field \(for example, string, integer\), and acceptable enumerations for each field \(for example, 0% \- 100%\)\.
-+ *Trial Product Listings*: Many prospective subscribers request trials of data sets before paying for a subscription\. Trial products can be published on AWS Data Exchange for subscribers to subscribe to like regular paid products\.
-+  *Sample files*: Sample files are typically smaller versions, or older, out\-of\-date versions of full production data sets\. These sample files give prospective users insights into the outputs they can expect before purchasing a subscription\.
-+  *Product fact sheets*: These can be documents, web links, or both to provide subscribers with more granular statistics on the coverage of your data sets, typical use\-cases for your data sets, and any other factors that differentiate your data sets\.
+1. If you are creating a public offer, in the **Add public offer** section, configure your offer\. All AWS Data Exchange products with visibility set to **Public** require a public offer\. 
 
-For information about adding links in the description, see [Include Links in Your Product Description](#best-practices-links-in-listing)\.
+   1. Choose your price and subscription durations, US sales tax settings, data subscription agreement, and refund policy\. For more information, see [Creating an offer for AWS Data Exchange products](prepare-offers.md)\.
 
-### Product Logo<a name="best-practices-product-logo"></a>
+   1. \(Optional\) Set **Subscription verification**, which enables you to control who can subscribe to this product\. For more information, see [Subscription verification for providers](subscription-verification-pro.md)\.
 
-The product logo appears in the AWS Data Exchange product catalog on the console and on AWS Marketplace\. The supported formats for the logo are \.png, \.jpg, and \.jpeg\.
+   1. Choose your **Oﬀer auto\-renewal** option\. For more information, see [Creating an offer for AWS Data Exchange products](prepare-offers.md)\.
 
-### Support Contact<a name="best-practices-support-info"></a>
+   1. Choose **Next**\.
 
-As a provider, you must include valid contact information\. This can be a managed email alias or case management system link for customers to use to get help when they have questions about your product\. We strongly recommend that you don't use a personal email address because the address is publicly visible\.
+1. If you are creating a private offer, configure the offer details in the **Add custom offer** section\.
 
-### Product Categories<a name="best-practices-categories"></a>
+   1. In the **Subscriber account information** section, add at least one subscriber account to which you want to extend the offer\.
 
-All products fit into one or more categories\. By specifying up to two categories for your product, you help subscribers filter and find your products in AWS Data Exchange and AWS Marketplace\.
+   1. Choose your **Pricing and access duration** options for the subscription\.
 
-## Include Links in Your Product Description<a name="best-practices-links-in-listing"></a>
+   1. Choose the **Offer expiration date** by which the subscriber must accept the offer\.
 
-The long description for a AWS Data Exchange product supports Markdown, which allows you to include links in your product's details page\. The following procedure shows you how to add links to websites in your AWS Data Exchange product description\. Complete the following steps\.
+   1. Choose your US sales tax settings, data subscription agreement \(DSA\), and refund policy\.
 
-**To include embedded links in your product listing**
+   1. Choose your **Oﬀer auto\-renewal** option\. For more information, see [Creating an offer for AWS Data Exchange products](prepare-offers.md)\.
 
-1. Log into the AWS console and navigate to a [Amazon S3 bucket](https://console.aws.amazon.com/s3) that your AWS Data Exchange user account has access to\. The contents of this bucket are publicly readable\.
+   1. Choose **Next**\.
 
-1. Upload the files \(for example, documents such as PDF files or Microsoft Excel files\) that you want to include in your product listing into the Amazon S3 bucket\. After the upload is complete, make sure you set the file or files to have public read access permissions\.
+1. In the **Review & publish** section, review your product information and then expand the **Product page preview** to see how it will look after it’s published\.
 
-1.  Choose one of the uploaded files\. In the **Overview** tab, you will see a URL for the file\. Copy the URL to your clipboard\.
+1. If you're sure that you want to make the product and public offer visible and available to everyone, choose **Publish**\.
 
-1. Open the AWS Data Exchange console at [AWS Data Exchange console](https://console.aws.amazon.com/dataexchange)\.
+You've now completed the manual portion of publishing a data product with a public offer\. AWS Data Exchange prepares and publishes your product\. On the **Product overview** page, the status of your product is **Awaiting approval** and then changes to **Published** after it's published\.
 
-1. Choose the product you want to update, and then choose **Edit**\.
+### Step 6: \(Optional\) Copy a product<a name="copy-product"></a>
 
-1. From **Product Description**, use the following Markdown formats to link to relevant files \(using the URL link you copied previously\) or to another URL, like your website\.
-   +  To link to a file stored in an Amazon S3 bucket: 
+After you have created your first product, you can copy its details and public offers to create a new product\.
 
-      \*\*\_\[*File name*\]\(*Object URL from Amazon S3*\)\_\*\* 
+**Note**  
+You can copy a public, private, published, or unpublished product\. Custom oﬀers associated with the product will not be copied, but public oﬀers will be copied\.
 
-      *Description of the object*\. 
-   +  To link to a trial product listing on AWS Data Exchange: 
+**To copy a product**
 
-      \*\*\_\[*Website Title\]*\(*URL*\)\_\*\* 
+1. Open your web browser and go to the [AWS Data Exchange console](https://console.aws.amazon.com/dataexchange)\.
 
-      *Description of the website*\. 
+1. From the left navigation pane, under **Publish data**, choose **Products**\.
 
-1. Choose **Save Changes**\. After a few minutes your AWS Data Exchange product listing page should be updated with the new links\.
+1. From **Products**, choose the button next to the product you want to copy\.
+
+1. Select the **Actions** dropdown, and then choose **Create copy**\.
+
+1. Continue through the [Step 5: Publish a new product](#publish-products) workflow, with details already filled in, based on the product you chose in Step 3\. For more information, see [Step 5: Publish a new product](#publish-products)\.
+**Important**  
+Beginning July 22, 2021, new and existing providers have the ability to automatically publish revisions to data sets\. All new products on AWS Data Exchange default to automatic revision publishing\. If you have created existing products on AWS Data Exchange before July 22, 2021, you need to migrate them to automatic revision publishing\.  
+For more information, see [Migrating an existing product to automatic revision publishing](updating-products.md#migrate-product)\.  
+If you are copying an existing product that you created before July 22, 2021, you will see two options under **Revision publishing**: **Automatically publish revisions** or **Manually publish revisions**\. We recommend that you choose the first option, to automatically publish revisions\.
+
+## Publishing a new Amazon Redshift data product \(preview\)<a name="publish-Redshift-product"></a>
+
+
+|  | 
+| --- |
+| The Amazon Redshift data product feature is in preview release for AWS Data Exchange and is subject to change\. | 
+
+### Participating in the Public Preview<a name="publish-Redshift-product-preview"></a>
+
+During this Public Preview, your use of products including Amazon Redshift data sets and their AWS Data Exchange datashares for Amazon Redshift is subject to Section 2 \(Betas and Previews\) of the [AWS Service Terms](https://aws.amazon.com/service-terms/)\. The Public Preview is structured in a way that you may *subscribe* \(in other words, purchase\) and *deploy* software, and standard charges for the software will apply\. 
+
+By participating in the Public Preview, you acknowledge that we will be collecting feedback and monitoring system performance, and that AWS Data Exchange may modify the experience based on this information\. Because this feature is a Preview service \(as defined in the AWS Service Terms\), there may be errors or issues with the search, procurement and approval processes, your qualified vendors and products, or other issues that you may encounter as you use this Preview feature\. We encourage you to note any errors or issues and send any feedback, test observations or suggestions to adx\-redshift\-preview@amazon\.com\. If you have any questions or concerns about the Public Preview or need assistance at any time, contact us at adx\-redshift\-preview@amazon\.com\. 
+
+Prior to the announcement of public availability, we may request Preview participants to provide a testimonial about their experience\. Providing a testimonial is voluntary and your participation in the Public Preview is not contingent on providing a testimonial\. 
+
+### Overview<a name="publish-Redshift-product-overview"></a>
+
+An Amazon Redshift data set contains AWS Data Exchange datashares for Amazon Redshift\. When customers subscribe to a product containing datashares, they are granted read\-only access to the tables, views, schemas, and user\-defined functions that a data provider adds to the datashare\.
+
+As a data provider, you create an AWS Data Exchange for Amazon Redshift in your cluster and add the schemas, tables, views, and user\-defined functions you'd like subscribers to access\. You then import the datashare to AWS Data Exchange, create a data set, add it to a product, and publish the product\. Subscribers are granted access to the datashare upon subscription\.
+
+When working with the preview, consider the following:
++ If you are a provider and want to participate in this preview, you must be registered as an AWS Marketplace partner and as an AWS Data Exchange provider to offer access to Amazon Redshift data on AWS Data Exchange\. For more information, see [Getting started as a provider](provider-getting-started.md)\. 
++ The subscriber's cluster must be in the same AWS Region as your encrypted cluster\. For more information, see [RA3 node type availability in AWS Regions](https://docs.aws.amazon.com/redshift/latest/mgmt/working-with-clusters.html#rs-ra3-node-types) in the *Amazon Redshift Cluster Management Guide*\.
+
+**Note**  
+To participate in the preview as a data provider, submit a request to the Amazon Redshift team to upgrade your cluster to the latest cluster version\.  
+Send an email message to adx\-redshift\-preview@amazon\.com to request your Amazon Redshift cluster be updated to the latest version\. Provide the following information in your email message:  
+Subject line: Request for Amazon Redshift cluster version update
+AWS account ID
+Your cluster Region code
+Your cluster identifier
+Your choice of when your Amazon Redshift cluster will updated to the latest version:   
+During the next maintenance window \(varies by Region\)
+During a specific period of time \(provide date and time\)
+
+Subscribers do not need to upgrade to the latest cluster version to participate in this preview\.
+
+For any questions, issues, or feedback related to the preview features during the Public Preview period, send an email message to adx\-redshift\-preview@amazon\.com or open a support case with AWS Support\.
+
+After you have set up your Amazon Redshift datashare in Amazon Redshift, you can create a new Amazon Redshift data set in AWS Data Exchange\. You can then create a revision, and add Amazon Redshift datashare assets\. This allows requests to the AWS Data Exchange endpoint to proxy through to your Amazon Redshift datashare\. You can then add this data set to a product and add pricing\. Then, prospective subscribers can view your product and subscribe to it in the AWS Data Exchange catalog\.
+
+The following topics describe the process of creating an Amazon Redshift data set and publishing a new product with Amazon Redshift data sets using the AWS Data Exchange console\. The process has the following steps:
+
+**Topics**
++ [Step 1: Create an Amazon Redshift datashare asset](#create-RS-asset)
++ [Step 2: Create an Amazon Redshift data set](#create-RS-data-set)
++ [Step 3: Create a revision](#create-RS-revision)
++ [Step 4: Add Amazon Redshift datashare assets to a revision](#add-RS-assets)
++ [Step 5: Publish a new Amazon Redshift data product](#publish-RS-product)
++ [Step 6: \(Optional\) Copy a product](#copy-RS-product)
+
+#### Step 1: Create an Amazon Redshift datashare asset<a name="create-RS-asset"></a>
+
+Assets are the data in AWS Data Exchange\. For more information, see [Assets](data-sets.md#assets)\.
+
+**To create an Amazon Redshift datashare asset**
+
+1. Create a datashare within your Amazon Redshift cluster \(must be RA3 type and encrypted\)\. 
+
+   For more information about how to create a datashare, see *Working with AWS Data Exchange datashares as a producer* in the [Amazon Redshift Database Developer Guide](https://docs.aws.amazon.com/redshift/latest/dg/welcome.html)\.
+**Note**  
+We recommend setting your datashare as publicly accessible\. If you do not, customers with publicly accessible clusters will not be able to consume your data\.
+
+1. [Step 2: Create an Amazon Redshift data set](#create-RS-data-set)\.
+
+#### Step 2: Create an Amazon Redshift data set<a name="create-RS-data-set"></a>
+
+An Amazon Redshift data set includes AWS Data Exchange datashares for Amazon Redshift\. For more information, see [Amazon Redshift data set \(preview\)](data-sets.md#RS-data-set-type)\.
+
+**To create an Amazon Redshift data set**
+
+1. Open your web browser and go to the [AWS Data Exchange console](https://console.aws.amazon.com/dataexchange)\.
+
+1.  On the left side navigation pane, under **Publish data**, choose **Owned data sets**\.
+
+1. In **Owned data sets**, choose **Create data set** to open the **Data set creation steps** wizard\.
+
+1. In **Select data set type**, choose **Amazon Redshift datashare \- preview**\.
+
+1. In **Define data set**, enter a **Name** and **Description** for your data set\. For more information, see [Data set best practices](data-sets.md#data-set-best-practices)\. 
+
+1. Under **Add tags – optional**, add tags\.
+
+1. Choose **Create**\. 
+
+#### Step 3: Create a revision<a name="create-RS-revision"></a>
+
+In the following procedure, you create a revision after you’ve created a data set in the AWS Data Exchange console\. For more information, see [Revisions](data-sets.md#revisions)\.
+
+**To create a revision**
+
+1. On the **Data set overview** section of the data set details page:
+
+   1. \(Optional\) Choose **Edit name** to edit information about your data set\.
+
+   1. \(Optional\) Choose **Delete** to delete the data set\.
+
+1. On the **Revisions and jobs** section, choose **Create revision**\.
+
+1. Under **Define revision**, provide an optional comment for your revision that describes the purpose of the revision\. 
+
+1. Under **Add tags – optional**, add tags associated with the resource\.
+
+1. Choose **Create**\.
+
+1. Review, edit, or delete your changes from the previous step\. 
+
+#### Step 4: Add Amazon Redshift datashare assets to a revision<a name="add-RS-assets"></a>
+
+ In the following procedure, you add Amazon Redshift datashare assets to a revision, and then finalize the revision in the AWS Data Exchange console\. For more information, see [Assets](data-sets.md#assets)\. 
+
+**To add assets to the revision**
+
+1. Under the **Amazon Redshift datashares** section of the data set details page, choose **Add datashares**\.
+
+1. Under **AWS Data Exchange datashares for Amazon Redshift**, select the datashares and then choose **Add**\.
+**Note**  
+You can add up to 20 datashares to a revision\.
+
+   A job is started to import your assets into your revision\.
+
+1. After the job is finished, the **State** field in the **Jobs** section is updated to **Completed\.**
+
+1. If you have more data to add, repeat Step 1\.
+
+1. Under **Revision overview**, review your revision and its assets\. 
+
+1. Choose **Finalize**\.
+
+You have successfully finalized a revision for a data set\. 
+
+You can [edit](#edit-revision) or [delete a revision](#delete-revision) before you add it to a product\. 
+
+#### Step 5: Publish a new Amazon Redshift data product<a name="publish-RS-product"></a>
+
+After you've created at least one data set and finalized a revision with assets, you're ready to publish a product with Amazon Redshift data sets\. For more information, see [Product details](product-details.md)\. Make sure that you have all required details about your product and offer\.
+
+**Note**  
+You can't add datashare assets to existing products with S3 object assets until after the Public Preview\.
+
+**To publish a new Amazon Redshift data product**
+
+1. From the left navigation pane of the [AWS Data Exchange console](https://console.aws.amazon.com/dataexchange), under **Publish data**, choose **Products**\.
+
+1. From **Products**, choose **Publish new product** to open the **Publish new product** wizard\.
+
+1. In the **Product visibility** section, choose your product's **Product visibility options** and **Sensitive information** configuration, and then choose **Next**\. For more information, see [Product visibility](product-details.md#product-visibility) and [Sensitive categories of information](product-details.md#sensitive-information)\.
+
+1. In the **Define product** section, enter information about your product, including name, logo, support contact, web address, categories, and descriptions, and then choose **Next**\. For more information, see [Product details](product-details.md)\.
+
+1. In the **Add data** section, select the check box next to the data sets you want to add\.
+**Note**  
+The data sets you choose must have a finalized revision\. Data sets without finalized revisions won't be added\.
+
+   1. Choose **Add selected**, and then scroll to **Selected data sets** to review your selection\.
+
+   1. Scroll to **Select revision access rules**, choose the revision access rules that you want to set for data sets included in this product, and then choose **Next**\. For more details, see [Revision access rules](product-details.md#best-practices-revisions)\.
+
+1. If you are creating a public offer, in the **Add public offer** section, configure your offer\. All AWS Data Exchange products with visibility set to **Public** require a public offer\. 
+
+   1. Choose your price and subscription durations, US sales tax settings, data subscription agreement, and refund policy\. For more information, see [Creating an offer for AWS Data Exchange products](prepare-offers.md)\.
+
+   1. \(Optional\) Set **Subscription verification**, which enables you to control who can subscribe to this product\. For more information, see [Subscription verification for providers](subscription-verification-pro.md)\.
+
+   1. Choose your **Oﬀer auto\-renewal** option\. For more information, see [Creating an offer for AWS Data Exchange products](prepare-offers.md)\.
+
+   1. Choose **Next**\.
+
+1. If you are creating a private offer, configure the offer details in the **Add custom offer** section\.
+
+   1. In the **Subscriber account information** section, add at least one subscriber account to which you want to extend the offer\.
+
+   1. Choose your **Pricing and access duration** options for the subscription\.
+
+   1. Choose the **Offer expiration date** by which the subscriber must accept the offer\.
+
+   1. Choose your US sales tax settings, data subscription agreement \(DSA\), and refund policy\.
+
+   1. Choose your **Oﬀer auto\-renewal** option\. For more information, see [Creating an offer for AWS Data Exchange products](prepare-offers.md)\.
+
+   1. Choose **Next**\.
+
+1. In the **Review & publish** section, review your product information and then expand the **Product page preview** to see how it will look after it’s published\.
+
+1. If you're sure that you want to make the product and public offer visible and available to everyone, choose **Publish**\.
+
+You've now completed the manual portion of publishing a data product with a public offer\. AWS Data Exchange prepares and publishes your product\. On the **Product overview** page, the status of your product is **Awaiting approval** and then changes to **Published** after it's published\.
+
+#### Step 6: \(Optional\) Copy a product<a name="copy-RS-product"></a>
+
+After you have created your first product, you can copy its details and public offers to create a new product\.
+
+**Note**  
+You can copy a public, private, published, or unpublished product\. Custom oﬀers associated with the product will not be copied, but public oﬀers will be copied\.
+
+**To copy a product**
+
+1. Open your web browser and go to the [AWS Data Exchange console](https://console.aws.amazon.com/dataexchange)\.
+
+1. From the left navigation pane, under **Publish data**, choose **Products**\.
+
+1. From **Products**, choose the button next to the product you want to copy\.
+
+1. Select the **Actions** dropdown, and then choose **Create copy**\.
+
+1. Continue through the **Publish a product** workflow, with details already filled in, based on the product you chose in Step 3\. For more information, see [Step 5: Publish a new product](#publish-products)\.

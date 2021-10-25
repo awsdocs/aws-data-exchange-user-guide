@@ -1,23 +1,25 @@
-# Product Description Templates<a name="product-description-templates"></a>
+# Product description templates<a name="product-description-templates"></a>
 
-When listing a product on AWS Data Exchange, you should include a long description that contains all the information necessary for subscribers to understand what your product offers\. This section contains markdown templates that you can use as a starting point for the long description of a number of popular product types\.
+When listing a product on AWS Data Exchange, you should include a long description that contains all the information necessary for subscribers to understand what your product offers\. For more information about the product long description, see [Long description](product-details.md#product-long-description)\.
 
-You can copy and paste the content below in your long description and use whichever sections apply to your data product: 
+This section contains Markdown templates that you can use as a starting point for the long description of a number of popular product types\.
+
+You can copy and paste the content below in your long description and use the sections that apply to your data product\. 
 
 ## Generic long description template<a name="generic-template"></a>
 
 ```
 ---
 ## PRODUCT TITLE Data Product Overview
-Instructions:Provide a description of the data product and what it contains in this section.
+Instructions: Provide a description of the data product and what it contains in this section.
 
 ---
 ## Use Cases
-Instructions:Provide a handful of use-cases or guidance of best ways to utilize the data product.
+Instructions: Provide a handful of use-cases or guidance of best ways to utilize the data product.
 
 ---
 ## Metadata
-Instructions:Provide metadata of your data using a table. Examples include but are not limited to:  
+Instructions: Provide metadata of your data using a table. Examples include but are not limited to:  
 
 Description | Value 
 ----|-----
@@ -65,7 +67,7 @@ for use of this product.  Are there exemptions that need to be linked in order f
 ---
 ## Subscription Verification Request Information
 If you are enabling subscription verification for your products, you may elect to indicate the information 
-that you will require from the prospective subscriber i.e., EIN number, # of applications, # of users, # of regions, etc.
+that you will require from the prospective subscriber i.e., EIN number, # of applications, # of users, # of Regions, etc.
 
 ---
 ## Need Help?
@@ -82,15 +84,15 @@ Provide a description and/or link about your company
 ```
 ---
 ## PRODUCT TITLE Data Product Overview
-Instructions:Provide a description of the data product and what it contains in this section.
+Instructions: Provide a description of the data product and what it contains in this section.
 
 ---
 ## Use Cases
-Instructions:Provide a handful of use-cases or guidance of best ways to utilize the data product.
+Instructions: Provide a handful of use-cases or guidance of best ways to utilize the data product.
 
 ---
 ## Metadata
-Instructions:Provide metadata of your data using a table. Examples include but are not limited to:  
+Instructions: Provide metadata of your data using a table. Examples include but are not limited to:  
 
 Description | Value 
 ----|-----
@@ -173,7 +175,7 @@ If this section is applicable, provide an overview of the regulatory guidance an
 ## Subscription Verification Request Information
 If you are enabling subscription verification for your products, you may elect to indicate 
 the information that you will require from the prospective subscriber i.e., EIN number, # of applications, 
-# of users, # of regions, etc.
+# of users, # of Regions, etc.
 
 ---
 ## Need Help?
@@ -190,15 +192,15 @@ Provide a description and/or link about your company
 ```
 ---
 ## PRODUCT TITLE Data Product Overview
-Instructions:Provide a description of the data product and what it contains in this section.
+Instructions: Provide a description of the data product and what it contains in this section.
 
 ---
 ## Use Cases
-Instructions:Provide a handful of use-cases or guidance of best ways to utilize the data product.
+Instructions: Provide a handful of use-cases or guidance of best ways to utilize the data product.
 
 ---
 ## Metadata
-Instructions:Provide metadata of your data using a table. Examples include but are not limited to:  
+Instructions: Provide metadata of your data using a table. Examples include but are not limited to:  
 
 Description | Value 
 ----|-----
@@ -266,99 +268,7 @@ order for the data product to be published?
 ## Subscription Verification Request Information
 If you are enabling subscription verification for your products, you may elect to 
 indicate the information that you will require from the prospective subscriber i.e., 
-EIN number, # of applications, # of users, # of regions, etc.
-
----
-## Need Help?
-* If you have questions about our products, contact us using the support information below. 
-
----
-## About Your Company
-Provide a description and/or link about your company
-* [Company Fact Sheet] (ADD LINK HERE)
-```
-
-## Retail and location long description template<a name="retail-location-template"></a>
-
-```
----
-## PRODUCT TITLE Data Product Overview
-Instructions:Provide a description of the data product and what it contains in this section.
-
----
-## Use Cases
-Instructions:Provide a handful of use-cases or guidance of best ways to utilize the data product.
-
----
-## Metadata
-Instructions:Provide metadata of your data using a table. Examples include but are not limited to:  
-
-Description | Value 
-----|-----
-Update Frequency | YOUR INFO HERE
-Data Source(s) | YOUR INFO HERE
-Original Publisher of data | YOUR INFO HERE
-Data Creation Date | YOUR INFO HERE
-Data Modification Date | YOUR INFO HERE
-Geographic coverage | YOUR INFO HERE
-Time period coverage | YOUR INFO HERE
-Is historical data “point-in-time” | YES OR NO
-Data Set(s) Format(s) | YOUR INFO HERE
-Raw or scraped data | YOUR INFO HERE
-Key Fields | YOUR INFO HERE
-Key Words | YOUR INFO HERE
-Number of companies/brands covered | YOUR INFO HERE
-Contains Anonymous Personal Data | YES OR NO
-Data Channels | Examples include web devices, mobile devices, CTV devices, offline purchases, household data, B2B data
-
----
-## Tables
-If you'd like to preview the format of the data file, you can make a table and include an example such as:
-
-DMA | Category | Index (100 is baseline)
-----|-----
-DMA - New York City | Restaurant Transactions | 125 
-DMA - Chicago | Restaurant Transactions | 150 
-DMA - Los Angeles | Restaurant Transactions | 75 
-DMA - New York City | Grocery store foot traffic | 120 | N/A | Weekly
-DMA - Chicago | Grocery store foot traffic | 90 | N/A | Weekly
-DMA - Los Angeles | Grocery store foot traffic | 150 | N/A | Weekly
-
-
----
-## Dataset Specification
-The following are examples of data set specifications that you can include if applicable: 
-
-The datasets are updated at midnight EST daily.
-The datasets are tied to a home address, and attributes correspond to the household level. 
-Provider processes opt-outs on a daily basis and remove records from future files. 
-Custom data cuts are available if desired. 
-
----
-## Additional Information
-
-* [Data Schema] (ADD LINK HERE)
-* [Data Dictionary] (ADD LINK HERE)
-* [Data Source] (ADD LINK HERE)
-* [Data Due Diligence Questionnaire] (ADD LINK HERE)
-* [Sample Data Set] (ADD LINK HERE)
-* [Link to Corresponding ADX Trial Product/ Link to Corresponding ADX Paid Product] (ADD LINK HERE)
-
----
-## Pricing Information
-If you would like to tell your subscribers that you would like them to inquire for custom pricing
-    (ie you price based on other variables), you can explain here.
-
----
-## Regulatory and Compliance Information
-If this section is applicable, provide an overview of the regulatory guidance and compliance 
-    for use of this product.  Are there exemptions that need to be linked in order for the data product 
-    to be published?
-
----
-## Subscription Verification Request Information
-If you are enabling subscription verification for your products, you may elect to indicate 
-    the information that you will require from the prospective subscriber i.e., EIN number, # of applications, # of users, # of regions, etc.
+EIN number, # of applications, # of users, # of Regions, etc.
 
 ---
 ## Need Help?
@@ -375,15 +285,15 @@ Provide a description and/or link about your company
 ```
 ---
 ## PRODUCT TITLE Data Product Overview
-Instructions:Provide a description of the data product and what it contains in this section.
+Instructions: Provide a description of the data product and what it contains in this section.
 
 ---
 ## Use Cases
-Instructions:Provide a handful of use-cases or guidance of best ways to utilize the data product.
+Instructions: Provide a handful of use-cases or guidance of best ways to utilize the data product.
 
 ---
 ## Metadata
-Instructions:Provide metadata of your data using a table. Examples include but are not limited to:  
+Instructions: Provide metadata of your data using a table. Examples include but are not limited to:  
 
 Description | Value 
 ----|-----
@@ -400,7 +310,6 @@ Raw or scraped data | YOUR INFO HERE
 Key Fields | YOUR INFO HERE
 Key Words | YOUR INFO HERE
 Number of companies/brands covered | YOUR INFO HERE 
-Contains Anonymous Personal Data | YES OR NO
 Data Channels | Examples include web devices, mobile devices, CTV devices, offline purchases, household data, B2B data
 
 
@@ -434,7 +343,7 @@ Are there exemptions that need to be linked in order for the data product to be 
 ---
 ## Subscription Verification Request Information
 If you are enabling subscription verification for your products, you may elect to indicate the information
-that you will require from the prospective subscriber i.e., EIN number, # of applications, # of users, # of regions, etc.
+that you will require from the prospective subscriber i.e., EIN number, # of applications, # of users, # of Regions, etc.
 
 ---
 ## Need Help?
@@ -451,15 +360,15 @@ Provide a description and/or link about your company
 ```
 ---
 ## PRODUCT TITLE Data Product Overview
-Instructions:Provide a description of the data product and what it contains in this section.
+Instructions: Provide a description of the data product and what it contains in this section.
 
 ---
 ## Use Cases
-Instructions:Provide a handful of use-cases or guidance of best ways to utilize the data product.
+Instructions: Provide a handful of use-cases or guidance of best ways to utilize the data product.
 
 ---
 ## Metadata
-Instructions:Provide metadata of your data using a table. Examples include but are not limited to:  
+Instructions: Provide metadata of your data using a table. Examples include but are not limited to:  
 
 Description | Value 
 ----|-----
@@ -510,8 +419,8 @@ Examples of key data points include:
 * Format
 * Operating System
 * Sale Price
-* # of Transactions
-* # of Streams
+* Number of Transactions
+* Number of Streams
 * Average rating
 * Designated Market Area (DMA)
 * Zip or Postal Code
@@ -529,7 +438,7 @@ Examples of key data points include:
 ---
 ## Pricing Information
 If you would like to tell your subscribers that you would like them to inquire for custom pricing 
-(ie you price based on other variables), you can explain here.
+(i.e., you price based on other variables), you can explain here.
 
 ---
 ## Regulatory and Compliance Information
@@ -539,7 +448,7 @@ Are there exemptions that need to be linked in order for the data product to be 
 ---
 ## Subscription Verification Request Information
 If you are enabling subscription verification for your products, you may elect to indicate the information 
-that you will require from the prospective subscriber i.e., EIN number, # of applications, # of users, # of regions, etc.
+that you will require from the prospective subscriber i.e., EIN number, # of applications, # of users, # of Regions, etc.
 
 ---
 ## Need Help?
@@ -564,11 +473,11 @@ Provide a list of industries that this data product is applicable to.
 
 ---
 ## Use Cases
-Instructions:Provide a handful of use-cases or guidance of best ways to utilize the data product.
+Instructions: Provide a handful of use-cases or guidance of best ways to utilize the data product.
 
 ---
 ## Metadata
-Instructions:Provide metadata of your data using a table. Examples include but are not limited to:  
+Instructions: Provide metadata of your data using a table. Examples include but are not limited to:  
 
 Description | Value 
 ----|-----
@@ -611,7 +520,7 @@ order for the data product to be published?
 ## Subscription Verification Request Information
 If you are enabling subscription verification for your products, you may elect to 
 indicate the information that you will require from the prospective subscriber i.e., 
-EIN number, # of applications, # of users, # of regions, etc.
+EIN number, # of applications, # of users, # of Regions, etc.
 
 ---
 ## Need Help?
@@ -621,4 +530,95 @@ EIN number, # of applications, # of users, # of regions, etc.
 ## About Your Company
 Provide a description and/or link about your company
 * [Company Fact Sheet] ADD LINK HERE
+```
+
+## Retail and location long description template<a name="retail-location-template"></a>
+
+```
+---
+## PRODUCT TITLE Data Product Overview
+Instructions: Provide a description of the data product and what it contains in this section.
+
+---
+## Use Cases
+Instructions: Provide a handful of use-cases or guidance of best ways to utilize the data product.
+
+---
+## Metadata
+Instructions: Provide metadata of your data using a table. Examples include but are not limited to:  
+
+Description | Value 
+----|-----
+Update Frequency | YOUR INFO HERE
+Data Source(s) | YOUR INFO HERE
+Original Publisher of data | YOUR INFO HERE
+Data Creation Date | YOUR INFO HERE
+Data Modification Date | YOUR INFO HERE
+Geographic coverage | YOUR INFO HERE
+Time period coverage | YOUR INFO HERE
+Is historical data “point-in-time” | YES OR NO
+Data Set(s) Format(s) | YOUR INFO HERE
+Raw or scraped data | YOUR INFO HERE
+Key Fields | YOUR INFO HERE
+Key Words | YOUR INFO HERE
+Number of companies/brands covered | YOUR INFO HERE
+Data Channels | Examples include web devices, mobile devices, CTV devices, offline purchases, household data, B2B data
+
+---
+## Tables
+If you'd like to preview the format of the data file, you can make a table and include an example such as:
+
+DMA | Category | Index (100 is baseline) | Cadence 
+----|-----
+DMA - New York City | Restaurant Transactions | 125 | Weekly 
+DMA - Chicago | Restaurant Transactions | 150 | Weekly  
+DMA - Los Angeles | Restaurant Transactions | 75 | Weekly  
+DMA - New York City | Grocery store foot traffic | 120 | Weekly 
+DMA - Chicago | Grocery store foot traffic | 90 | Weekly 
+DMA - Los Angeles | Grocery store foot traffic | 150 | Weekly 
+
+
+---
+## Dataset Specification
+The following are examples of data set specifications that you can include if applicable: 
+
+The datasets are updated at midnight EST daily.
+The datasets are tied to a home address, and attributes correspond to the household level. 
+Provider processes opt-outs on a daily basis and remove records from future files. 
+Custom data cuts are available if desired. 
+
+---
+## Additional Information
+
+* [Data Schema] (ADD LINK HERE)
+* [Data Dictionary] (ADD LINK HERE)
+* [Data Source] (ADD LINK HERE)
+* [Data Due Diligence Questionnaire] (ADD LINK HERE)
+* [Sample Data Set] (ADD LINK HERE)
+* [Link to Corresponding ADX Trial Product/ Link to Corresponding ADX Paid Product] (ADD LINK HERE)
+
+---
+## Pricing Information
+If you would like to tell your subscribers that you would like them to inquire for custom pricing
+    (i.e., you price based on other variables), you can explain here.
+
+---
+## Regulatory and Compliance Information
+If this section is applicable, provide an overview of the regulatory guidance and compliance 
+    for use of this product.  Are there exemptions that need to be linked in order for the data product 
+    to be published?
+
+---
+## Subscription Verification Request Information
+If you are enabling subscription verification for your products, you may elect to indicate 
+    the information that you will require from the prospective subscriber i.e., EIN number, # of applications, # of users, # of Regions, etc.
+
+---
+## Need Help?
+* If you have questions about our products, contact us using the support information below. 
+
+---
+## About Your Company
+Provide a description and/or link about your company
+* [Company Fact Sheet] (ADD LINK HERE)
 ```

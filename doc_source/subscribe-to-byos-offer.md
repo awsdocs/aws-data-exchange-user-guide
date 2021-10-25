@@ -1,4 +1,4 @@
-# Accepting a Bring Your Own Subscription Offer<a name="subscribe-to-byos-offer"></a>
+# Bring Your Own Subscription \(BYOS\) offers<a name="subscribe-to-byos-offer"></a>
 
 As a subscriber, you might want to migrate your existing data subscriptions to AWS Data Exchange\. Bring your own subscription \(BYOS\) functionality allows you to migrate and fulfill existing subscriptions with participating data providers at no additional cost\.
 
@@ -13,7 +13,7 @@ Before creating or accepting a BYOS offer on AWS Data Exchange, the provider and
 
 **Prerequisites**
 
-1. The provider and the subscriber should contact each other about implementing a BYOS AWS Data Exchange solution\.
+1. The provider and the subscriber contact each other about implementing a BYOS AWS Data Exchange solution\.
 
 1. The subscriber provides the AWS account ID that they want to use to subscribe to data products on AWS Data Exchange\.
 
@@ -23,11 +23,9 @@ The subscriber accepts the BYOS offer as follows\.
 
 1. Sign in to the AWS Data Exchange console\.
 
-1. In the left navigation pane, from **Discover data**, choose **Product catalog**\.
+1. In the left navigation pane, from **Discover data products**, choose **My product offers**\.
 
-1. In **Product catalog**, search for the name of the product or paste the product URL that the provider gave you \(for example, [AWS Data Exchange Heartbeat](https://console.aws.amazon.com/dataexchange/home?region=us-east-1#/products/prodview-yhh6jo2dubhsy)\)\.
-
-1. Choose the name of the product to review the BYOS offer\.
+1. Select the offer to which you would like to subscribe\. You can use the filter at the top of the page to choose between **All products**, **Private products**, and **Public products**\.
 
 1. Choose **Continue to subscribe**\.
 

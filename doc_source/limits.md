@@ -1,56 +1,54 @@
-# AWS Data Exchange Limits<a name="limits"></a>
+# AWS Data Exchange quotas<a name="limits"></a>
 
- The following tables lists limits for AWS Data Exchange for an AWS account\. 
-
-## Service Limits<a name="limits-on-resource-fields"></a>
+The following sections provide information about the service quotas, endpoints, AWS Region export guidelines across Regions, and constraints related to resource fields for AWS Data Exchange for an AWS account\. 
 
 
-|  **Resource, Descriptor, or Operation**  |  **Default Limit**  |  **Description**  | 
+
+## Service quotas<a name="service-quotas"></a>
+
+For information about service quotas, see [AWS Data Exchange endpoints and quotas](https://docs.aws.amazon.com/general/latest/gr/dataexchange.html) in the *AWS General Reference*\.
+
+## Service endpoints<a name="api-endpoints"></a>
+
+For information about service endpoints, see [AWS Data Exchange endpoints and quotas](https://docs.aws.amazon.com/general/latest/gr/dataexchange.html) in the *AWS General Reference*\.
+
+
+
+## Export and import guidelines<a name="export-import-guidelines"></a>
+
+The following table provides guidelines for export and import jobs\. For more information, see [AWS Regions and data sets](data-sets.md#data-set-regions)\.
+
+
+|  **Resource, descriptor, or operation**  |  **Maximum value**  |  **Description**  | 
 | --- | --- | --- | 
-| Products per account | 50 | The maximum number of products per account\. | 
-| Data sets per account | 3,000 | The maximum number of data sets per account\. | 
-| Products per data set | 100 | The maximum number of products that can contain a given data set\. | 
-| Concurrent export jobs \(to S3 or a signed URL\) | 10 | The maximum concurrent number of running export jobs with the IN\_PROGRESS state\. | 
-| Concurrent import jobs \(from S3 or a signed URL\) | 10 | The maximum concurrent number of running import jobs with the IN\_PROGRESS state\. | 
-| Private offers per account | 10 | The maximum number of private offers that a single account can create\. | 
-| BYOS offers per account | 10 | The maximum number of BYOS offers that a single account can create\. | 
-| Revisions per addRevisions change set | 5 | The maximum number of revisions that can be published to a product in a single AWS Marketplace Catalog API ChangeSet of type addRevisions\. | 
-| Number of assets that can be imported or exported to/from Amazon S3 in a single job | 100 | A single job can import or export up to 100 assets to or from Amazon S3\. | 
-| Number of assets per single revision | 10,000  | A single revision can contain up to 10,000 assets\. | 
-| Number of revisions per single data set  | 10,000  | A single data set can contain up to 10,000 revisions\. | 
-| Number of data sets per single product | 25  | A product can have up to 25 data sets\.  | 
-| Asset size in GB | 10 GB  | The maximum size, in GB, of a single asset\. | 
+| File size for assets imported from a signed URL | 5 GB | The maximum size, in GB, of an asset that can be imported using IMPORT\_ASSET\_FROM\_SIGNED\_URL\. | 
+| File size of a cross\-Region revision export to Amazon Simple Storage Service \(Amazon S3\) | 100 GB | The maximum size, in GB, of a revision that can be exported to a different Region from the provider data set using an ExportRevision job\. | 
+| Number of assets that can be imported from a signed URL in a single job | 1 | The number of assets that can be imported using a single IMPORT\_ASSET\_FROM\_SIGNED\_URL job\.  | 
+| Number of assets that can be exported to Amazon S3 in a single cross\-Region ExportRevision job | 2,000 | The number of assets that can be exported from one Region to another from the provider data set using an ExportRevision job\. | 
+| Number of assets that can be exported to Amazon S3 in a single ExportRevision job | 10,000 | The number of assets that can be exported to Amazon S3 using an ExportRevision job\. | 
+| Number of revisions that can be exported to Amazon S3 in a single ExportRevision job | 1 | The number of revisions that can be exported to Amazon S3 using an ExportRevision job\. | 
+| Event actions per resource | 5 | The maximum number of event actions per resource\. | 
+| Event actions per account | 50 | The maximum number of event actions per account\. | 
 
-## Limits on Resource Fields<a name="limits-on-resource-fields"></a>
+ 
+
+## Constraints for resource fields<a name="limits-on-resource-fields"></a>
+
+The following table provides constraints related to resource fields that providers encounter in the AWS Data Exchange console when creating data sets, revisions, products, and product offers\. The table also provides constraints related to resource fields that subscribers encounter when making subscription requests\.
 
 
-|  **Resources**  |  **Field**  |  **Maximum Length**  | 
+|  **Resource**  |  **Field** |  **Maximum length or size**  | 
 | --- | --- | --- | 
-| Data set | Name | 256 characters | 
-| Data set | Description | 16,384 characters | 
+| Dataset | Name | 256 characters | 
+| Dataset | Description | 16,384 characters | 
 | Revision | Comment | 128 characters | 
-| Product | Name | 72 characters | 
-| Product | Short description | 500 characters | 
-| Product | Long description | 30,000 characters | 
-| Product | Logo | 100 KB | 
-| Offer | DSA | 10 MB | 
-| Offer | Refund policy | 200 characters | 
+| Product details | Name | 72 characters | 
+| Product details | Short description | 500 characters | 
+| Product details | Long description | 30,000 characters | 
+| Product details | Logo | 100 KB | 
+| Product offer | DSA | 10 MB | 
+| Product offer | Refund policy | 200 characters | 
 | Subscription request | company name | 40 characters | 
 | Subscription request | name | 40 characters | 
 | Subscription request | email address | 100 characters | 
 | Subscription request | intended use\-case | 500 characters | 
-
-## Endpoints and AWS Regions<a name="api-endpoints"></a>
-
-The following AWS Regions are endpoints are supported for AWS Data Exchange:
-+ US East \(N\. Virginia\) – `dataexchange.us-east-1.amazonaws.com`
-+ US East \(Ohio\) – `dataexchange.us-east-2.amazonaws.com`
-+ US West \(N\. California\) – `dataexchange.us-west-1.amazonaws.com`
-+ US West \(Oregon\) – `dataexchange.us-west-2.amazonaws.com`
-+ Asia Pacific \(Tokyo\) – `dataexchange.ap-northeast-1.amazonaws.com`
-+ Asia Pacific \(Seoul\) – `dataexchange.ap-northeast-2.amazonaws.com`
-+ Asia Pacific \(Singapore\) – `dataexchange.ap-southeast-1.amazonaws.com`
-+ Asia Pacific \(Sydney\) – `dataexchange.ap-southeast-2.amazonaws.com`
-+ Europe \(Frankfurt\) – `dataexchange.eu-central-1.amazonaws.com`
-+ Europe \(Ireland\) – `dataexchange.eu-west-1.amazonaws.com`
-+ Europe \(London\) – `dataexchange.eu-west-2.amazonaws.com`

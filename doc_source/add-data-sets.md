@@ -1,22 +1,28 @@
 # AddDataSets<a name="add-data-sets"></a>
 
-In order to add data sets to your AWS Data Exchange product, you need to start a change set of type `AddDataSets`\. To do so, you can use the `StartChangeSet` API and specify the change type, the product identifier, the product type, and the details including the data set ARN\.
+**Important**  
+Beginning July 22, 2021, new and existing providers have the ability to automatically publish revisions to data sets\. All new products on AWS Data Exchange default to automatic revision publishing\. If you have created existing products on AWS Data Exchange before July 22, 2021, you need to migrate them to automatic revision publishing\.  
+For more information, see [Migrating an existing product to automatic revision publishing](updating-products.md#migrate-product)\.
+
+**Note**  
+Data sets added via the Catalog API change set of type `AddDataSets` default to the publishing method of the product\.
+
+To add data sets to your AWS Data Exchange product, start a change set of type `AddDataSets`\. To do so, you can use the `StartChangeSet` API operation and specify the change type, the product identifier, the product type, and the details including the data set Amazon Resource Name \(ARN\)\.
 
 ## Tutorial: Adding new data sets to a published data product<a name="add-data-sets-tutorial"></a>
 
-This tutorial walks you through detailed steps to publish new AWS Data Exchange data sets to an existing product\. The tutorial has the following high\-level steps\.
+This tutorial walks you through detailed steps to add new AWS Data Exchange data sets to a published product\. The tutorial has the following high\-level steps\.
 
 **Topics**
-+ [Set Up IAM Permissions](#data-set-catalog-iam-permissions)
++ [Set up IAM permissions](#data-set-catalog-iam-permissions)
 + [Access the AWS Marketplace Catalog API](#data-set-access-catalog-api)
-+ [Get Your Product ID from the AWS Data Exchange Console](#get-data-set-exchange-product-id)
-+ [Describe Product Details](#describe-data-set-product-details)
-+ [Start a Change Request](#start-data-set-change-request)
-+ [Check the Status of Your Change Set](#check-data-set-change-status)
++ [Get your product ID from the AWS Data Exchange console](#get-data-set-exchange-product-id)
++ [Start a change request](#start-data-set-change-request)
++ [Check the status of your change set](#check-data-set-change-status)
 
-### Set Up IAM Permissions<a name="data-set-catalog-iam-permissions"></a>
+### Set up IAM permissions<a name="data-set-catalog-iam-permissions"></a>
 
-Before you begin, you need IAM permissions for using the AWS Marketplace Catalog API\. These permissions are in addition to the permissions you need for using AWS Data Exchange\.
+Before you begin, you need AWS Identity and Access Management \(IAM\) permissions for using the AWS Marketplace Catalog API\. These permissions are in addition to the permissions you need for using AWS Data Exchange\.
 
 1. Navigate your browser to the IAM console and sign in using an AWS account that can manage IAM permissions\.
 
@@ -38,7 +44,8 @@ Before you begin, you need IAM permissions for using the AWS Marketplace Catalog
            "aws-marketplace:DescribeEntity",
            "aws-marketplace:StartChangeSet",
            "aws-marketplace:ListEntities",
-           "aws-marketplace:DescribeChangeSet"
+           "aws-marketplace:DescribeChangeSet",
+           "dataexchange:PublishDataSet"
          ],
          "Resource": "*"
        }
@@ -60,52 +67,28 @@ To access the AWS Marketplace Catalog API, use the following HTTP client endpoin
 catalog.marketplace.us-east-1.amazonaws.com
 ```
 
-### Get Your Product ID from the AWS Data Exchange Console<a name="get-data-set-exchange-product-id"></a>
+### Get your product ID from the AWS Data Exchange console<a name="get-data-set-exchange-product-id"></a>
 
-Before you can use the AWS Marketplace Catalog API to publish new data sets, get your product ID from the AWS Data Exchange console\. Navigate to the **Product Dashboard**, and then copy the product ID you would like to publish data sets for\.
+Before you can use the AWS Marketplace Catalog API to publish new data sets, get your product ID from the AWS Data Exchange console\. Navigate to the **Product Dashboard**, and then copy the product ID you would like to publish data sets for\. You may also use the [AWS Marketplace Catalog API](https://docs.aws.amazon.com/marketplace-catalog/latest/api-reference/welcome.html) to find your product ID, using the `ListEntities` action with the **DataProduct@1\.0** entity type\.
 
-### Describe Product Details<a name="describe-data-set-product-details"></a>
+### Start a change request<a name="start-data-set-change-request"></a>
 
-Before you add new data sets to your data product, you must make a `DescribeEntity` call with the ID of your product\. The output contains the product details and an `EntityIdentifier` attribute, which is the entity ID \(your product ID\) appended with a revision number\. The revision number ensures you are adding data sets to the latest version of the product\.
+**To start a change request to add a data set in your test product**
 
-**Sample Request**
-
-```
-https://catalog.marketplace.us-east-1.amazonaws.com/DescribeEntity?catalog=AWSMarketplace&entityId=entity-id
-```
-
-**Sample Response**
-
-```
-{
-    "Details": "{\"Title\":\"Example Data Product\",\"Presentation\":{\"ShortDescription\":\"Descriptive text that appears on the tiles in the Product catalog page\",\"FullDescription\":\"Descriptive text that appears on the product's detail page after the product is published. \",\"Logo\":\"logo-url\",\"Highlights\":[]},\"Lifecycle\":\"Public\",\"ProductCode\":\"product-code\",\"DataSets\":[{\"ProductDataSetId\":\"product-data-set-id\",\"DataSetArn\":\"data-set-arn\",\"Name\":\"Example Data Set\",\"Description\":\"Example Data Set\",\"CreationDate\":\"2019-09-08T16:10:33.011Z\",\"LastRevisionAddedDate\":\"2019-09-08T16:10:33.011Z\",\"PublishedDataSetArn\":\"published-data-set-arn\"}]}",
-    "EntityArn": "arn:aws:aws-marketplace:us-east-1:account-id:AWSMarketplace/DataProduct/entity-id",
-    "EntityIdentifier": "entity-id@1",
-    "EntityType": "DataProduct@1.0",
-    "LastModifiedDate": "2019-09-08T16:10:38.287Z"
-}
-```
-
-**Note**  
-If you are using an HTTP client, you must unescape the JSON output to view the data in a nested structure\. You might also need to reform the output to suit your needs\.
-
-### Start a Change Request<a name="start-data-set-change-request"></a>
-
-To start a change request to new data sets to a data set in your test product:
-
-1. Copy the `DescribeEntity` response from [Describe Product Details](add-revisions.md#describe-product-details) and include the following elements:
-   + Entity type with the version number \(for example, `DataProduct@1.0`\)\.
-   + Identifier with the revision number \(for example, `product-test@1`\)\.
+1. Copy the entity ID that you get by following the instructions in [Get your product ID from the AWS Data Exchange console](#get-data-set-exchange-product-id)\.
 
 1. Make a `StartChangeSet` request with an `AddDataSets` change type\.
 
-**Sample Request**
+**Note**  
+For information about working with change sets in the AWS Marketplace Catalog API, see [ Working with change sets](https://docs.aws.amazon.com/marketplace-catalog/latest/api-reference/welcome.html#working-with-change-sets)\. For more information about working with the identifier for entities, see [Identifier](https://docs.aws.amazon.com/marketplace-catalog/latest/api-reference/welcome.html#identifier)\.
+
+**Example request**
 
 ```
 https://catalog.marketplace.us-east-1.amazonaws.com/StartChangeSet
 ```
 
-**Sample Request Body**
+**Example request body**
 
 ```
 {
@@ -124,26 +107,26 @@ https://catalog.marketplace.us-east-1.amazonaws.com/StartChangeSet
 }
 ```
 
-**Sample Response**
+**Example response**
 
 ```
-{{
+{
   "ChangeSetId": "cs-bnEXAMPLE4mkz9oh",
   "ChangeSetArn": "arn:aws:aws-marketplace:us-east-1:account-id:AWSMarketplace/ChangeSet/cs-bnEXAMPLE4mkz9oh"
 }
 ```
 
-### Check the Status of Your Change Set<a name="check-data-set-change-status"></a>
+### Check the status of your change set<a name="check-data-set-change-status"></a>
 
-After you use the `StartChangeSet` API to start the change request, you can use the `DescribeChangeSet` API to check its status\. Provide the change set ID returned in the `StartChangeSet` API response\.
+After you use the `StartChangeSet` API operation to start the change request, you can use the `DescribeChangeSet` operation to check its status\. Provide the change set ID returned in the `StartChangeSet` API response\.
 
-**Sample Request**
+**Example request**
 
 ```
 https://catalog.marketplace.us-east-1.amazonaws.com/DescribeChangeSet?catalog=AWSMarketplace&changeSetId=cs-bnEXAMPLE4mkz9oh
 ```
 
-**Sample Request Body**
+**Example request body**
 
 ```
 {
@@ -151,7 +134,7 @@ https://catalog.marketplace.us-east-1.amazonaws.com/DescribeChangeSet?catalog=AW
 }
 ```
 
-**Sample Response**
+**Example response**
 
 ```
 {
@@ -183,7 +166,7 @@ The following exceptions can occur when you use the AWS Marketplace Catalog API 
 This happens when the requested data set was not found\. To resolve this issue, ensure that there's not a typo in the data set ARN and that your AWS account owns the data set, and try again\.
 
 **INVALID\_INPUT**  
-The request couldn't be processed due to invalid input\. To resolve this issue, ensure that there's not a typo in the request and that the product does not exceed the maximum number of allowed data sets\.
+The request couldn't be processed due to input that isn't valid\. To resolve this issue, ensure that there's not a typo in the request and that the product does not exceed the maximum number of allowed data sets\.
 
 **DATA\_SET\_ALREADY\_PUBLISHED**  
 This happens when the data set has already been previously added to the product\.

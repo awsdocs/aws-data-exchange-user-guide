@@ -29,6 +29,8 @@ The following table provides guidelines for export and import jobs\. For more in
 | Number of revisions that can be exported to Amazon S3 in a single ExportRevision job | 1 | The number of revisions that can be exported to Amazon S3 using an ExportRevision job\. | 
 | Event actions per resource | 5 | The maximum number of event actions per resource\. | 
 | Event actions per account | 50 | The maximum number of event actions per account\. | 
+| Payload size for APIs imported from API Gateway | 10 MB | The maximum payload size for APIs that have been imported from Amazon API Gateway\. For more information about quotas for Amazon API Gateway APIs, see [Amazon API Gateway quotas and important notes](https://docs.aws.amazon.com/apigateway/latest/developerguide/limits.html) in the Amazon API Gateway API Developer Guide\. | 
+| Number of requests per second to an imported API Gateway API | 10 | The maximum number of requests that can be sent per second to an imported API Gateway API\. | 
 
  
 

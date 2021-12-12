@@ -1,6 +1,6 @@
 # Updating products<a name="updating-products"></a>
 
-The following sections describe how to update your products\. The instructions are written with the assumption you're a provider who's familiar with [Data in AWS Data Exchange](data-sets.md)\. After you publish a product, you can edit the product's details and its public offer\. You can also update the underlying data sets by publishing new revisions to subscribers\. For more information, see [Revisions](data-sets.md#revisions)\.
+The following sections describe how to update your products\. The instructions are written with the assumption that you're a provider who is familiar with [Data in AWS Data Exchange](data-sets.md)\. After you publish a product, you can edit the product's details and its public offer\. You can also update the underlying data sets by publishing new revisions to subscribers\. For more information, see [Revisions](data-sets.md#revisions)\.
 
 ## Updating product and offer details<a name="update-product-details"></a>
 
@@ -10,7 +10,7 @@ Keep the following in mind when you update products:
 + You can't remove or edit a subscription duration in your offers\. This ensures that existing subscribers retain the ability to renew\. If you no longer want to offer a specific subscription duration, you can unpublish your existing product and then publish a new product\. For more information, see [Unpublish a product](#unpublish-product)\.
 + You can't remove data sets from a product after it is published, regardless of how many subscribers have subscribed to your product\.
 
-**To update a product, data set, and/or offer details**
+**To update a product, data set, or offer details**
 
 1. Open your web browser and go to the [AWS Data Exchange console](https://console.aws.amazon.com/dataexchange)\.
 
@@ -20,15 +20,35 @@ Keep the following in mind when you update products:
 
 1. From **Product details**, choose **Edit**, and then follow the instructions to edit the product\.
 
-1. From **Data sets**, Under **Sensitive information**, choose **Edit**, and then follow the instructions to edit the information\.
+1. From **Data sets**:
+
+   1. Under **Sensitive information**, choose **Edit**, and then follow the instructions to edit the information\.
 
 1. If your product is a public offer, from **Public offer**, choose **Edit**, and then follow the instructions to edit the public oﬀer\.
 
 1. If your product is a public offer, from **Custom offers**, choose **Edit**, and then follow the instructions to edit the custom oﬀer\.
 
-1. If your product is a private offer, fFrom **Private offers**, choose **Edit**, and then follow the instructions to edit the offer\.
+1. If your product is a private offer, from **Private offers**, choose **Edit**, and then follow the instructions to edit the private offer\.
 
 1. Choose **Update**\.
+
+## Updating custom metadata<a name="update-custom-metadata"></a>
+
+After you publish a product, you can use the AWS Data Exchange console to edit the product's custom metadata\.
+
+**To update custom metadata**
+
+1. Open your web browser and go to the AWS Data Exchange console\.
+
+1. From the left navigation pane, under **Publish data**, choose **Products**\.
+
+1. From **Products**, choose the product you want to update\. Make sure its status is **Published**\.
+
+1. \(Optional\) From **Subscriptions**, choose **View custom metadata**, and view the metadata, and then choose **Close**\.
+
+1. From **Subscriptions**, choose **Edit custom metadata**, and then follow the instructions to edit the metadata\.
+
+1. Choose **Save**\.
 
 ## Publishing a new data set revision using automatic revision publishing<a name="dynamically-updated-products"></a>
 

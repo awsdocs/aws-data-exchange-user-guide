@@ -8,18 +8,21 @@
 The following topics describe the process of subscribing to a product on AWS Data Exchange using the AWS Data Exchange console\.
 
 **Topics**
-+ [Subscribing to a file\-based data product](#subscribing-to-data-product)
-+ [Subscribing to an Amazon Redshift data product \(preview\)](#subscribing-to-Redshift-product)
++ [Subscribing to a product containing file\-based data](#subscribing-to-data-product)
++ [Subscribing to a product containing APIs](#subscribing-to-API-product)
++ [Subscribing to a product containing Amazon Redshift datashares \(preview\)](#subscribing-to-Redshift-product)
 + [Request a recommendation for a data product](#request-new-products)
 + [Unsubscribe from a product](#unsubscribe-product)
 
-## Subscribing to a file\-based data product<a name="subscribing-to-data-product"></a>
+## Subscribing to a product containing file\-based data<a name="subscribing-to-data-product"></a>
 
-The following topics describe the complete process of becoming a file\-based data product subscriber on AWS Data Exchange using the AWS Data Exchange console\. The process has the following steps:
+The following topics describe the complete process of subscribing to a product containing file\-based data on AWS Data Exchange by using the AWS Data Exchange console\. 
+
+The process has the following steps:
 
 **Topics**
 + [Step 1: Browse the catalog](#browse-catalog)
-+ [Step 2: Subscribe to the file\-based data product](#subscribe-to-data-product)
++ [Step 2: Subscribe to the product containing the file\-based data](#subscribe-to-data-product)
 + [Step 3: Use the product](#use-product)
 + [Step 4: \(Optional\) Export data after subscribing](#export-data-after-subscribing)
 
@@ -37,19 +40,19 @@ If the provider has issued a private oﬀer to your account, the product is avai
 
 1. \(Optional\) Under **Refine results**, choose a specific **Category** to browse specific data products\.
 
-1. Under **Refine results**, use the **Data available through** filter to select Amazon S3\.
+1. Under **Refine results**, use the **Data available through** filter to select **Amazon S3**\.
 
    
 
 1. \(Optional\) Under **Browse catalog**, enter in a word or phrase and then choose **Search** to view results matching your query\.
 
-### Step 2: Subscribe to the file\-based data product<a name="subscribe-to-data-product"></a>
+### Step 2: Subscribe to the product containing the file\-based data<a name="subscribe-to-data-product"></a>
 
 If you subscribe to a paid product, you are billed on your AWS bill\. You get access to the entitled data set\. For more information, see [Subscribing to data products on AWS Data Exchange](subscribe-to-data-sets.md)\.
 
-**To subscribe to the file\-based data product**
+**To subscribe to the product containing the file\-based data**
 
-1. Select an Amazon S3 data product and view its details page\.
+1. Select a data product containing an Amazon S3 object and view its details page\.
 
    The information on the details page includes a product description, the provider's contact information, and the details of the product's public offer\. The public offer information includes price and durations, the data subscription agreement, and the refund policy\. You can also view the names of the data sets included in the product and the AWS Regions in which they are available\.
 
@@ -112,7 +115,149 @@ If you want export or download your data at a later time, including getting new 
 **Important**  
 We recommend that you consider Amazon S3 security features when exporting data to Amazon S3\. See [Security best practices for Amazon S3](https://docs.aws.amazon.com/AmazonS3/latest/dev/security-best-practices.html) for general guidelines and best practices\.
 
-## Subscribing to an Amazon Redshift data product \(preview\)<a name="subscribing-to-Redshift-product"></a>
+## Subscribing to a product containing APIs<a name="subscribing-to-API-product"></a>
+
+The following topics describe the complete process of subscribing to a product containing APIs on AWS Data Exchange by using the AWS Data Exchange console\. 
+
+The process has the following steps:
+
+**Topics**
++ [Step 1: Browse the catalog](#subscribe-API-product-browse)
++ [Step 2: Subscribe to a product containing APIs](#subscribe-to-API-product)
++ [Step 3: Use an API product](#use-API-product)
+
+### Step 1: Browse the catalog<a name="subscribe-API-product-browse"></a>
+
+You can ﬁnd products and review the associated public or custom oﬀers and product details on both AWS Marketplace and AWS Data Exchange\. 
+
+If the provider has issued a private oﬀer to your account, the product is available on the **My product oﬀers page** of the AWS Data Exchange console\. For more information, see [Subscribing to data products on AWS Data Exchange](subscribe-to-data-sets.md)\.
+
+**To browse the catalog for products containing APIs**
+
+1. Open and sign in to the [AWS Data Exchange console](https://console.aws.amazon.com/dataexchange)\.
+
+1. On the left side navigation pane, under **Discover data products**, choose **Browse catalog**\.
+
+1. \(Optional\) Under **Refine results**, choose a specific **Category** to browse specific data products\.
+
+1. Under **Refine results**, use the **Data available through** filter to select **API**\.
+
+   
+
+1. \(Optional\) Under **Browse catalog**, enter in a word or phrase and then choose **Search** to view results matching your query\.
+
+### Step 2: Subscribe to a product containing APIs<a name="subscribe-to-API-product"></a>
+
+If you subscribe to a paid product, you're billed on your AWS bill\. You get access to the entitled data set\. For more information, see [Subscribing to data products on AWS Data Exchange](subscribe-to-data-sets.md)\.
+
+**To subscribe to the product containing APIs**
+
+1. Select a product containing APIs, and view its details page\.
+
+   The information on the details page includes a product description, the provider's contact information, and the details of the product's public offer\. The public offer information includes price and durations, the data subscription agreement, and the refund policy\. You can also view the names of the data sets included in the product and the AWS Regions in which they are available\.
+
+   If the provider has issued a custom offer to your account \(for example, a [private offer](subscribe-to-private-offer.md) or [Bring Your Own Subscription \(BYOS\) offer](subscribe-to-byos-offer.md)\), you see those details, too\.
+
+1. In the top right corner, choose **Continue to subscribe**\. 
+
+1. Choose your preferred price and duration combination, choose whether to enable auto\-renewal for the subscription, and review the oﬀer details, including the data subscription agreement\.
+**Note**  
+Some products require subscription veriﬁcation\. For more information, see [Subscription verification for subscribers](subscription-verification-sub.md)\.
+
+1. Review the pricing information, choose the pricing oﬀer, and then choose **Subscribe**\.
+**Note**  
+If you subscribe to a paid product, you're prompted to conﬁrm your decision to subscribe\.
+
+### Step 3: Use an API product<a name="use-API-product"></a>
+
+The following topics provide details about how to use a product that includes API data sets: 
+
+**Topics**
++ [Viewing an API](#view-the-api)
++ [Downloading the API specification](#download-api-spec)
++ [Making an API call \(console\)](#make-api-call-console)
++ [Making an API call \(AWS CLI\)](#make-api-call-cli)
+
+#### Viewing an API<a name="view-the-api"></a>
+
+**To view an API**
+
+1. Open and sign in to the [AWS Data Exchange console](https://console.aws.amazon.com/dataexchange)\.
+
+1. From the left navigation pane, under **My subscriptions**, choose **Entitled data**\.
+
+1. Choose a data set\.
+
+1. Under the **Revisions** tab, choose a revision\.
+
+1. Under **API assets**, choose the API\.
+
+1. View the **Asset overview**, which includes the **Integration notes**\.
+
+1. Follow the guidance in the **Integration notes** to call the API\.
+
+#### Downloading the API specification<a name="download-api-spec"></a>
+
+**To download the API specification**
+
+1. Open and sign in to the [AWS Data Exchange console](https://console.aws.amazon.com/dataexchange)\.
+
+1. From the left navigation pane, under **My subscriptions**, choose **Entitled data**\.
+
+1. Choose a data set\.
+
+1. Under the **Revisions** tab, choose a revision\.
+
+1. Under **API assets**, choose the API\.
+
+1. On the **OpenAPI 3\.0 specification**, choose **Download API specification**\.
+
+   The specification is downloaded onto your local computer\. You can then export the asset to a third\-party tool for SDK generation\.
+
+#### Making an API call \(console\)<a name="make-api-call-console"></a>
+
+You can call a single endpoint in the AWS Data Exchange console\.
+
+**To make an API call from the console**
+
+1. Open and sign in to the [AWS Data Exchange console](https://console.aws.amazon.com/dataexchange)\.
+
+1. From the left navigation pane, under **My subscriptions**, choose **Entitled data**\.
+
+1. Choose a data set\.
+
+1. Under the **Revisions** tab, choose a revision\.
+
+1. Under **API assets**, choose the API\.
+
+1. For **Integration notes**: 
+
+   1. Choose **Copy** to use the **Base URL**\.
+
+   1. Choose **Copy** to use the **Code structure**\.
+
+   1. Follow the information provided in the specification documentation to call the API\.
+
+#### Making an API call \(AWS CLI\)<a name="make-api-call-cli"></a>
+
+**To make an API call \(AWS CLI\)**
++ Use the `send-api-asset` command to call the API\.
+
+  ```
+  $ aws dataexchange send-api-asset \
+    --asset-id $ASSET_ID \
+    --data-set-id $DATA_SET_ID \
+    --revision-id $REVISION_ID \
+    --body "..." \
+  {
+      "headers": {
+          ...
+      },
+      "body": "..."
+  }
+  ```
+
+## Subscribing to a product containing Amazon Redshift datashares \(preview\)<a name="subscribing-to-Redshift-product"></a>
 
 
 |  | 
@@ -135,7 +280,7 @@ As a data subscriber, you can find and subscribe to products containing Amazon R
 
 When working with the preview, consider the following:
 + If you are a subscriber and want to work with this preview, you must have an encrypted Amazon Redshift cluster running on an RA3 instance to query to Amazon Redshift data on AWS Data Exchange\. For more information, see the [Amazon Redshift Database Developer Guide](https://docs.aws.amazon.com/redshift/latest/dg/welcome.html)\.
-+ Your cluster must be in the same AWS Region  as the offered product\. For more information, see [RA3 node type availability in AWS Regions](https://docs.aws.amazon.com/redshift/latest/mgmt/working-with-clusters.html#rs-ra3-node-types) in the *Amazon Redshift Cluster Management Guide*\.
++ Your cluster must be in the same AWS Region as the offered product\. For more information, see [RA3 node type availability in AWS Regions](https://docs.aws.amazon.com/redshift/latest/mgmt/working-with-clusters.html#rs-ra3-node-types) in the *Amazon Redshift Cluster Management Guide*\.
 + It may take a few minutes to access the datashares after your subscription starts\.
 
 Subscribers do not need to upgrade to the latest cluster version to participate in this preview\.
@@ -146,7 +291,7 @@ The following sections describe the complete process of becoming an Amazon Redsh
 
 **Topics**
 + [Step 1: Browse the catalog \(preview\)](#subscribe-Redshift-product-browse)
-+ [Step 2: Subscribe to products containing Amazon Redshift data sets \(preview\)](#subscribe-Redshift-product)
++ [Step 2: Subscribe to products containing Amazon Redshift datashares \(preview\)](#subscribe-Redshift-product)
 + [Step 3: Use the AWS Data Exchange datashares for Amazon Redshift \(preview\)](#use-Redshift-product)
 
 #### Step 1: Browse the catalog \(preview\)<a name="subscribe-Redshift-product-browse"></a>
@@ -161,17 +306,17 @@ If the provider has issued a private oﬀer to your account, the product is avai
 
 1. On the left side navigation pane, under **Discover data products**, choose **Browse catalog**\.
 
-1. \(Optional\) Under **Refine results**, choose a specific **Category** to browse specific data products\.
+1. \(Optional\) Under **Refine results**, choose from one of the listed **Categories** to browse specific data products in that category\.
 
-1. Under **Refine results**, use the **Data available through** filter to select Amazon Redshift\.
+1. Under **Refine results**, use the **Data available through** filter to select **Amazon Redshift**\.
 
 1. \(Optional\) Under **Browse catalog**, enter in a word or phrase and then choose **Search** to view results matching your query\.
 
-#### Step 2: Subscribe to products containing Amazon Redshift data sets \(preview\)<a name="subscribe-Redshift-product"></a>
+#### Step 2: Subscribe to products containing Amazon Redshift datashares \(preview\)<a name="subscribe-Redshift-product"></a>
 
 If you subscribe to a paid product, you're billed on your AWS bill\. You get access to all data sets included in the product\. For more information, see [Subscribing to data products on AWS Data Exchange](subscribe-to-data-sets.md)\.
 
-**To subscribe to the Amazon Redshift datashare product**
+**To subscribe to a product containing Amazon Redshift datashares**
 
 1. Select a product and view its details page\.
 

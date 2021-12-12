@@ -10,6 +10,11 @@ Additionally, AWS supports managed policies for job functions that span multiple
 
 ## AWS managed policy: `AWSDataExchangeFullAccess`<a name="security-iam-awsmanpol-awsdataexchangefullaccess"></a>
 
+
+|  | 
+| --- |
+| The updated managed policy for the Amazon Redshift data product feature is in preview release for AWS Data Exchange and is subject to change\. | 
+
 You can attach the `AWSDataExchangeFullAccess` policy to your IAM identities\.
 
 This policy grants administrative permissions that allow full access to AWS Data Exchange and AWS Marketplace actions using the AWS Management Console and SDK\. It also provides select access to Amazon S3 and AWS Key Management Service as needed to take full advantage of AWS Data Exchange\.
@@ -17,9 +22,10 @@ This policy grants administrative permissions that allow full access to AWS Data
 **Permissions details**
 
 This policy includes the following permissions:
-+ `AWS Data Exchange` – Allows principals full access to AWS Data Exchange\. This includes both providing data products as well as subscribing to them\.
++ `AWS Data Exchange` – Allows principals full access to AWS Data Exchange\. This includes both providing data products and subscribing to them\.
 + `AWS Marketplace` – Allows principals access to AWS Marketplace for providing products, subscribing to products, and managing product agreements\. This is required to provide or subscribe to data products\.
-+ `Amazon S3` – Allows principals to get AWS Data Exchange related objects \(including data product files\) from Amazon Simple Storage Service, as well as to upload AWS Data Exchange related files to Amazon S3\. This is required for providing and subscribing to data products\.
++ `Amazon S3` – Allows principals to get AWS Data Exchange related objects \(including data product files\) from Amazon Simple Storage Service, and to upload AWS Data Exchange related files to Amazon S3\. This is required for providing and subscribing to data products\.
++ `Amazon Redshift` – Allows principals to view AWS Data Exchange datashares for Amazon Redshift for import and to authorize them\. This is required for providing Amazon Redshift data products\.
 + `AWS KMS` – Allows access to AWS Key Management Service so that data can be encrypted and accessed using keys\.
 
 ```
@@ -123,12 +129,42 @@ This policy includes the following permissions:
                 "kms:ListKeys"
             ],
             "Resource": "*"
+            },
+           {
+            "Effect": "Allow",
+            "Action": ["redshift:AuthorizeDataShare"],
+            "Resource": "*",
+            "Condition": {
+	         "StringEqualsIgnoreCase": {
+	          "redshift:ConsumerIdentifier": "ADX"
+	         }
+	       }
+	     },
+	     {
+            "Effect": "Allow",
+            "Action": [
+	          "redshift:DescribeDataSharesForProducer",
+	          "redshift:DescribeDataShares"
+	       ],
+            "Resource": "*"
+        },
+        {
+            "Effect": "Allow",
+            "Action": [
+                "apigateway:GET",
+            ],
+            "Resource": "*"
         }
     ]
 }
 ```
 
 ## AWS managed policy: `AWSDataExchangeProviderFullAccess`<a name="security-iam-awsmanpol-awsdataexchangeproviderfullaccess"></a>
+
+
+|  | 
+| --- |
+| The updated managed policy for the Amazon Redshift data product feature is in preview release for AWS Data Exchange and is subject to change\. | 
 
 You can attach the `AWSDataExchangeProviderFullAccess` policy to your IAM identities\.
 
@@ -139,7 +175,9 @@ This policy grants contributor permissions that provide data provider access to 
 This policy includes the following permissions:
 + `AWS Data Exchange` – Allows principals full access to provide data products on AWS Data Exchange\. Principals can create, update, and remove products on AWS Data Exchange\.
 + `AWS Marketplace` – Allows principals access to AWS Marketplace for providing and subscribing to data products, and managing subscription verification requests\. This is required to provide data products\.
-+ `Amazon S3` – Allows principals to get AWS Data Exchange related objects \(including data product files\) from Amazon Simple Storage Service, as well as to upload AWS Data Exchange related files to Amazon S3\. This is required for providing data products\.
++ `Amazon S3` – Allows principals to get AWS Data Exchange related objects \(including data product files\) from Amazon Simple Storage Service, and to upload AWS Data Exchange related files to Amazon S3\. This is required for providing data products\.
++ `Amazon API Gateway` – Allows principals to get Amazon API Gateway APIs from Amazon API Gateway, and to upload APIs\. This is required for providing Amazon API Gateway API data sets\.
++ `Amazon Redshift` – Allows principals to view AWS Data Exchange datashares for Amazon Redshift for import and to authorize them\. This is required for providing Amazon Redshift data products\.
 + `AWS KMS` – Allows access to AWS Key Management Service so that data can be encrypted and accessed using keys\.
 
 ```
@@ -159,6 +197,7 @@ This policy includes the following permissions:
                 "dataexchange:TagResource",
                 "dataexchange:UntagResource",
                 "dataexchange:PublishDataSet",
+                "dataexchange:SendApiAsset",
                 "tag:GetTagKeys",
                 "tag:GetTagValues"
             ],
@@ -178,7 +217,9 @@ This policy includes the following permissions:
                         "IMPORT_ASSETS_FROM_S3",
                         "IMPORT_ASSET_FROM_SIGNED_URL",
                         "EXPORT_ASSETS_TO_S3",
-                        "EXPORT_ASSET_TO_SIGNED_URL"
+                        "EXPORT_ASSET_TO_SIGNED_URL",
+                        "IMPORT_ASSET_FROM_API_GATEWAY_API",
+                        "IMPORT_ASSETS_FROM_REDSHIFT_DATA_SHARES"
                     ]
                 }
             }
@@ -259,6 +300,31 @@ This policy includes the following permissions:
                 "kms:DescribeKey",
                 "kms:ListAliases",
                 "kms:ListKeys"
+            ],
+            "Resource": "*"
+        },
+        {
+            "Effect": "Allow",
+            "Action": ["redshift:AuthorizeDataShare"],
+            "Resource": "*",
+            "Condition": {
+                "StringEqualsIgnoreCase": {
+                  "redshift:ConsumerIdentifier": "ADX"
+         }
+            }
+        },
+        {
+            "Effect": "Allow",
+            "Action": [
+                "redshift:DescribeDataSharesForProducer",
+                "redshift:DescribeDataShares"
+            ],
+            "Resource": "*"
+        },
+        {
+            "Effect": "Allow",
+            "Action": [
+                "apigateway:GET",
             ],
             "Resource": "*"
         }
@@ -342,7 +408,8 @@ This policy includes the following permissions:
             "Action": [
                 "dataexchange:CreateEventAction",
                 "dataexchange:UpdateEventAction",
-                "dataexchange:DeleteEventAction"
+                "dataexchange:DeleteEventAction",
+                "dataexchange:SendApiAsset"
             ],
             "Resource": "*"
         },
@@ -422,7 +489,10 @@ The following table provides details about updates to AWS managed policies for A
 
 | Change | Description | Date | 
 | --- | --- | --- | 
+|  [ AWSDataExchangeProviderFullAccess](#security-iam-awsmanpol-awsdataexchangeproviderfullaccess) and  [ AWSDataExchangeFullAccess](#security-iam-awsmanpol-awsdataexchangefullaccess) – Update to existing policies  |   Added `apigateway:GET`, a new permission to retrieve an API asset from Amazon API Gateway\.   | December 3, 2021 | 
+| [ AWSDataExchangeProviderFullAccess](#security-iam-awsmanpol-awsdataexchangeproviderfullaccess) and [ AWSDataExchangeSubscriberFullAccess](#security-iam-awsmanpol-awsdataexchangesubscriberfullaccess) – Update to existing policies |  Added `dataexchange:SendApiAsset`, a new permission to send a request to an API asset\.  | November 29, 2021 | 
+|  [ AWSDataExchangeProviderFullAccess](#security-iam-awsmanpol-awsdataexchangeproviderfullaccess) and [ AWSDataExchangeFullAccess](#security-iam-awsmanpol-awsdataexchangefullaccess) – Update to existing policies  |  Added `redshift:AuthorizeDataShare`, `redshift:DescribeDataSharesForProducer`, and` redshift:DescribeDataShares`, new permissions to authorize access to and create Amazon Redshift datashares\. \(Preview\)  | November 1, 2021 | 
 |  [AWSDataExchangeSubscriberFullAccess](#security-iam-awsmanpol-awsdataexchangesubscriberfullaccess) – Update to an existing policy  |  Added `dataexchange:CreateEventAction`, `dataexchange:UpdateEventAction`, and `dataexchange:DeleteEventAction`, new permissions to control access to automatically export new revisions of data sets\.  | September 30, 2021 | 
-|  [ AWSDataExchangeProviderFullAccess](#security-iam-awsmanpol-awsdataexchangeproviderfullaccess), and [ AWSDataExchangeFullAccess](#security-iam-awsmanpol-awsdataexchangefullaccess) – Update to existing policies  |  Added `dataexchange:PublishDataSet`, a new permission to control access to publishing new versions of data sets\.  | May 25, 2021 | 
+|  [ AWSDataExchangeProviderFullAccess](#security-iam-awsmanpol-awsdataexchangeproviderfullaccess) and [ AWSDataExchangeFullAccess](#security-iam-awsmanpol-awsdataexchangefullaccess) – Update to existing policies  |  Added `dataexchange:PublishDataSet`, a new permission to control access to publishing new versions of data sets\.  | May 25, 2021 | 
 |  [ AWSDataExchangeReadOnly](#security-iam-awsmanpol-awsdataexchangereadonly), [ AWSDataExchangeProviderFullAccess](#security-iam-awsmanpol-awsdataexchangeproviderfullaccess), and [ AWSDataExchangeFullAccess](#security-iam-awsmanpol-awsdataexchangefullaccess) – Update to existing policies  | Added aws\-marketplace:SearchAgreements and aws\-marketplace:GetAgreementTerms to enable viewing subscriptions for products and offers\. | May 12, 2021 | 
 |  AWS Data Exchange started tracking changes  |  AWS Data Exchange started tracking changes for its AWS managed policies\.  | April 20, 2021 | 

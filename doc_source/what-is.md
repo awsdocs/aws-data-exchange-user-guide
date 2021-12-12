@@ -22,7 +22,7 @@ A product is the unit of exchange in AWS Data Exchange that is published by a pr
 **Note**  
 When a product is initially created and published, all pre\-existing ﬁnalized revisions within its data sets are published at the same time\.
 
-With AWS Data Exchange, providers publish  data products and subscribers subscribe to those products\.
+With AWS Data Exchange, providers publish data products and subscribers subscribe to those products\.
 
 Providers can publish and view their products using the AWS Data Exchange console\. Providers can also list and view the details of their existing products using the AWS Marketplace Catalog API\. 
 
@@ -43,7 +43,7 @@ For more information, see [Migrating an existing product to automatic revision p
 
 ## Malware prevention<a name="ensuring-safe-data"></a>
 
-Security and compliance is a shared responsibility between you and AWS\. To promote a safe, secure, and trustworthy service for everyone, AWS Data Exchange scans all files published by providers before they are made available to subscribers\.  If AWS detects malware, the affected asset is removed\.
+Security and compliance is a shared responsibility between you and AWS\. To promote a safe, secure, and trustworthy service for everyone, AWS Data Exchange scans all S3 object files published by providers before they are made available to subscribers\. If AWS detects malware, the affected asset is removed\.
 
 **Important**  
 AWS Data Exchange does not guarantee that the data you consume as a subscriber is free of any potential malware\. We encourage that you conduct your own additional due diligence to ensure compliance with your internal security controls\. You can find anti\-malware and security products in AWS Marketplace\.
@@ -70,7 +70,7 @@ As a subscriber, you can explore available AWS Data Exchange products through th
 As an existing provider, you can access AWS Data Exchange through the following options:
 + Directly through the [AWS Data Exchange console](https://console.aws.amazon.com/dataexchange) \(**Publish data**\)
 + Programmatically using the following APIs:
-  + **AWS Data Exchange API** – Use theAPI operations to create, view, update, and delete data sets and revisions\. You can also use these API operations to import and export assets to and from those revisions\. For more information, see the [AWS Data Exchange API Reference](https://docs.aws.amazon.com/data-exchange/latest/apireference)\.
+  + **AWS Data Exchange API** – Use the API operations to create, view, update, and delete data sets and revisions\. You can also use these API operations to import and export assets to and from those revisions\. For more information, see the [AWS Data Exchange API Reference](https://docs.aws.amazon.com/data-exchange/latest/apireference)\.
   + **AWS Marketplace Catalog API** – Use the API operations to view and update products on AWS Data Exchange and AWS Marketplace\. For more information, see the [AWS Marketplace Catalog API Reference](https://docs.aws.amazon.com/marketplace-catalog/latest/api-reference/catalog-api-user-guide.html)\.
 
 ## Pricing<a name="pricing"></a>
@@ -94,6 +94,7 @@ AWS Data Exchange has a single, globally available product catalog offered by pr
 | The Amazon Redshift data set type is in preview release for AWS Data Exchange and is subject to change\. | 
 
 The following services are related to AWS Data Exchange:
-+ **Amazon S3** – AWS Data Exchange supports  Amazon S3 object data sets\.  Subscribers can export data sets to Amazon S3 programmatically\. For more information, see [What Is Amazon S3?](https://docs.aws.amazon.com/AmazonS3/latest/dev/Welcome.html) in the *Amazon Simple Storage Service User Guide*\.
++ **Amazon S3** – One supported asset type for data sets is Amazon S3 object snapshots\. Subscribers can export data sets to Amazon S3 programmatically\. For more information, see [What Is Amazon S3?](https://docs.aws.amazon.com/AmazonS3/latest/dev/Welcome.html) in the *Amazon Simple Storage Service User Guide*\.
++ **Amazon API Gateway** – Another supported asset type for data sets is APIs\. Subscribers can call the API programmatically, call the API from the AWS Data Exchange console, or download the OpenAPI specification file\. For more information, see [What is Amazon API Gateway?](https://docs.aws.amazon.com/apigateway/latest/developerguide/welcome.html) in the *Amazon API Gateway* Developer Guide\. 
 + \(Preview\) **Amazon Redshift** – AWS Data Exchange supports Amazon Redshift datashare data sets\. Subscribers can get read\-only access to query the data in Amazon Redshift without extracting, transforming, and loading data\. For more information, see [Getting started with Amazon Redshift](https://docs.aws.amazon.com/redshift/latest/gsg/getting-started.html) in the *Amazon Redshift Getting Started Guide* and [Amazon Redshift system overview](https://docs.aws.amazon.com/redshift/latest/dg/welcome.html) in the *Amazon Redshift Database Developer Guide*\.
 + **AWS Marketplace** – AWS Data Exchange allows data sets to be published as products on AWS Marketplace\. AWS Data Exchange providers must be registered as AWS Marketplace sellers, and can use the AWS Marketplace Management Portal or the AWS Marketplace Catalog API\. For information about becoming an AWS Marketplace subscriber, see [What Is AWS Marketplace?](https://docs.aws.amazon.com/marketplace/latest/buyerguide/what-is-marketplace.html) in the *AWS Marketplace Buyer Guide*\. For information about becoming an AWS Marketplace seller, see [What Is AWS Marketplace?](https://docs.aws.amazon.com/marketplace/latest/userguide/what-is-marketplace.html) in the *AWS Marketplace Seller Guide*\.

@@ -110,9 +110,9 @@ For example, you could create a policy to allow importing and exporting to AWS D
 ```
 
 These permissions allow providers to import and export with AWS Data Exchange\. The policy includes the following permissions and restrictions:
-+ **s3:putObject and s3:putObjectAcl** – These permissions are restricted only to S3 buckets that contain `aws-data-exchange` in their name\. These permissions allows providers to write to AWS Data Exchange service buckets when importing from Amazon S3\.
-+ **s3:getObject** – This permission is restricted to S3 buckets that contain `aws-data-exchange` in their name\. This permission allows customers to read from AWS Data Exchange service buckets when exporting out of AWS Data Exchange to Amazon S3\.
-+ These permissions are restricted to requests made via AWS Data Exchange using the IAM `CalledVia` condition\. This only allows them to be used in the context of the AWS Data Exchange console or API\.
++ **s3:PutObject** and **s3:PutObjectAcl** – These permissions are restricted only to S3 buckets that contain `aws-data-exchange` in their name\. These permissions allows providers to write to AWS Data Exchange service buckets when importing from Amazon S3\.
++ **s3:GetObject** – This permission is restricted to S3 buckets that contain `aws-data-exchange` in their name\. This permission allows customers to read from AWS Data Exchange service buckets when exporting from AWS Data Exchange to Amazon S3\.
++ These permissions are restricted to requests made by using AWS Data Exchange with the IAM `CalledVia` condition\. This only allows them to be used in the context of the AWS Data Exchange console or API\.
 
 **Note**  
 Your users may also need additional permissions to read to or write from your own S3 buckets and objects that are not covered in this example\.
@@ -121,7 +121,9 @@ For more information about users, groups, roles, and permissions, see [Identitie
 
 #### Resource\-based policies<a name="access-control-manage-access-intro-resource-policies"></a>
 
-Other services, such as Amazon S3, also support resource\-based permissions policies\. For example, you can attach a policy to an S3 bucket to manage access permissions to that bucket\.
+AWS Data Exchange does not support resource\-based policies\.
+
+Other services, such as Amazon S3, do support resource\-based permissions policies\. For example, you can attach a policy to an S3 bucket to manage access permissions to that bucket\.
 
 ### Specifying policy elements: actions, effects, and principals<a name="access-control-specify-control-tower-actions"></a>
 
@@ -152,6 +154,7 @@ When you grant permissions, you can use the IAM policy language to specify the c
 | "dataexchange:JobType":"IMPORT\_ASSETS\_FROM\_S3" | Scopes permissions to jobs that import assets from Amazon S3\. | String | 
 | "dataexchange:JobType":"IMPORT\_ASSET\_FROM\_SIGNED\_URL" | Scopes permissions to jobs that import assets from a signed URL\. | String | 
 | "dataexchange:JobType":"IMPORT\_ASSET\_FROM\_REDSHIFT\_DATA\_SHARES" | Scopes permissions to jobs that import assets from Amazon Redshift\. | String | 
+| "dataexchange:JobType":"IMPORT\_ASSET\_FROM\_API\_GATEWAY\_API" | Scopes permissions to jobs that import assets from Amazon API Gateway\. | String | 
 | "dataexchange:JobType":"EXPORT\_ASSETS\_TO\_S3" | Scopes permissions to jobs that export assets to Amazon S3\. | String | 
 | "dataexchange:JobType":"EXPORT\_ASSETS\_TO\_SIGNED\_URL" | Scopes permissions to jobs that export assets to a signed URL\. | String | 
 | "dataexchange:JobType":EXPORT\_REVISIONS\_TO\_S3" | Scopes permissions to jobs that export revisions to Amazon S3\. | String | 

@@ -19,7 +19,7 @@ If you change the product offer terms after a subscriber makes the request, the 
 
 The AWS Data Exchange console maintains a history of requests\. You control when you delete the subscriber’s contact details and personally identifiable information \(PII\)\.
 
- You can view, approve, or decline  all subscription verification requests for all of your products on the **Subscription verification** page under **Publish data** on the AWS Data Exchange console\. 
+ You can view, approve, or decline all subscription verification requests for all of your products on the **Subscription verification** page under **Publish data** on the AWS Data Exchange console\. 
 
 **Note**  
 Each subscription request is uniquely identified using its ID\. The ID is visible to both the provider and the subscriber\. You can use the subscription request ID in your communications with the subscriber\.
@@ -49,6 +49,36 @@ The subscriber information you collect through subscription verification must be
 1. From **Subscription verification**, choose **View pending requests**\.
 
 1. Choose **Approve**\.
+
+### Approving requests for products containing APIs<a name="approve-add-custom-metadata"></a>
+
+You can approve a subscription request for a product containing APIs\. You can also add custom metadata to product containing APIs that is sent in the header of each AWS Data Exchange request for the specific subscription\. The custom metadata isn't visible to subscribers\.
+
+**To approve a subscription request for a product containing APIs**
+
+1. Open your web browser, and go to the [AWS Data Exchange console](https://console.aws.amazon.com/dataexchange)\.
+
+1. From the left navigation pane, under **Publish data**, choose **Subscription verification**\.
+
+1. From **Subscription verification**, choose **View pending requests**\.
+
+1. Choose **Approve and add custom API metadata**\.
+
+1. On the modal, enter the key\-value pair and then choose **Approve and add custom API metadata**\.
+**Note**  
+You can add additional key\-value pairs if necessary by choosing **Add** and then entering an additional key\-value pair\.
+
+1. You are returned to the **Subscription verification** page\. A message informs you that you have successfully accepted the subscription request\.
+
+1. To view the custom metadata, go to **Products**, select your product with APIs and then select the **Subscriptions** tab\.
+
+1. Under **Public and custom subscriptions**, you can:
+
+   1.  Select the subscription, and choose **View custom metadata** to see the key\-value pairs you added\.
+
+   1.  Select the subscription, and choose **Edit custom metadata** to edit, add, or remove the key\-value pairs for this subscription\.
+**Note**  
+If you add three or more key\-value pairs, the **Custom metadata for APIs** column in the **Public and custom subscriptions** table displays the first key\-value pair, and then displays a number of key\-value pairs underneath the first key\-value pair\. For example: **`keyExample-valueExample` \+2 more**
 
 ### Declining requests<a name="decline-request"></a>
 

@@ -5,7 +5,13 @@
 | --- |
 | The Amazon Redshift data set type is in preview release for AWS Data Exchange and is subject to change\. | 
 
-AWS Data Exchange jobs are asynchronous import or export operations that you can use to create or copy assets, in addition to export operations you can use to copy revisions\. If you're a data set owner \(provider\), you can perform both import and export operations\. However, a subscriber with an entitlement to a data set can only perform an export operation\. To create or copy assets or copy revisions through jobs, you can use the AWS Management Console, AWS Command Line Interface \(AWS CLI\), your own REST application, or one of the AWS SDKs\.
+AWS Data Exchange jobs are asynchronous import or export operations\. 
+
+As a provider, you can create and manage your data sets that you want to publish to a product\. You can download \(export\) or copy your assets or revisions to Amazon Simple Storage Service \(Amazon S3\) or a signed URL\. In addition, providers can import assets from an Amazon API Gateway API or import assets from an Amazon Redshift datashare \(Preview\)\.
+
+As a subscriber, you can view and access the data sets that you have an entitlement to through a subscription\. You can use the API operations to download \(export\) or copy your entitled data sets to Amazon S3 for use with a variety of AWS analytics and machine learning services\.
+
+To create or copy assets or copy revisions through jobs, you can use the AWS Management Console, AWS Command Line Interface \(AWS CLI\), your own REST application, or one of the AWS SDKs\.
 
 Jobs are deleted 90 days after they are created\.
 
@@ -24,6 +30,7 @@ Jobs have the following properties:
 + **Job type** – The following job types are supported: 
   + Import from Amazon Simple Storage Service \(Amazon S3\)
   + Import from signed URL
+  + Import from Amazon API Gateway API
   + Import from Amazon Redshift datashares \(Preview\)
   + Export from Amazon S3
   + Export from signed URL
@@ -69,6 +76,7 @@ You can import assets to a revision in the following ways:
 **Topics**
 + [Importing assets from an S3 bucket](#importing-from-s3)
 + [Importing assets from a signed URL](#importing-from-url)
++ [Importing assets from an Amazon API Gateway API](#import-API-asset)
 + [Importing assets from an Amazon Redshift datashare \(Preview\)](#import-RS-asset)
 
 ### Importing assets from an S3 bucket<a name="importing-from-s3"></a>
@@ -179,6 +187,69 @@ The signed URL expires one hour after it's created\.
 
    A job is started to import your asset into your data set\. After the job is ﬁnished, the **State** ﬁeld in the **Jobs** section is updated to **Completed**\.
 
+### Importing assets from an Amazon API Gateway API<a name="import-API-asset"></a>
+
+When you import assets from Amazon API Gateway to AWS Data Exchange, the AWS Identity and Access Management \(IAM\) permissions you use must include the ability to write to the AWS Data Exchange service S3 buckets and to read from the S3 bucket where your assets are stored\. 
+
+#### Importing API assets from an Amazon API Gateway API \(AWS SDKs\)<a name="import-api-asset-prog"></a>
+
+**Note**  
+Currently, the `SendApiAsset` operation is not supported for the following SDKs:  
+AWS SDK for \.NET
+AWS SDK for C\+\+
+AWS SDK for Java 2\.x
+
+**To import assets from an Amazon API Gateway API \(AWS SDKs\)**
+
+1. Create a `CreateJob` request of type `IMPORT_ASSET_FROM_API_GATEWAY_API`\.
+
+1. Include the following in the request:
+   + `ApiID`
+   + `DataSetID`
+   + `ProtocolType`
+   + `RevisionID`
+   + `Stage`
+
+1. Start the `CreateJob` request with a `StartJob` operation that requires the `JobId` returned in step 1\.
+
+1. \(Optional\) Poll the `GetJob` operation to wait for the Job to complete\.
+
+1. \(Optional\) Update the assets' name property after they are created\.
+
+#### Importing API assets from an Amazon API Gateway API \(console\)<a name="import-api-asset-console"></a>
+
+**To import an asset from an Amazon API Gateway API \(console\)**
+
+1. Open your web browser and go to the [AWS Data Exchange console](https://console.aws.amazon.com/dataexchange)\.
+
+1. In the left side navigation pane, for **Publish data**, choose **Owned data sets**\.
+
+1. In **Owned data sets**, choose the data set that has the asset you want to update\.
+
+1. On the **Revisions** tab, choose **Create revision** to open the **Create revision** page\.
+
+   1. For **Revision settings**, provide an optional comment for your revision that describes the purpose of the revision\.
+
+   1. For **Add tags – optional**, add tags associated with the resource\.
+
+   1. Choose **Create**\.
+
+      Your new revision is created\.
+
+1. For the **API assets** section, choose **Add API stage**\.
+
+1. On the **Add API stage** page, select the **Amazon API Gateway API** and the **Stage name** from your AWS account or another account\.
+
+1. For **Document API for subscribers**:
+
+   1. Update the **API name** to a clear and concise name that subscribers can understand\.
+
+   1. Document the OpenAPI 3\.0 specification by entering the specification in the field, importing the specification by choosing **Import from \.JSON file**, or importing the specification by choosing **Import from Amazon API Gateway**\.
+
+1. Choose **Add API stage**\.
+
+   A job is started to import your API assets into your data set\. After the job is ﬁnished, the **State** ﬁeld in the **Jobs** section is updated to **Completed**\.
+
 ### Importing assets from an Amazon Redshift datashare \(Preview\)<a name="import-RS-asset"></a>
 
 
@@ -188,7 +259,7 @@ The signed URL expires one hour after it's created\.
 
 #### Importing assets from an Amazon Redshift datashare \(AWS SDKs\)<a name="import-RS-asset-prog"></a>
 
-**To import assets from a Amazon Redshift datashare \(AWS SDKs\)**
+**To import assets from an Amazon Redshift datashare \(AWS SDKs\)**
 
 1. Create a `CreateJob` request of type `IMPORT_ASSETS_FROM_REDSHIFT_DATA_SHARES`\.
 
@@ -206,7 +277,7 @@ The signed URL expires one hour after it's created\.
 
 #### Importing assets from an Amazon Redshift datashare \(console\)<a name="import-RS-asset-console"></a>
 
-**To import an asset from a Amazon Redshift datashare \(console\)**
+**To import an asset from an Amazon Redshift datashare \(console\)**
 
 1. Open your web browser and go to the [AWS Data Exchange console](https://console.aws.amazon.com/dataexchange)\.
 
@@ -648,7 +719,6 @@ When you export a revision, each asset becomes an object in the S3 bucket\. The 
 | --- | --- | 
 | $\{Asset\.Id\} | The Id of the asset\. | 
 | $\{Asset\.Name\} | The name of the asset\. | 
-| $\{Dataset\.ID\} | The Id of the data set\. | 
 | $\{Revision\.CreatedAt\} | The UTC date and time the revision was created, in the following format: YYYY\-MM\-DDTHH:MM:SSZ\. For example: 2021\-10\-08T16:33:19\.787Z | 
 | $\{Revision\.CreatedAt\.Day\} | The day of the month the revision was created\. | 
 | $\{Revision\.CreatedAt\.Month\} | The month the revision was created\. | 

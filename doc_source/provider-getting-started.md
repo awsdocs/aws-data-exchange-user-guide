@@ -74,6 +74,11 @@ We strongly recommend that you sign and submit the tax form electronically\. Oth
 
 ## Step 3: Confirm eligibility of your data<a name="confirm-data-eligibility"></a>
 
-You're limited to distributing data sets that meet the legal eligibility requirements set forth in the Terms and Conditions for AWS Marketplace Sellers\. If a provider breaches these terms in any way, the prohibited product is removed from AWS Data Exchange and the provider might be suspended from the service\. For more information, see [Publishing guidelines](publishing-guidelines.md)\.
+To confirm the eligibility of your data, review the [Publishing guidelines](publishing-guidelines.md)\.
 
-If you have questions about the eligibility of your data set, access the [AWS Support Dashboard](https://console.aws.amazon.com/support/cases#/create?issueType=customer-service) and create a case in the AWS Management Console\. After you've reviewed the publishing guidelines for data products on AWS Data Exchange, and you've confirmed that your data set can be listed, you create your product\.
+If you have questions about the eligibility of your data set:
++ Contact [ AWS Support](https://console.aws.amazon.com/support/home#/case/create?issueType=customer-service) 
++ Send an email message to [dataexchangehelp@amazon\.com](mailto://dataexchangehelp@amazon.com)
++ Access the [AWS Support Dashboard](https://console.aws.amazon.com/support/home#/case/create?issueType=customer-service) and create a case in the AWS Management Console\.
+
+You can create your product after you've reviewed the publishing guidelines for data products on AWS Data Exchange, and you've conﬁrmed that your data set can be listed\.

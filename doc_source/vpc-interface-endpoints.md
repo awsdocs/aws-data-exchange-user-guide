@@ -4,6 +4,9 @@ You can establish a private connection between your virtual private cloud \(VPC\
 
 Each interface endpoint is represented by one or more [Elastic Network Interfaces](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/using-eni.html) in your subnets\. 
 
+**Note**  
+Every AWS Data Exchange action, except for `SendAPIAsset`, is supported for VPC\. 
+
 For more information, see [Interface VPC endpoints \(AWS PrivateLink\)](https://docs.aws.amazon.com/vpc/latest/userguide/vpce-interface.html) in the *Amazon VPC User Guide*\. 
 
 ## Considerations for AWS Data Exchange VPC endpoints<a name="vpc-endpoint-considerations"></a>
@@ -37,7 +40,7 @@ For more information, see [Controlling access to services with VPC endpoints](ht
 **Example: VPC endpoint policy for AWS Data Exchange actions**  
 The following is an example of an endpoint policy for AWS Data Exchange\. When attached to an endpoint, this policy grants access to the listed AWS Data Exchange actions for all principals on all resources\.
 
-This example VPC endpoint policy allows full access only to the IAM user `bts` in AWS account `123456789012` from `vpc-12345678`\. The IAM user `readUser` is allowed to read the resources, but all other IAM principals are denied access to the endpoint\.
+This example VPC endpoint policy allows full access only to the AWS Identity and Access Management \(IAM\) user `bts` in AWS account `123456789012` from `vpc-12345678`\. The IAM user `readUser` is allowed to read the resources, but all other IAM principals are denied access to the endpoint\.
 
 ```
 { 

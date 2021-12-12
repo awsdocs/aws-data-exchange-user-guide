@@ -14,8 +14,9 @@ At a high level, this is how to use AWS Data Exchange as a provider:
 1. **Provider creates a data set, a revision, and imports assets** – You can create data sets through the AWS Data Exchange console or API\. Then, you can create revisions in the data set, and add assets to that revision\. For more information, see [Data in AWS Data Exchange](data-sets.md)\.
 
 1. **Provider creates a product and its offer** – To create a product, you must provide product details, include one or more data sets, and optionally provide public offer details\. For more information, see [Publishing a new product](publishing-products.md)\.
-
-1. **AWS Data Exchange copies the data set** – When an owned data set is published in a product, AWS Data Exchange creates a copy of the data set\. Subscribers can access that copy of the data set as an entitled data set\.
+   + **Products containing Amazon S3 objects** – When an owned data set containing S3 objects is published in a product, AWS Data Exchange creates a copy of the data set\. Subscribers can access that copy of the data set as an entitled data set\.
+   + **Products containing Amazon API Gateway APIs** – When an owned data set containing Amazon API Gateway APIs is published in a product, AWS Data Exchange allows requests to the AWS Data Exchange endpoint to proxy through to your Amazon API Gateway API\. Subscribers can view the API and download the API specification as an entitled data set\. Subscribers can also call the API through the AWS Data Exchange console\.
+   + **Products containing Amazon Redshift datashares** – When an owned data set containing Amazon Redshift datashares is published in a product, AWS Data Exchange allows requests to the AWS Data Exchange endpoint to proxy through to your Amazon Redshift datashare\. Subscribers can have read\-only access to the tables, views, schemas, and user\-defined functions that you've added to the datashare\.
 
 1. **\(Optional\) Provider enables subscription verification ** – If you enable subscription verification, subscribers must request a subscription to your product\. This gives you an opportunity to review potential subscribers before they access your data sets\. For more information, see [Subscription verification for providers](subscription-verification-pro.md)\.
 

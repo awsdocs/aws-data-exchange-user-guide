@@ -37,4 +37,8 @@ Each revision may contain all the data for the data set \(updated for the revisi
 
 When you subscribe to a product, you have access to all data sets in the product\. When the data provider creates the offer, they give you access to 0 or more historical revisions, up to all historical revisions\. They can also give you access to future revisions that are made available during your subscription period\. The terms of the subscription are shown on the product details page in the AWS Data Exchange console\.
 
-After you subscribe to a product, you can manually export each revision or asset individually, or you can select to automatically export new revisions to your Amazon S3 buckets \(up to 5 buckets maximum\) when the provider publishes new revisions\. For more information about how to export revisions, see [Exporting revisions](jobs.md#exporting-revisions)\.
+After you subscribe to a product containing Amazon S3 objects, you can manually export each revision or asset individually, or you can select to automatically export new revisions to your Amazon S3 buckets \(up to 5 buckets maximum\) when the provider publishes new revisions\. For more information, see [Subscribing to a product containing file\-based data](subscribing-to-product.md#subscribing-to-data-product)\. For more information about how to export revisions, see [Exporting revisions](jobs.md#exporting-revisions)\.
+
+After you subscribe to a product containing an Amazon API Gateway API, you can view and invoke the data provider's API\. For more information, see [Subscribing to a product containing APIs](subscribing-to-product.md#subscribing-to-API-product)\.
+
+After you subscribe to a product containing Amazon Redshift datashares, you get access to query the data in Amazon Redshift\. For more information, see [Subscribing to a product containing Amazon Redshift datashares \(preview\)](subscribing-to-product.md#subscribing-to-Redshift-product)\. 

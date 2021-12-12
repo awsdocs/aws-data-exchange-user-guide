@@ -18,13 +18,13 @@ To create, view, update, or delete data sets, you can use the AWS Data Exchange 
 
 Assets are the *data* in AWS Data Exchange\. 
 
-Each asset can be either of the following:
-+ A snapshot of an Amazon S3 object, with a maximum size of 10 GB
+The type of asset defines how the data is delivered to the subscriber through the data sets and products that contain it\.
+
+An asset can be any of the following:
++ A file stored on your local computer
++ A file stored as an object in Amazon Simple Storage Service \(Amazon S3\)
++ A REST API created in Amazon API Gateway
 + An Amazon Redshift datashare \(preview\)
-
-To create or copy Amazon S3 object assets through jobs, you can use the AWS Data Exchange console\. You can also perform the tasks programmatically through the AWS CLI, your own REST application, or one of the AWS SDKs\.
-
-A data set owner can both import and export assets, but someone with an entitlement to a data set can only export\. For more information, see [Jobs in AWS Data Exchange](jobs.md)\.
 
 ### Asset structure<a name="assets-structure"></a>
 
@@ -35,7 +35,7 @@ Assets have the following parameters:
 + `Arn` – A unique identifier for an AWS resource name\.
 + `CreatedAt` and `UpdatedAt` – Date and timestamps for the creation and last update of the asset\.
 + `AssetDetails` – Information about the asset\.
-+ `AssetType` – Either a snapshot of an Amazon S3 object or an Amazon Redshift datashare \(Preview\)\.
++ `AssetType` – Either a snapshot of an Amazon S3 object, an Amazon API Gateway API, or an Amazon Redshift datashare \(Preview\)\.
 
 **Example asset resource**  
 
@@ -56,6 +56,34 @@ Assets have the following parameters:
     }
 }
 ```
+
+### Asset types<a name="asset-types"></a>
+
+#### Amazon S3 object assets<a name="asset-types.title"></a>
+
+With S3 object assets, subscribers can access a copy of the data set as an entitled data set and export the assets\.
+
+A provider \(data set owner\) can both import and export Amazon S3 object assets using the AWS Data Exchange console, programmatically through the AWS CLI, their own REST application, or one of the AWS SDKs\. For more information, about importing S3 assets see [Importing assets from an S3 bucket](jobs.md#importing-from-s3)\. For more information about exporting assets, see [Exporting assets to an S3 bucket](jobs.md#exporting-from-s3)\.
+
+#### API assets<a name="API-asset-type"></a>
+
+With API assets, subscribers can view the API and download the API specification as an entitled data set\. Subscribers can also make API calls to AWS Data Exchange\-managed endpoints, which are then proxied through to provider endpoints\.
+
+A provider \(data set owner\) who has existing Amazon API Gateway API can add an API asset using the AWS Data Exchange console, programmatically through the AWS CLI, or one of the AWS SDKs\. For more information about importing API assets, see [Importing assets from an Amazon API Gateway API](jobs.md#import-API-asset)\.
+
+**Note**  
+Currently, the `SendApiAsset` operation is not supported for the following SDKs:  
+AWS SDK for \.NET
+AWS SDK for C\+\+
+SDK for Java 2\.x
+
+Providers who do not have an existing Amazon API Gateway API must create one before adding an API asset to their product\. For more information, see [Developing a REST API in API Gateway](https://docs.aws.amazon.com/apigateway/latest/developerguide/rest-api-develop.html) in the *Amazon API Gateway Developer Guide*\.
+
+#### Amazon Redshift datashare assets \(Preview\)<a name="RS-asset-type"></a>
+
+ With Amazon Redshift datashare assets, subscribers can get read\-only access to query the data in Amazon Redshift without extracting, transforming, and loading data\. 
+
+ For more information about importing Amazon Redshift datashare assets, see [Importing assets from an Amazon Redshift datashare \(Preview\)](jobs.md#import-RS-asset)\.
 
 ## Revisions<a name="revisions"></a>
 
@@ -110,11 +138,13 @@ Revisions have the following parameters:
 
 A data set in AWS Data Exchange is a *collection* of data that can change over time\. 
 
-When you access an Amazon S3 data set, you're accessing a speciﬁc revision in the data set\. This structure enables providers to change the data available in data sets over time without having to worry about changes to historical data\.
+When subscribers access an Amazon S3 data set, they're accessing a speciﬁc revision in the data set\. This structure enables providers to change the data available in data sets over time without having to worry about changes to historical data\.
 
-During the Public Preview, when you access an Amazon Redshift data set, you're accessing an AWS Data Exchange datashare for Amazon Redshift\. This datashare gives you read\-only access to the schemas, tables, views, and user\-defined functions that the provider has added to the datashares\. 
+When subscribers access an API data set, they're accessing a data set that contains API assets, which enable subscribers to make API calls to AWS Data Exchange\-managed endpoints, which are then proxied through to provider endpoints\.
 
-To create, view, update, or delete data sets, you can use the AWS Data Exchange console, AWS CLI, your own REST client, or one of the AWS SDKs\. For more information about programmatically managing AWS Data Exchange data sets, see the [AWS Data Exchange API Reference](https://docs.aws.amazon.com/data-exchange/latest/apireference/welcome.html)\.
+During the Public Preview, when subscribers access an Amazon Redshift data set, they're accessing an AWS Data Exchange datashare for Amazon Redshift\. This datashare gives subscribers read\-only access to the schemas, tables, views, and user\-defined functions that the provider has added to the datashares\. 
+
+To create, view, update, or delete data sets, providers can use the AWS Data Exchange console, AWS CLI, your own REST client, or one of the AWS SDKs\. For more information about programmatically managing AWS Data Exchange data sets, see the [AWS Data Exchange API Reference](https://docs.aws.amazon.com/data-exchange/latest/apireference/welcome.html)\.
 
 **Topics**
 + [Owned data sets](#owned-data-sets)
@@ -145,6 +175,7 @@ As a data provider, you also have access to the entitled data set view that your
 
 The following data set types are supported in AWS Data Exchange: 
 + [Amazon S3 object data set](#S3-object-data-set-type)
++ [API data set](#api-data-set-type)
 + [Amazon Redshift data set \(preview\)](#RS-data-set-type)
 
 #### Amazon S3 object data set<a name="S3-object-data-set-type"></a>
@@ -154,6 +185,12 @@ An Amazon S3 object data set is a data set that contains flat files permitted by
 As a data subscriber, you can export data either locally \(download to your computer\) or to your Amazon S3 bucket\.
 
 As a data provider, you can import any type of flat file from your Amazon S3 bucket and add it to the data set\.
+
+#### API data set<a name="api-data-set-type"></a>
+
+An API data set is data set that contains API assets\. API assets enable subscribers to make API calls to AWS Data Exchange\-managed endpoints, which are then proxied through to provider endpoints\.
+
+As a data provider, you create an API in Amazon API Gateway and add it to the data set to license access to your API upon subscription\.
 
 #### Amazon Redshift data set \(preview\)<a name="RS-data-set-type"></a>
 

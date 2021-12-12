@@ -25,11 +25,11 @@ To specify an action, use the `dataexchange:` prefix followed by the API operati
 | DeleteRevision | dataexchange:DeleteRevision |  Revision  | aws:RequestTag | 
 | ListDataSetRevisions | dataexchange:ListDataSetRevisions | Data set | aws:RequestTag | 
 | ListRevisionAssets | dataexchange:ListRevisionAssets |  Revision  | aws:RequestTag | 
-| CreateEventAction | dataexchange:CreateEventAction |  EventAction  | dataexchange:JobType | 
-| UpdateEventAction | dataexchange:UpdateEventAction |  EventAction  | dataexchange:JobType | 
-| GetEventAction | dataexchange:GetEventAction |  EventAction  | dataexchange:JobType | 
-| ListEventActions | dataexchange:ListEventActions |  EventAction  | dataexchange:JobType | 
-| DeleteEventAction | dataexchange:DeleteEventAction |  EventAction  | dataexchange:JobType | 
+| CreateEventAction | dataexchange:CreateEventAction | N/A | N/A | 
+| UpdateEventAction | dataexchange:UpdateEventAction |  EventAction  | N/A | 
+| GetEventAction | dataexchange:GetEventAction |  EventAction  | N/A | 
+| ListEventActions | dataexchange:ListEventActions | N/A | N/A | 
+| DeleteEventAction | dataexchange:DeleteEventAction |  EventAction  | N/A | 
 | CreateJob | dataexchange:CreateJob | N/A | dataexchange:JobType | 
 | GetJob | dataexchange:GetJob | Job | dataexchange:JobType | 
 | StartJob\*\* | dataexchange:StartJob | Job | dataexchange:JobType | 
@@ -42,8 +42,15 @@ To specify an action, use the `dataexchange:` prefix followed by the API operati
 | DeleteAsset | dataexchange:DeleteAsset |  Asset  | N/A | 
 | GetAsset | dataexchange:GetAsset |  Asset  | N/A | 
 | UpdateAsset | dataexchange:UpdateAsset |  Asset  | N/A | 
+| SendApiAsset | dataexchange:SendApiAsset |  Asset  | N/A | 
 
-**\*\*** Additional IAM permissions might be needed depending on the type of the job you are starting\. See the table below for the AWS Data Exchange job types and associated additional IAM permissions\. For more information about jobs, see [Jobs in AWS Data Exchange](jobs.md)\.
+**\*\*** Additional IAM permissions might be needed depending on the type of the job you are starting\. See the following table for the AWS Data Exchange job types and associated additional IAM permissions\. For more information about jobs, see [Jobs in AWS Data Exchange](jobs.md)\.
+
+**Note**  
+Currently, the `SendApiAsset` operation is not supported for the following SDKs:  
+AWS SDK for \.NET
+AWS SDK for C\+\+
+SDK for Java 2\.x
 
 
 **AWS Data Exchange job type permissions for `StartJob`**  
@@ -51,7 +58,8 @@ To specify an action, use the `dataexchange:` prefix followed by the API operati
 | Job type | Additional IAM permissions needed | 
 | --- | --- | 
 | IMPORT\_ASSETS\_FROM\_S3 | dataexchange:CreateAsset | 
-| IMPORT\_ASSETS\_FROM\_SIGNED\_URL | dataexchange:CreateAsset | 
+| IMPORT\_ASSET\_FROM\_SIGNED\_URL | dataexchange:CreateAsset | 
+| IMPORT\_ASSETS\_FROM\_API\_GATEWAY\_API | dataexchange:CreateAsset | 
 | IMPORT\_ASSETS\_FROM\_REDSHIFT\_DATA\_SHARES | dataexchange:CreateAsset, redshift:AuthorizeDataShare | 
 | EXPORT\_ASSETS\_TO\_S3 | dataexchange:GetAsset | 
 | EXPORT\_ASSETS\_TO\_SIGNED\_URL | dataexchange:GetAsset | 
@@ -63,7 +71,7 @@ You can scope data set actions to the revision or asset level through the use of
 arn:aws:dataexchange:us-east-1:123456789012:data-sets/99EXAMPLE23c7c272897cf1EXAMPLE7a/revisions/*/assets/*
 ```
 
-Some AWS Data Exchange actions can only be performed on the AWS Data Exchange console\. These actions are integrated with AWS Marketplace functionality and require the following AWS Marketplace permissions\.
+Some AWS Data Exchange actions can only be performed on the AWS Data Exchange console\. These actions are integrated with AWS Marketplace functionality\. The actions require the AWS Marketplace permissions shown in the following table\.
 
 
 **AWS Data Exchange console\-only actions for subscribers**  

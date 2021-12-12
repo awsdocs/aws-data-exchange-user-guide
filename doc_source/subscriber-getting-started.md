@@ -19,7 +19,8 @@ Before you can use AWS Data Exchange, you must sign up for AWS and create an AWS
 ## Step 2: Subscribe to a product<a name="subscribe-to-product"></a>
 
 You can subscribe to a product on AWS Data Exchange\. For more information, see the following: 
-+ [Subscribing to a file\-based data product](subscribing-to-product.md#subscribing-to-data-product)
-+ [Subscribing to an Amazon Redshift data product \(preview\)](subscribing-to-product.md#subscribing-to-Redshift-product)
++ [Subscribing to a product containing file\-based data](subscribing-to-product.md#subscribing-to-data-product)
++ [Subscribing to a product containing APIs](subscribing-to-product.md#subscribing-to-API-product)
++ [Subscribing to a product containing Amazon Redshift datashares \(preview\)](subscribing-to-product.md#subscribing-to-Redshift-product)
 
 If you subscribe to a paid product, you are billed on your AWS bill\. You get access to the entitled data set\. For more information, see [Subscribing to data products on AWS Data Exchange](subscribe-to-data-sets.md)\.

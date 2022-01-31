@@ -88,13 +88,8 @@ AWS Data Exchange has a single, globally available product catalog offered by pr
 
 ## Related services<a name="related-services"></a>
 
-
-|  | 
-| --- |
-| The Amazon Redshift data set type is in preview release for AWS Data Exchange and is subject to change\. | 
-
 The following services are related to AWS Data Exchange:
 + **Amazon S3** – One supported asset type for data sets is Amazon S3 object snapshots\. Subscribers can export data sets to Amazon S3 programmatically\. For more information, see [What Is Amazon S3?](https://docs.aws.amazon.com/AmazonS3/latest/dev/Welcome.html) in the *Amazon Simple Storage Service User Guide*\.
 + **Amazon API Gateway** – Another supported asset type for data sets is APIs\. Subscribers can call the API programmatically, call the API from the AWS Data Exchange console, or download the OpenAPI specification file\. For more information, see [What is Amazon API Gateway?](https://docs.aws.amazon.com/apigateway/latest/developerguide/welcome.html) in the *Amazon API Gateway* Developer Guide\. 
-+ \(Preview\) **Amazon Redshift** – AWS Data Exchange supports Amazon Redshift datashare data sets\. Subscribers can get read\-only access to query the data in Amazon Redshift without extracting, transforming, and loading data\. For more information, see [Getting started with Amazon Redshift](https://docs.aws.amazon.com/redshift/latest/gsg/getting-started.html) in the *Amazon Redshift Getting Started Guide* and [Amazon Redshift system overview](https://docs.aws.amazon.com/redshift/latest/dg/welcome.html) in the *Amazon Redshift Database Developer Guide*\.
++ **Amazon Redshift** – AWS Data Exchange supports Amazon Redshift data sets\. Subscribers can get read\-only access to query the data in Amazon Redshift without extracting, transforming, and loading data\. For more information, see [Getting started with Amazon Redshift](https://docs.aws.amazon.com/redshift/latest/gsg/getting-started.html) in the *Amazon Redshift Getting Started Guide* and [Amazon Redshift system overview](https://docs.aws.amazon.com/redshift/latest/dg/welcome.html) in the *Amazon Redshift Database Developer Guide*\.
 + **AWS Marketplace** – AWS Data Exchange allows data sets to be published as products on AWS Marketplace\. AWS Data Exchange providers must be registered as AWS Marketplace sellers, and can use the AWS Marketplace Management Portal or the AWS Marketplace Catalog API\. For information about becoming an AWS Marketplace subscriber, see [What Is AWS Marketplace?](https://docs.aws.amazon.com/marketplace/latest/buyerguide/what-is-marketplace.html) in the *AWS Marketplace Buyer Guide*\. For information about becoming an AWS Marketplace seller, see [What Is AWS Marketplace?](https://docs.aws.amazon.com/marketplace/latest/userguide/what-is-marketplace.html) in the *AWS Marketplace Seller Guide*\.

@@ -1,13 +1,8 @@
 # Jobs in AWS Data Exchange<a name="jobs"></a>
 
-
-|  | 
-| --- |
-| The Amazon Redshift data set type is in preview release for AWS Data Exchange and is subject to change\. | 
-
 AWS Data Exchange jobs are asynchronous import or export operations\. 
 
-As a provider, you can create and manage your data sets that you want to publish to a product\. You can download \(export\) or copy your assets or revisions to Amazon Simple Storage Service \(Amazon S3\) or a signed URL\. In addition, providers can import assets from an Amazon API Gateway API or import assets from an Amazon Redshift datashare \(Preview\)\.
+As a provider, you can create and manage your data sets that you want to publish to a product\. You can download \(export\) or copy your assets or revisions to Amazon Simple Storage Service \(Amazon S3\) or a signed URL\. In addition, providers can import assets from an Amazon API Gateway API or import assets from an Amazon Redshift data set\.
 
 As a subscriber, you can view and access the data sets that you have an entitlement to through a subscription\. You can use the API operations to download \(export\) or copy your entitled data sets to Amazon S3 for use with a variety of AWS analytics and machine learning services\.
 
@@ -31,7 +26,7 @@ Jobs have the following properties:
   + Import from Amazon Simple Storage Service \(Amazon S3\)
   + Import from signed URL
   + Import from Amazon API Gateway API
-  + Import from Amazon Redshift datashares \(Preview\)
+  + Import from an AWS Data Exchange datashare for Amazon Redshift
   + Export from Amazon S3
   + Export from signed URL
 + **Amazon Resource Name \(ARN\)** – A unique identifier for AWS resources\.
@@ -77,7 +72,7 @@ You can import assets to a revision in the following ways:
 + [Importing assets from an S3 bucket](#importing-from-s3)
 + [Importing assets from a signed URL](#importing-from-url)
 + [Importing assets from an Amazon API Gateway API](#import-API-asset)
-+ [Importing assets from an Amazon Redshift datashare \(Preview\)](#import-RS-asset)
++ [Importing assets from an AWS Data Exchange datashare for Amazon Redshift](#import-RS-asset)
 
 ### Importing assets from an S3 bucket<a name="importing-from-s3"></a>
 
@@ -250,16 +245,11 @@ AWS SDK for Java 2\.x
 
    A job is started to import your API assets into your data set\. After the job is ﬁnished, the **State** ﬁeld in the **Jobs** section is updated to **Completed**\.
 
-### Importing assets from an Amazon Redshift datashare \(Preview\)<a name="import-RS-asset"></a>
+### Importing assets from an AWS Data Exchange datashare for Amazon Redshift<a name="import-RS-asset"></a>
 
+#### Importing assets from an AWS Data Exchange datashare for Amazon Redshift \(AWS SDKs\)<a name="import-RS-asset-prog"></a>
 
-|  | 
-| --- |
-| The Amazon Redshift datashare asset type is in preview release for AWS Data Exchange and is subject to change\. | 
-
-#### Importing assets from an Amazon Redshift datashare \(AWS SDKs\)<a name="import-RS-asset-prog"></a>
-
-**To import assets from an Amazon Redshift datashare \(AWS SDKs\)**
+**To import assets from an AWS Data Exchange datashare for Amazon Redshift \(AWS SDKs\)**
 
 1. Create a `CreateJob` request of type `IMPORT_ASSETS_FROM_REDSHIFT_DATA_SHARES`\.
 
@@ -275,9 +265,9 @@ AWS SDK for Java 2\.x
 
 1. \(Optional\) Update the assets' name property after they are created\.
 
-#### Importing assets from an Amazon Redshift datashare \(console\)<a name="import-RS-asset-console"></a>
+#### Importing assets from an AWS Data Exchange datashare for Amazon Redshift \(console\)<a name="import-RS-asset-console"></a>
 
-**To import an asset from an Amazon Redshift datashare \(console\)**
+**To import an asset from an ADE datashare \(for Amazon Redshift console\)**
 
 1. Open your web browser and go to the [AWS Data Exchange console](https://console.aws.amazon.com/dataexchange)\.
 
@@ -471,7 +461,7 @@ The signed URL expires one hour after it's created\.
 
 ## Exporting revisions<a name="exporting-revisions"></a>
 
-Both providers and subscribers can export revisions of a product to an S3 bucket that they have permissions to access\. 
+Both providers and subscribers can export revisions of a data set to an S3 bucket that they have permissions to access\. 
 
 AWS Data Exchange supports configurable encryption parameters when exporting revisions to Amazon S3\. In your export job details, you can specify the Amazon S3 server\-side encryption configuration you want to apply to the exported objects\. You can choose to use server\-side encryption with Amazon S3\-Managed Keys \(SSE\-S3\) or server\-side encryption with KMS keys stored in AWS Key Management Service \(SSE\-KMS\)\. For more information, see [Protecting data using server\-side encryption](https://docs.aws.amazon.com/AmazonS3/latest/dev/serv-side-encryption.html) in the *Amazon Simple Storage Service Developer Guide*\.
 

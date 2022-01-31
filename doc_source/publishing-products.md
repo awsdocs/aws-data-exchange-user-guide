@@ -1,16 +1,11 @@
 # Publishing a new product<a name="publishing-products"></a>
 
-
-|  | 
-| --- |
-| The Amazon Redshift data product feature is in preview release for AWS Data Exchange and is subject to change\. | 
-
 The following topics describe the process of publishing a new product on AWS Data Exchange by using the AWS Data Exchange console\. 
 
 **Topics**
 + [Publishing a product containing file\-based data](#publish-data-product)
 + [Publishing a product containing APIs](#publish-API-product)
-+ [Publishing a product containing Amazon Redshift datashares \(preview\)](#publish-Redshift-product)
++ [Publishing a product containing Amazon Redshift datasets](#publish-Redshift-product)
 
 **Important**  
 Beginning July 22, 2021, new and existing providers have the ability to automatically publish revisions to data sets\. All new products on AWS Data Exchange default to automatic revision publishing\. If you have created existing products on AWS Data Exchange before July 22, 2021, you need to migrate them to automatic revision publishing\.   
@@ -712,20 +707,7 @@ Beginning July 22, 2021, new and existing providers have the ability to automati
 For more information, see [Migrating an existing product to automatic revision publishing](updating-products.md#migrate-product)\.  
 If you are copying an existing product that you created before July 22, 2021, you will see two options under **Revision publishing**: **Automatically publish revisions** or **Manually publish revisions**\. We recommend that you choose the first option, to automatically publish revisions\.
 
-## Publishing a product containing Amazon Redshift datashares \(preview\)<a name="publish-Redshift-product"></a>
-
-
-|  | 
-| --- |
-| The Amazon Redshift data product feature is in preview release for AWS Data Exchange and is subject to change\. | 
-
-### Participating in the Public Preview<a name="publish-Redshift-product-preview"></a>
-
-During this Public Preview, your use of products including Amazon Redshift data sets and their AWS Data Exchange datashares for Amazon Redshift is subject to Section 2 \(Betas and Previews\) of the [AWS Service Terms](https://aws.amazon.com/service-terms/)\. The Public Preview is structured in a way that you may *subscribe* \(in other words, purchase\) and *deploy* software, and standard charges for the software will apply\. 
-
-By participating in the Public Preview, you acknowledge that we will be collecting feedback and monitoring system performance, and that AWS Data Exchange may modify the experience based on this information\. Because this feature is a Preview service \(as defined in the AWS Service Terms\), there may be errors or issues with the search, procurement and approval processes, your qualified vendors and products, or other issues that you may encounter as you use this Preview feature\. We encourage you to note any errors or issues and send any feedback, test observations or suggestions to adx\-redshift\-preview@amazon\.com\. If you have any questions or concerns about the Public Preview or need assistance at any time, contact us at adx\-redshift\-preview@amazon\.com\. 
-
-Prior to the announcement of public availability, we may request Preview participants to provide a testimonial about their experience\. Providing a testimonial is voluntary and your participation in the Public Preview is not contingent on providing a testimonial\. 
+## Publishing a product containing Amazon Redshift datasets<a name="publish-Redshift-product"></a>
 
 ### Overview<a name="publish-Redshift-product-overview"></a>
 
@@ -733,11 +715,7 @@ An Amazon Redshift data set contains AWS Data Exchange datashares for Amazon Red
 
 As a data provider, you create an AWS Data Exchange for Amazon Redshift datashare in your cluster\. Then, you add to the datashare the schemas, tables, views, and user\-defined functions that you want the subscribers to access\. You then import the datashare to AWS Data Exchange, create a data set, add it to a product, and publish the product\. Subscribers are granted access to the datashare upon subscription\.
 
-When working with the preview, consider the following:
-+ If you are a provider and want to participate in this preview, you must be registered as an AWS Marketplace partner and as an AWS Data Exchange provider to offer access to Amazon Redshift data on AWS Data Exchange\. For more information, see [Getting started as a provider](provider-getting-started.md)\. 
-+ The subscriber's cluster must be in the same AWS Region as your encrypted cluster\. For more information, see [RA3 node type availability in AWS Regions](https://docs.aws.amazon.com/redshift/latest/mgmt/working-with-clusters.html#rs-ra3-node-types) in the *Amazon Redshift Cluster Management Guide*\.
-
-For any questions, issues, or feedback related to the preview features during the Public Preview period, send an email message to adx\-redshift\-preview@amazon\.com or open a support case with AWS Support\.
+The subscriber's cluster must have an encrypted Amazon Redshift cluster running on an RA3 instance to query to Amazon Redshift data\. For more information, see the [Amazon Redshift Database Developer Guide](https://docs.aws.amazon.com/redshift/latest/dg/welcome.html)\.
 
 After you have set up your Amazon Redshift datashare in Amazon Redshift, you can create a new Amazon Redshift data set in AWS Data Exchange\. You can then create a revision, and add Amazon Redshift datashare assets\. This allows requests to the AWS Data Exchange endpoint to proxy through to your Amazon Redshift datashare\. You can then add this data set to a product and add pricing\. Then, prospective subscribers can view your product and subscribe to it in the AWS Data Exchange catalog\.
 
@@ -748,7 +726,7 @@ The following topics describe the process of creating an Amazon Redshift data se
 + [Step 2: Create an Amazon Redshift data set](#create-RS-data-set)
 + [Step 3: Create a revision](#create-RS-revision)
 + [Step 4: Add Amazon Redshift datashare assets to a revision](#add-RS-assets)
-+ [Step 5: Publish a new product containing Amazon Redshift datashares](#publish-RS-product)
++ [Step 5: Publish a new product containing Amazon Redshift data sets](#publish-RS-product)
 + [Step 6: \(Optional\) Copy a product](#copy-RS-product)
 
 #### Step 1: Create an Amazon Redshift datashare asset<a name="create-RS-asset"></a>
@@ -767,7 +745,7 @@ We recommend setting your datashare as publicly accessible\. If you do not, cust
 
 #### Step 2: Create an Amazon Redshift data set<a name="create-RS-data-set"></a>
 
-An Amazon Redshift data set includes AWS Data Exchange datashares for Amazon Redshift\. For more information, see [Amazon Redshift data set \(preview\)](data-sets.md#RS-data-set-type)\.
+An Amazon Redshift data set includes AWS Data Exchange datashares for Amazon Redshift\. For more information, see [Amazon Redshift data set](data-sets.md#RS-data-set-type)\.
 
 **To create an Amazon Redshift data set**
 
@@ -777,7 +755,7 @@ An Amazon Redshift data set includes AWS Data Exchange datashares for Amazon Red
 
 1. In **Owned data sets**, choose **Create data set** to open the **Data set creation steps** wizard\.
 
-1. In **Select data set type**, choose **Amazon Redshift datashare \- preview**\.
+1. In **Select data set type**, choose **Amazon Redshift datashare**\.
 
 1. In **Define data set**, enter a **Name** and **Description** for your data set\. For more information, see [Data set best practices](data-sets.md#data-set-best-practices)\. 
 
@@ -833,14 +811,11 @@ You have successfully finalized a revision for a data set\.
 
 You can [edit](#edit-revision) or [delete a revision](#delete-revision) before you add it to a product\. 
 
-#### Step 5: Publish a new product containing Amazon Redshift datashares<a name="publish-RS-product"></a>
+#### Step 5: Publish a new product containing Amazon Redshift data sets<a name="publish-RS-product"></a>
 
-After you've created at least one data set and finalized a revision with assets, you're ready to publish a product with Amazon Redshift datashare data sets\. For more information, see [Product details](product-details.md)\. Make sure that you have all required details about your product and offer\.
+After you've created at least one data set and finalized a revision with assets, you're ready to publish a product with Amazon Redshift data sets\. For more information, see [Product details](product-details.md)\. Make sure that you have all required details about your product and offer\.
 
-**Note**  
-You can't add datashare assets to existing products with S3 object assets until after the Public Preview\.
-
-**To publish a new product containing Amazon Redshift datashares**
+**To publish a new product containing Amazon Redshift data sets**
 
 1. From the left navigation pane of the [AWS Data Exchange console](https://console.aws.amazon.com/dataexchange), under **Publish data**, choose **Products**\.
 

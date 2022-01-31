@@ -11,11 +11,6 @@ To create, view, update, or delete data sets, you can use the AWS Data Exchange 
 
 ## Assets<a name="assets"></a>
 
-
-|  | 
-| --- |
-| The Amazon Redshift datashare feature is in preview release for AWS Data Exchange and is subject to change\. | 
-
 Assets are the *data* in AWS Data Exchange\. 
 
 The type of asset defines how the data is delivered to the subscriber through the data sets and products that contain it\.
@@ -24,7 +19,7 @@ An asset can be any of the following:
 + A file stored on your local computer
 + A file stored as an object in Amazon Simple Storage Service \(Amazon S3\)
 + A REST API created in Amazon API Gateway
-+ An Amazon Redshift datashare \(preview\)
++ An Amazon Redshift data set
 
 ### Asset structure<a name="assets-structure"></a>
 
@@ -35,7 +30,7 @@ Assets have the following parameters:
 + `Arn` – A unique identifier for an AWS resource name\.
 + `CreatedAt` and `UpdatedAt` – Date and timestamps for the creation and last update of the asset\.
 + `AssetDetails` – Information about the asset\.
-+ `AssetType` – Either a snapshot of an Amazon S3 object, an Amazon API Gateway API, or an Amazon Redshift datashare \(Preview\)\.
++ `AssetType` – Either a snapshot of an Amazon S3 object, an Amazon API Gateway API, or an Amazon Redshift data set\.
 
 **Example asset resource**  
 
@@ -79,11 +74,11 @@ SDK for Java 2\.x
 
 Providers who do not have an existing Amazon API Gateway API must create one before adding an API asset to their product\. For more information, see [Developing a REST API in API Gateway](https://docs.aws.amazon.com/apigateway/latest/developerguide/rest-api-develop.html) in the *Amazon API Gateway Developer Guide*\.
 
-#### Amazon Redshift datashare assets \(Preview\)<a name="RS-asset-type"></a>
+#### Amazon Redshift datashare assets<a name="RS-asset-type"></a>
 
  With Amazon Redshift datashare assets, subscribers can get read\-only access to query the data in Amazon Redshift without extracting, transforming, and loading data\. 
 
- For more information about importing Amazon Redshift datashare assets, see [Importing assets from an Amazon Redshift datashare \(Preview\)](jobs.md#import-RS-asset)\.
+ For more information about importing Amazon Redshift datashare assets, see [Importing assets from an AWS Data Exchange datashare for Amazon Redshift](jobs.md#import-RS-asset)\.
 
 ## Revisions<a name="revisions"></a>
 
@@ -131,18 +126,13 @@ Revisions have the following parameters:
 
 ## Data sets<a name="data-sets-concept"></a>
 
-
-|  | 
-| --- |
-| The Amazon Redshift datashare feature is in preview release for AWS Data Exchange and is subject to change\. | 
-
 A data set in AWS Data Exchange is a *collection* of data that can change over time\. 
 
 When subscribers access an Amazon S3 data set, they're accessing a speciﬁc revision in the data set\. This structure enables providers to change the data available in data sets over time without having to worry about changes to historical data\.
 
 When subscribers access an API data set, they're accessing a data set that contains API assets, which enable subscribers to make API calls to AWS Data Exchange\-managed endpoints, which are then proxied through to provider endpoints\.
 
-During the Public Preview, when subscribers access an Amazon Redshift data set, they're accessing an AWS Data Exchange datashare for Amazon Redshift\. This datashare gives subscribers read\-only access to the schemas, tables, views, and user\-defined functions that the provider has added to the datashares\. 
+When subscribers access an Amazon Redshift data set, they're accessing an AWS Data Exchange datashare for Amazon Redshift\. This datashare gives subscribers read\-only access to the schemas, tables, views, and user\-defined functions that the provider has added to the datashares\. 
 
 To create, view, update, or delete data sets, providers can use the AWS Data Exchange console, AWS CLI, your own REST client, or one of the AWS SDKs\. For more information about programmatically managing AWS Data Exchange data sets, see the [AWS Data Exchange API Reference](https://docs.aws.amazon.com/data-exchange/latest/apireference/welcome.html)\.
 
@@ -168,15 +158,10 @@ As a data provider, you also have access to the entitled data set view that your
 
 ### Data set types<a name="data-set-types"></a>
 
-
-|  | 
-| --- |
-| The Amazon Redshift data set type is in preview release for AWS Data Exchange and is subject to change\. | 
-
 The following data set types are supported in AWS Data Exchange: 
 + [Amazon S3 object data set](#S3-object-data-set-type)
 + [API data set](#api-data-set-type)
-+ [Amazon Redshift data set \(preview\)](#RS-data-set-type)
++ [Amazon Redshift data set](#RS-data-set-type)
 
 #### Amazon S3 object data set<a name="S3-object-data-set-type"></a>
 
@@ -192,7 +177,7 @@ An API data set is data set that contains API assets\. API assets enable subscri
 
 As a data provider, you create an API in Amazon API Gateway and add it to the data set to license access to your API upon subscription\.
 
-#### Amazon Redshift data set \(preview\)<a name="RS-data-set-type"></a>
+#### Amazon Redshift data set<a name="RS-data-set-type"></a>
 
 An Amazon Redshift data set includes AWS Data Exchange datashares for Amazon Redshift\. When you subscribe to a data set with datashares, you are added as a consumer of the datashare\. This gives you read\-only access to the schemas, tables, views, and user\-defined functions the provider has added to the datashares\.
 

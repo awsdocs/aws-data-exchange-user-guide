@@ -41,4 +41,4 @@ After you subscribe to a product containing Amazon S3 objects, you can manually 
 
 After you subscribe to a product containing an Amazon API Gateway API, you can view and invoke the data provider's API\. For more information, see [Subscribing to a product containing APIs](subscribing-to-product.md#subscribing-to-API-product)\.
 
-After you subscribe to a product containing Amazon Redshift datashares, you get access to query the data in Amazon Redshift\. For more information, see [Subscribing to a product containing Amazon Redshift datashares \(preview\)](subscribing-to-product.md#subscribing-to-Redshift-product)\. 
+After you subscribe to a product containing Amazon Redshift data sets, you get access to query the data in Amazon Redshift\. For more information, see [Subscribing to a product containing Amazon Redshift data sets](subscribing-to-product.md#subscribing-to-Redshift-product)\. 

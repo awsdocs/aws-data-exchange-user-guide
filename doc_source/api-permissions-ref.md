@@ -1,10 +1,5 @@
 # AWS Data Exchange API permissions: actions and resources reference<a name="api-permissions-ref"></a>
 
-
-|  | 
-| --- |
-| The Amazon Redshift datashare job type is in preview release for AWS Data Exchange and is subject to change\. | 
-
 Use the following table as a reference when you are setting up [Access control](access-control.md) and writing a permissions policy that you can attach to an AWS Identity and Access Management \(IAM\) identity \(identity\-based policies\)\. The table lists each AWS Data Exchange API operation, the actions for which you can grant permissions to perform the action, and the AWS resource for which you can grant the permissions\. You specify the actions in the policy's `Action` field\. You specify the resource value in the policy's `Resource` field\. 
 
 **Note**  

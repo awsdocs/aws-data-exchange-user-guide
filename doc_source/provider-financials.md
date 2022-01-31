@@ -4,7 +4,7 @@ The following topics cover financial information about providing data through AW
 
 AWS Data Exchange is integrated with AWS Marketplace\. If you want to register as an AWS Data Exchange provider, you must first register as an AWS Marketplace seller\. For more information, see [Step 2: Register to be a provider](provider-getting-started.md#provider-registration)\.
 
-As an AWS Data Exchange provider, you benefit from AWS Marketplace features, such as Seller Reports and the AWS Marketplace Commerce Analytics Service\. For more information, see [Seller Reports and Data Feeds](https://docs.aws.amazon.com/marketplace/latest/userguide/reports-and-data-feed.html) and [AWS Marketplace Enhanced Data Sharing Program](https://docs.aws.amazon.com/marketplace/latest/userguide/enhanced-data-sharing-program.html) in the *AWS Marketplace Seller Guide*\.
+As an AWS Data Exchange provider, you benefit from AWS Marketplace features, such as Seller Reports and the AWS Marketplace Commerce Analytics Service\. For more information, see [Seller Reports and Data Feeds](https://docs.aws.amazon.com/marketplace/latest/userguide/reports-and-data-feed.html)\.
 
 ## Payments<a name="payments"></a>
 
@@ -24,8 +24,6 @@ For more information, see [Seller registration process](https://docs.aws.amazon.
  As an AWS Data Exchange provider, you receive reports detailing the subscription activity of your products\. There are several reports available to track daily and monthly data\. The reports include information about the subscription activity for your offers, payment received from subscribers, and money being disbursed to you\. Disbursement doesn't occur until payment is received from the AWS customer\. For more information, see [Seller reports](https://docs.aws.amazon.com/marketplace/latest/userguide/Reporting.html) in the *AWS Marketplace Seller Guide*\.
 
 AWS Data Exchange providers who use the payment scheduler for their private offers can see this data in a monthly report\. For more information, see [Monthly billed revenue report](https://docs.aws.amazon.com/marketplace/latest/userguide/monthly-billed-revenue-report.html#section-4-contracts-with-flexible-payments.html) in the *AWS Marketplace Seller Guide*\.
-
-As an AWS Data Exchange provider, you might be eligible for the AWS Marketplace Enhanced Data Sharing program\. For more information, see [AWS Marketplace Enhanced Data Sharing Program](https://docs.aws.amazon.com/marketplace/latest/userguide/enhanced-data-sharing-program.html)\.
 
 ## Subscriber refund requests<a name="refund-requests"></a>
 

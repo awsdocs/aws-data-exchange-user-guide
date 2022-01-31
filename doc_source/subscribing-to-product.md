@@ -1,16 +1,11 @@
 # Subscribing to a product<a name="subscribing-to-product"></a>
 
-
-|  | 
-| --- |
-| The Amazon Redshift data product feature is in preview release for AWS Data Exchange and is subject to change\. | 
-
 The following topics describe the process of subscribing to a product on AWS Data Exchange using the AWS Data Exchange console\.
 
 **Topics**
 + [Subscribing to a product containing file\-based data](#subscribing-to-data-product)
 + [Subscribing to a product containing APIs](#subscribing-to-API-product)
-+ [Subscribing to a product containing Amazon Redshift datashares \(preview\)](#subscribing-to-Redshift-product)
++ [Subscribing to a product containing Amazon Redshift data sets](#subscribing-to-Redshift-product)
 + [Request a recommendation for a data product](#request-new-products)
 + [Unsubscribe from a product](#unsubscribe-product)
 
@@ -25,6 +20,8 @@ The process has the following steps:
 + [Step 2: Subscribe to the product containing the file\-based data](#subscribe-to-data-product)
 + [Step 3: Use the product](#use-product)
 + [Step 4: \(Optional\) Export data after subscribing](#export-data-after-subscribing)
+
+To practice subscribing to and using a product containing file\-based data, see the [Tutorial: Subscribe to AWS Data Exchange Heartbeat on AWS Data Exchange](heartbeat.md)\.
 
 ### Step 1: Browse the catalog<a name="browse-catalog"></a>
 
@@ -126,6 +123,8 @@ The process has the following steps:
 + [Step 2: Subscribe to a product containing APIs](#subscribe-to-API-product)
 + [Step 3: Use an API product](#use-API-product)
 
+To practice subscribing to and using a product containing APIs, see the [Tutorial: Subscribe to AWS Data Exchange for APIs \(Test Product\) on AWS Data Exchange](subscriber-tutorial-api-product.md)\.
+
 ### Step 1: Browse the catalog<a name="subscribe-API-product-browse"></a>
 
 You can ﬁnd products and review the associated public or custom oﬀers and product details on both AWS Marketplace and AWS Data Exchange\. 
@@ -192,7 +191,7 @@ The following topics provide details about how to use a product that includes AP
 
 1. Under **API assets**, choose the API\.
 
-1. View the **Asset overview**, which includes the **Integration notes**\.
+1. View the **Asset overview**\.
 
 1. Follow the guidance in the **Integration notes** to call the API\.
 
@@ -257,50 +256,34 @@ You can call a single endpoint in the AWS Data Exchange console\.
   }
   ```
 
-## Subscribing to a product containing Amazon Redshift datashares \(preview\)<a name="subscribing-to-Redshift-product"></a>
-
-
-|  | 
-| --- |
-| The Amazon Redshift data product feature is in preview release for AWS Data Exchange and is subject to change\. | 
-
-### Participating in the Public Preview<a name="subscribe-Redshift-product-preview"></a>
-
-During this Public Preview, your use of products including Amazon Redshift data sets and their AWS Data Exchange datashares for Amazon Redshift is subject to Section 2 \(Betas and Previews\) of the [AWS Service Terms](https://aws.amazon.com/service-terms/)\. The Public Preview is structured in a way that you can *subscribe* \(in other words, purchase\) and *deploy* software, and standard charges for the software will apply\. 
-
-By participating in the Public Preview, you acknowledge that we will collect feedback and monitor system performance, and that AWS Data Exchange may modify the experience based on this information\. Because this feature is a Preview service \(as defined in the AWS Service Terms\), there may be errors or issues with the search, procurement and approval processes, your qualified vendors and products, or other issues that you may encounter as you use this Preview feature\. We encourage you to note any errors or issues and send any feedback, test observations, or suggestions to adx\-redshift\-preview@amazon\.com\. If you have any questions or concerns about the Public Preview or need assistance at any time, contact us at adx\-redshift\-preview@amazon\.com\.
-
-Prior to the announcement of public availability, we may request Public Preview participants to provide a testimonial about their experience\. Providing this statement is voluntary, and your participation in the Public Preview is not contingent on providing a testimonial\. 
+## Subscribing to a product containing Amazon Redshift data sets<a name="subscribing-to-Redshift-product"></a>
 
 ### Overview for subscribers<a name="subscribe-Redshift-product-overview"></a>
 
 An Amazon Redshift data set is a data set that contains AWS Data Exchange datashares for Amazon Redshift\. Datashares give you read\-only access to the tables, views, schemas, and user\-defined functions that a data provider adds to the datashare\. 
 
-As a data subscriber, you can find and subscribe to products containing Amazon Redshift datashares\. After your subscription starts, you get access to query the data in Amazon Redshift without extracting, transforming, and loading data\. You lose access to a product's datashares after your subscription expires\.
+As a data subscriber, you can find and subscribe to products containing Amazon Redshift data sets\. After your subscription starts, you get access to query the data in Amazon Redshift without extracting, transforming, and loading data\. You lose access to a product's datashares after your subscription expires\.
 
-When working with the preview, consider the following:
-+ If you are a subscriber and want to work with this preview, you must have an encrypted Amazon Redshift cluster running on an RA3 instance to query to Amazon Redshift data on AWS Data Exchange\. For more information, see the [Amazon Redshift Database Developer Guide](https://docs.aws.amazon.com/redshift/latest/dg/welcome.html)\.
-+ Your cluster must be in the same AWS Region as the offered product\. For more information, see [RA3 node type availability in AWS Regions](https://docs.aws.amazon.com/redshift/latest/mgmt/working-with-clusters.html#rs-ra3-node-types) in the *Amazon Redshift Cluster Management Guide*\.
+Consider the following:
++ If you are a subscriber, you must have an encrypted Amazon Redshift cluster running on an RA3 instance to query to Amazon Redshift data on AWS Data Exchange\. For more information, see the [Amazon Redshift Database Developer Guide](https://docs.aws.amazon.com/redshift/latest/dg/welcome.html)\.
 + It may take a few minutes to access the datashares after your subscription starts\.
-
-Subscribers do not need to upgrade to the latest cluster version to participate in this preview\.
-
-For any questions, issues, or feedback related to the preview features during the Public Preview period, send an email message to adx\-redshift\-preview@amazon\.com or open a support case with [AWS Support Center](https://console.aws.amazon.com/support/home#/)\.
 
 The following sections describe the complete process of becoming an Amazon Redshift datashare product subscriber on AWS Data Exchange by using the AWS Data Exchange console\. The process has the following steps:
 
 **Topics**
-+ [Step 1: Browse the catalog \(preview\)](#subscribe-Redshift-product-browse)
-+ [Step 2: Subscribe to products containing Amazon Redshift datashares \(preview\)](#subscribe-Redshift-product)
-+ [Step 3: Use the AWS Data Exchange datashares for Amazon Redshift \(preview\)](#use-Redshift-product)
++ [Step 1: Browse the catalog](#subscribe-Redshift-product-browse)
++ [Step 2: Subscribe to products containing Amazon Redshift data sets](#subscribe-Redshift-product)
++ [Step 3: Use the AWS Data Exchange datashares for Amazon Redshift](#use-Redshift-product)
 
-#### Step 1: Browse the catalog \(preview\)<a name="subscribe-Redshift-product-browse"></a>
+To practice subscribing to and using a product containing Amazon Redshift data sets, see the [Tutorial: Subscribe to Worldwide Event Attendance \(Test Product\) on AWS Data Exchange](subscriber-tutorial-RS-product.md)\.
+
+#### Step 1: Browse the catalog<a name="subscribe-Redshift-product-browse"></a>
 
 You can ﬁnd products and review the associated public or custom oﬀers and product details on both AWS Marketplace and AWS Data Exchange\. 
 
 If the provider has issued a private oﬀer to your account, the product is available on the **My product oﬀers page** of the AWS Data Exchange console\. For more information, see [Subscribing to data products on AWS Data Exchange](subscribe-to-data-sets.md)\.
 
-**To browse the catalog for products containing Amazon Redshift datashares**
+**To browse the catalog for products containing Amazon Redshift data sets**
 
 1. Open and sign in to the [AWS Data Exchange console](https://console.aws.amazon.com/dataexchange)\.
 
@@ -312,11 +295,11 @@ If the provider has issued a private oﬀer to your account, the product is avai
 
 1. \(Optional\) Under **Browse catalog**, enter in a word or phrase and then choose **Search** to view results matching your query\.
 
-#### Step 2: Subscribe to products containing Amazon Redshift datashares \(preview\)<a name="subscribe-Redshift-product"></a>
+#### Step 2: Subscribe to products containing Amazon Redshift data sets<a name="subscribe-Redshift-product"></a>
 
 If you subscribe to a paid product, you're billed on your AWS bill\. You get access to all data sets included in the product\. For more information, see [Subscribing to data products on AWS Data Exchange](subscribe-to-data-sets.md)\.
 
-**To subscribe to a product containing Amazon Redshift datashares**
+**To subscribe to a product containing Amazon Redshift data sets**
 
 1. Select a product and view its details page\.
 
@@ -338,7 +321,7 @@ Some products require subscription veriﬁcation\. For more information, see [Su
 **Note**  
 If you subscribe to a paid product, you're prompted to conﬁrm your decision to subscribe\.
 
-#### Step 3: Use the AWS Data Exchange datashares for Amazon Redshift \(preview\)<a name="use-Redshift-product"></a>
+#### Step 3: Use the AWS Data Exchange datashares for Amazon Redshift<a name="use-Redshift-product"></a>
 
 You have access to the product's data sets according to the terms of the data subscription agreement\. As a subscriber, your subscription to a product that includes AWS Data Exchange datashares for Amazon Redshift gives you read\-only access to the tables, views, schemas, and functions within the datashare\.
 
@@ -346,10 +329,12 @@ With a subscription, you can do the following:
 + Query data without having to extract, transform, or load data\.
 + Access the latest provider data as soon as the provider updates it\.
 
-For more information, see [Working with AWS Data Exchange datashares \(preview\)](https://docs.aws.amazon.com/redshift/latest/dg/adx-datashare.html) in the *Amazon Redshift Database Developer Guide*\. 
+For more information, see [Working with AWS Data Exchange datashares](https://docs.aws.amazon.com/redshift/latest/dg/adx-datashare.html) in the *Amazon Redshift Database Developer Guide*\. 
 
 **Note**  
 You lose access to a product's datashares after your subscription expires\.
+
+For more information about how to subscribe to a Amazon Redshift data set, see [Tutorial: Subscribe to Worldwide Event Attendance \(Test Product\) on AWS Data Exchange](subscriber-tutorial-RS-product.md)\.
 
 ## Request a recommendation for a data product<a name="request-new-products"></a>
 

@@ -112,7 +112,7 @@ For example, you could create a policy to allow importing and exporting to AWS D
 These permissions allow providers to import and export with AWS Data Exchange\. The policy includes the following permissions and restrictions:
 + **s3:PutObject** and **s3:PutObjectAcl** – These permissions are restricted only to S3 buckets that contain `aws-data-exchange` in their name\. These permissions allows providers to write to AWS Data Exchange service buckets when importing from Amazon S3\.
 + **s3:GetObject** – This permission is restricted to S3 buckets that contain `aws-data-exchange` in their name\. This permission allows customers to read from AWS Data Exchange service buckets when exporting from AWS Data Exchange to Amazon S3\.
-+ These permissions are restricted to requests made by using AWS Data Exchange with the IAM `CalledVia` condition\. This only allows them to be used in the context of the AWS Data Exchange console or API\.
++ These permissions are restricted to requests made by using AWS Data Exchange with the IAM `CalledVia` condition\. This allows the S3 `PutObject` permissions to only be used in the context of the AWS Data Exchange console or API\.
 
 **Note**  
 Your users may also need additional permissions to read to or write from your own S3 buckets and objects that are not covered in this example\.
@@ -138,11 +138,6 @@ The following are the most basic policy elements:
 For more information about IAM policy syntax and descriptions, see [AWS IAM Policy Reference](https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies.html) in the *IAM User Guide*\.
 
 ### Specifying conditions in a policy<a name="specifying-conditions"></a>
-
-
-|  | 
-| --- |
-| The Amazon Redshift datashare job type is in preview release for AWS Data Exchange and is subject to change\. | 
 
 When you grant permissions, you can use the IAM policy language to specify the conditions when a policy should take effect\. With AWS Data Exchange, the `CreateJob`, `StartJob`, `GetJob`, and `CancelJob` API operations support conditional permissions\. You can provide permissions at the `JobType` level\.
 

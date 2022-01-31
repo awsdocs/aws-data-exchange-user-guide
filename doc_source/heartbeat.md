@@ -1,6 +1,6 @@
 # Tutorial: Subscribe to AWS Data Exchange Heartbeat on AWS Data Exchange<a name="heartbeat"></a>
 
-AWS Data Exchange Heartbeat \(Test product\) is a free product that is made available to subscribers to understand how to interact with an AWS Data Exchange product subscription\. You can use it for testing purposes and to get familiar with the AWS Data Exchange API and concepts\.
+AWS Data Exchange Heartbeat \(Test product\) is a free product that subscribers can use to understand how to interact with an AWS Data Exchange product subscription\. You can use it for testing purposes and to get familiar with the AWS Data Exchange API and concepts\.
 
 AWS Data Exchange Heartbeat contains a single data set named **Heartbeat**\. Approximately every 15 minutes, a new revision is published to this data set\.
 
@@ -56,7 +56,7 @@ The following procedure shows how to browse the AWS Data Exchange catalog to fin
 
 1. From the search bar, enter **AWS Data Exchange Heartbeat** and press **Enter**\. Choose the product to view its details page\.
 
-1. In the top right corner, choose **Continue to Subscribe**\. 
+1. In the top right corner, choose **Continue to subscribe**\. 
 
 1. Choose your preferred price and duration combination, choose whether to enable auto\-renewal for the subscription, and review the offer details, including the data subscription agreement\.
 **Note**  

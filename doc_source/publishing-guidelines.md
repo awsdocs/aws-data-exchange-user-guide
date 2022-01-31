@@ -20,11 +20,10 @@ In addition to accepting and following the guidelines under the Terms and Condit
 + If you're listing an API data set in a product: 
   + You must first integrate your API with Amazon API Gateway\. For more information about how to integrate your REST API with API Gateway, see [Working with REST APIs](https://docs.aws.amazon.com/apigateway/latest/developerguide/apigateway-rest-api.html) in the *API Gateway Developer Guide*\.
   + You must respond to support\-related questions from subscribers about the data product in 1 business day\. Not following this guideline may result in your products being removed from AWS Data Exchange\.
-
-  
++ Logos, DSAs, and other attachments added to your product might be stored separately from where your actual data products sits\.
 
 If you have questions about the eligibility of your data set:
-+ Contact [ AWS Support](https://console.aws.amazon.com/support/home#/case/create?issueType=customer-service)\.
++ Contact [AWS Support](https://console.aws.amazon.com/support/home#/case/create?issueType=customer-service)\.
 + Send an email message to [dataexchangehelp@amazon\.com](mailto://dataexchangehelp@amazon.com)\.
 + Access the [AWS Support Dashboard](https://console.aws.amazon.com/support/home#/case/create?issueType=customer-service) and create a case in the AWS Management Console\.
 

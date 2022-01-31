@@ -54,7 +54,7 @@ For more information about VAT, invoicing, and your tax obligations as a provide
 To use AWS Data Exchange as a provider, you must be a registered seller on AWS Marketplace and be qualified by the AWS Data Exchange team\. When you register an account as an AWS Marketplace seller, the account is the seller of record for your products and is used for reporting and disbursement\. All products and their public offers are discoverable on AWS Data Exchange and AWS Marketplace\.
 
 **Important**  
-You cannot change the AWS account you use to list a product on AWS Marketplace\. Only data sets owned by that account can be included in products published by that account\. Only AWS accounts that are registered to provide data products on AWS Marketplace and AWS Data Exchange can publish products\.
+You can't change the AWS account that you use to list a product on AWS Marketplace\. Only data sets owned by that account can be included in products published by that account\. Only AWS accounts that are registered to provide data products on AWS Marketplace and AWS Data Exchange can publish products\.
 
 **To register as a provider for AWS Data Exchange and AWS Marketplace**
 
@@ -76,9 +76,9 @@ We strongly recommend that you sign and submit the tax form electronically\. Oth
 
 To confirm the eligibility of your data, review the [Publishing guidelines](publishing-guidelines.md)\.
 
-If you have questions about the eligibility of your data set:
-+ Contact [ AWS Support](https://console.aws.amazon.com/support/home#/case/create?issueType=customer-service) 
-+ Send an email message to [dataexchangehelp@amazon\.com](mailto://dataexchangehelp@amazon.com)
+If you have questions about the eligibility of your data set, you can take any of the following actions:
++ Contact [AWS Support](https://console.aws.amazon.com/support/home#/case/create?issueType=customer-service)\. 
++ Send an email message to [dataexchangehelp@amazon\.com](mailto://dataexchangehelp@amazon.com)\.
 + Access the [AWS Support Dashboard](https://console.aws.amazon.com/support/home#/case/create?issueType=customer-service) and create a case in the AWS Management Console\.
 
 You can create your product after you've reviewed the publishing guidelines for data products on AWS Data Exchange, and you've conﬁrmed that your data set can be listed\.

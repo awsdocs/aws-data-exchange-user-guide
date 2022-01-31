@@ -8,5 +8,5 @@ The following sections describe monitoring and logging in AWS Data Exchange:
 
 **Topics**
 + [Monitoring](monitoring-overview.md)
-+ [CloudWatch Events](cloudwatch-events.md)
++ [Amazon EventBridge events](cloudwatch-events.md)
 + [Logging AWS Data Exchange API calls with AWS CloudTrail](logging-api-calls-with-cloudtrail.md)

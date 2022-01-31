@@ -26,4 +26,6 @@ When subscribing to data products from some non\-US sellers, you might also rece
 + [Bring Your Own Subscription \(BYOS\) offers ](subscribe-to-byos-offer.md)
 + [Private products and offers ](subscribe-to-private-offer.md)
 + [Tutorial: Subscribe to AWS Data Exchange Heartbeat on AWS Data Exchange](heartbeat.md)
++ [Tutorial: Subscribe to AWS Data Exchange for APIs \(Test Product\) on AWS Data Exchange](subscriber-tutorial-api-product.md)
++ [Tutorial: Subscribe to Worldwide Event Attendance \(Test Product\) on AWS Data Exchange](subscriber-tutorial-RS-product.md)
 + [Data in AWS Data Exchange](data-sets.md)

@@ -9,6 +9,10 @@ The following topics describe the process of subscribing to a product on AWS Dat
 + [Request a recommendation for a data product](#request-new-products)
 + [Unsubscribe from a product](#unsubscribe-product)
 
+**Note**  
+By subscribing to a product, you agree that your use of the product is subject to the provider's offer terms including pricing information and Data Subscription Agreement\.  
+You also agree and acknowledge that AWS may share information about the transaction \(including your payment terms and product usage metrics\) with the respective seller, reseller, or underlying provider, as applicable, in accordance with the [AWS Privacy Notice](https://aws.amazon.com/privacy/)\. AWS will issue invoices and collect payments from you on behalf of the provider through your AWS account\. Your use of AWS services remains subject to the AWS Customer Agreement or other agreement with AWS governing your use of such services\.
+
 ## Subscribing to a product containing file\-based data<a name="subscribing-to-data-product"></a>
 
 The following topics describe the complete process of subscribing to a product containing file\-based data on AWS Data Exchange by using the AWS Data Exchange console\. 

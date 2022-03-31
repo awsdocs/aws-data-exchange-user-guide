@@ -12,6 +12,8 @@ When you publish a product on the AWS Data Exchange console, you must provide th
 + [Short description](#product-short-description)
 + [Long description](#product-long-description)
 + [Revision access rules](#best-practices-revisions)
++ [Data dictionaries](#data-dictionaries-pro)
++ [Samples](#samples-pro)
 
 ## Product visibility<a name="product-visibility"></a>
 
@@ -111,7 +113,7 @@ The long description for an AWS Data Exchange product supports Markdown, which a
 
 1.  Choose one of the uploaded files\. In the **Overview** tab, you will see a URL for the file\. Copy the URL to your clipboard\.
 
-1. Open the AWS Data Exchange console at [AWS Data Exchange console](https://console.aws.amazon.com/dataexchange)\.
+1. Open the [AWS Data Exchange console](https://console.aws.amazon.com/dataexchange)\.
 
 1. Choose the product you want to update, and then choose **Edit**\.
 
@@ -142,3 +144,31 @@ Revision access rules specify which revisions subscribers can access when they s
 
 **Note**  
 You can't choose both **No historical revisions** and **No future revisions**\. That would create a product with no revisions and no data\.
+
+## Data dictionaries<a name="data-dictionaries-pro"></a>
+
+A *data dictionary* is a visual representation of the contents of your data set\. 
+
+Subscribers can view and download a data dictionary before they subscribe to your product to evaluate if your product meets their needs\.
+
+You can add one data dictionary to each data set, with a maximum size of 1 MB\. The accepted file type for a data dictionary is \.csv\. 
+
+When you create a data dictionary, you include details about what columns are included in the data set and their meaning\. Your data dictionary must conform to the AWS Data Exchange data dictionary template\. You can download the **blank data dictionary template** from the AWS Data Exchange console\. AWS Data Exchange also provides an **example data dictionary** for you to view as an example\.
+
+**Note**  
+A data dictionary is attached to a product and associated with a data set\. If you want to have more than one data dictionary for potential subscribers to evaluate, you can create two or more versions of the same product with the same data sets\. Then, add a different data dictionary to each product\.
+
+For more information about how to add a data dictionary to a product, see [Publishing a new product](publishing-products.md)\.
+
+## Samples<a name="samples-pro"></a>
+
+A *sample* is a small part of the data in your product that is intended to show what the entire data set is like\.
+
+Subscribers can view and download samples before they subscribe to your product to evaluate if your product meets their needs\.
+
+You can upload up to 10 samples to each data set with a maximum size of 50 MB\. The accepted file formats for samples are any file type accepted by Amazon S3\. Samples in \.csv format can be previewed\.
+
+**Note**  
+Samples are attached to a product and associated with a data set\. If you want to have more than 10 samples for potential subscribers to evaluate, you can create two or more versions of the same product with the same data sets\. Then, add up to 10 samples to each product\.
+
+For more information about how to add a sample to a product, see [Publishing a new product](publishing-products.md)\.

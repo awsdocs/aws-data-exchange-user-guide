@@ -16,7 +16,6 @@ Jobs are deleted 90 days after they are created\.
 + [Importing assets](#importing-assets)
 + [Exporting assets](#exporting-assets)
 + [Exporting revisions](#exporting-revisions)
-+ [Key patterns when exporting revisions](#revision-export-keypatterns)
 
 ## Job properties<a name="job-properties"></a>
 
@@ -105,7 +104,7 @@ You can import up to 100 assets in a single job\.
 
 **To import an asset from an S3 bucket \(console\)**
 
-1. Open your web browser and go to the [AWS Data Exchange console](https://console.aws.amazon.com/dataexchange)\.
+1. Open your web browser and sign in to the [AWS Data Exchange console](https://console.aws.amazon.com/dataexchange)\.
 
 1. In the left side navigation pane, for **Publish data**, choose **Owned data sets**\.
 
@@ -160,7 +159,7 @@ The signed URL expires one hour after it's created\.
 
 **To import an asset from a signed URL \(console\)**
 
-1. Open your web browser and go to the [AWS Data Exchange console](https://console.aws.amazon.com/dataexchange)\.
+1. Open your web browser and sign in to the [AWS Data Exchange console](https://console.aws.amazon.com/dataexchange)\.
 
 1. In the left side navigation pane, for **Publish data**, choose **Owned data sets**\.
 
@@ -215,7 +214,7 @@ AWS SDK for Java 2\.x
 
 **To import an asset from an Amazon API Gateway API \(console\)**
 
-1. Open your web browser and go to the [AWS Data Exchange console](https://console.aws.amazon.com/dataexchange)\.
+1. Open your web browser and sign in to the [AWS Data Exchange console](https://console.aws.amazon.com/dataexchange)\.
 
 1. In the left side navigation pane, for **Publish data**, choose **Owned data sets**\.
 
@@ -269,7 +268,7 @@ AWS SDK for Java 2\.x
 
 **To import an asset from an ADE datashare \(for Amazon Redshift console\)**
 
-1. Open your web browser and go to the [AWS Data Exchange console](https://console.aws.amazon.com/dataexchange)\.
+1. Open your web browser and sign in to the [AWS Data Exchange console](https://console.aws.amazon.com/dataexchange)\.
 
 1. In the left side navigation pane, for **Publish data**, choose **Owned data sets**\.
 
@@ -348,7 +347,7 @@ For information about exporting an entire revision as a single job, see [Exporti
 
 **To export an asset to an S3 bucket as a subscriber \(console\)**
 
-1. Open your web browser and go to the [AWS Data Exchange console](https://console.aws.amazon.com/dataexchange)\.
+1. Open your web browser and sign in to the [AWS Data Exchange console](https://console.aws.amazon.com/dataexchange)\.
 
 1. In the left side navigation pane, for **My subscriptions**, choose **Entitled data**\.
 
@@ -370,7 +369,7 @@ For information about exporting an entire revision as a single job, see [Exporti
 
 **To export an asset to an S3 bucket as a provider \(console\)**
 
-1. Open your web browser and go to the [AWS Data Exchange console](https://console.aws.amazon.com/dataexchange)\.
+1. Open your web browser and sign in to the [AWS Data Exchange console](https://console.aws.amazon.com/dataexchange)\.
 
 1. In the left side navigation pane, for **Publish data**, choose **Owned data sets**\.
 
@@ -423,7 +422,7 @@ The signed URL expires one hour after it's created\.
 
 **To export an asset to a signed URL as a subscriber \(console\)**
 
-1. Open your web browser and go to the [AWS Data Exchange console](https://console.aws.amazon.com/dataexchange)\.
+1. Open your web browser and sign in to the [AWS Data Exchange console](https://console.aws.amazon.com/dataexchange)\.
 
 1. In the left side navigation pane, for **My subscriptions**, choose **Entitled data**\.
 
@@ -443,7 +442,7 @@ The signed URL expires one hour after it's created\.
 
 **To export an asset to a signed URL as a provider \(console\)**
 
-1. Open your web browser and go to the [AWS Data Exchange console](https://console.aws.amazon.com/dataexchange)\.
+1. Open your web browser and sign in to the [AWS Data Exchange console](https://console.aws.amazon.com/dataexchange)\.
 
 1. In the left side navigation pane, for **Publish data**, choose **Owned data sets**\.
 
@@ -473,6 +472,7 @@ If the provider has marked a product as containing protected health information 
 + [Exporting revisions to an S3 bucket as a provider \(console\)](#export-rev-s3-console-pro)
 + [Exporting revisions to an S3 bucket as a subscriber \(console\)](#export-rev-s3-console-sub)
 + [Automatically exporting revisions to an S3 bucket as a subscriber](#auto-export-rev-s3-console-sub)
++ [Key patterns when exporting revisions](#revision-export-keypatterns)
 
 ### Exporting revisions to an S3 bucket \(AWS SDKs\)<a name="export-rev-s3-prog"></a>
 
@@ -502,7 +502,7 @@ If the provider has marked a product as containing protected health information 
 
 **To export a revision to an S3 bucket as a provider \(console\)**
 
-1. Open your web browser and go to the [AWS Data Exchange console](https://console.aws.amazon.com/dataexchange)\.
+1. Open your web browser and sign in to the [AWS Data Exchange console](https://console.aws.amazon.com/dataexchange)\.
 
 1. In the left side navigation pane, for **Publish data**, choose **Owned data sets**\.
 
@@ -524,7 +524,7 @@ If the provider has marked a product as containing protected health information 
 
 **To export a revision to an S3 bucket as a subscriber \(console\)**
 
-1. Open your web browser and go to the [AWS Data Exchange console](https://console.aws.amazon.com/dataexchange)\.
+1. Open your web browser and sign in to the [AWS Data Exchange console](https://console.aws.amazon.com/dataexchange)\.
 
 1. In the left side navigation pane, for **My subscriptions**, choose **Entitled data**\.
 
@@ -644,7 +644,7 @@ To automatically export revisions to an S3 bucket of your choice, your S3 bucket
 
 **To automatically export a revision to an S3 bucket as a subscriber \(console\)**
 
-1. Open your web browser and go to the [AWS Data Exchange console](https://console.aws.amazon.com/dataexchange)\.
+1. Open your web browser and sign in to the [AWS Data Exchange console](https://console.aws.amazon.com/dataexchange)\.
 
 1. In the left side navigation pane, for **My subscriptions**, choose **Entitled data**\.
 
@@ -700,7 +700,7 @@ To automatically export revisions to an S3 bucket of your choice, your S3 bucket
 
    For more information about key patterns, see [Key patterns when exporting revisions](#revision-export-keypatterns)\.
 
-## Key patterns when exporting revisions<a name="revision-export-keypatterns"></a>
+### Key patterns when exporting revisions<a name="revision-export-keypatterns"></a>
 
 When you export a revision, each asset becomes an object in the S3 bucket\. The names of the objects are based on a key pattern that you provide\. You can use dynamic references that represent asset attributes to create a pattern for the names that are automatically generated during the export\. Use the dynamic references shown in the following table\.
 

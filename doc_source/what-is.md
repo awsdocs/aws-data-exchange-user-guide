@@ -38,7 +38,7 @@ A product has the following parts:
   + For more information as a provider, see [Data in AWS Data Exchange](data-sets.md)\.
 
 **Important**  
-Beginning July 22, 2021, new and existing providers have the ability to automatically publish revisions to data sets\. All new products on AWS Data Exchange default to automatic revision publishing\. If you have existing products on AWS Data Exchange before July 22, 2021, you need to migrate them to automatic revision publishing\.  
+As of July 22, 2021, new and existing providers can automatically publish revisions to data sets\. All new products on AWS Data Exchange default to automatic revision publishing\. If you have existing products on AWS Data Exchange before July 22, 2021, you need to migrate them to automatic revision publishing\.  
 For more information, see [Migrating an existing product to automatic revision publishing](updating-products.md#migrate-product)\.
 
 ## Malware prevention<a name="ensuring-safe-data"></a>
@@ -75,7 +75,7 @@ As an existing provider, you can access AWS Data Exchange through the following 
 
 ## Pricing<a name="pricing"></a>
 
-Your AWS Data Exchange subscriptions are displayed in the currency you specified for your AWS account\. You can change your preferred currency for your AWS account in the AWS Billing and Cost Management console\. For instructions, see [Changing which currency you use to pay your bill](https://docs.aws.amazon.com/awsaccountbilling/latest/aboutv2/manage-account-payment.html#manage-account-payment-change-currency) in the *AWS Billing and Cost Management User Guide*\.
+Your AWS Data Exchange subscriptions are displayed in the currency you specified for your AWS account\. You can change your preferred currency for your AWS account in the AWS Billing and Cost Management console\. For instructions, see [Changing which currency you use to pay your bill](https://docs.aws.amazon.com/awsaccountbilling/latest/aboutv2/manage-account-payment.html#manage-account-payment-change-currency) in the *AWS Billing User Guide*\.
 
 **Note**  
  Changing your preferred currency changes your remittance instructions\. To view updated remittance instructions, see your AWS Marketplace invoice or view the **Account Settings** page in the [AWS Billing and Cost Management](https://console.aws.amazon.com/billing/home?#account) console\.

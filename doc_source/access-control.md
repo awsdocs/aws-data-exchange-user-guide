@@ -156,4 +156,4 @@ When you grant permissions, you can use the IAM policy language to specify the c
 
 For more information about specifying conditions in a policy language, see [Condition](https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_elements.html#Condition) in the *IAM User Guide*\. 
 
-To express conditions, you use predefined condition keys\. AWS Data Exchange has the `JobType` condition for API operations\. However, there are AWS wide condition keys that you can use, as appropriate\. For a complete list of AWS wide keys, see [Available Keys for Conditions](https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_elements.html#AvailableKeys) in the *IAM User Guide*\.
+To express conditions, you use predefined condition keys\. AWS Data Exchange has the `JobType` condition for API operations\. However, there are AWS wide condition keys that you can use, as appropriate\. For a complete list of AWS wide keys, see the [https://docs.aws.amazon.com/IAM/latest/UserGuide/introduction.html](https://docs.aws.amazon.com/IAM/latest/UserGuide/introduction.html)\.

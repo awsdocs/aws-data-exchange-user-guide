@@ -47,11 +47,8 @@ Key data points include:
 ---
 ## Additional Information
 
-* [Data Schema] (ADD LINK HERE)
-* [Data Dictionary] (ADD LINK HERE)
 * [Data Source] (ADD LINK HERE)
 * [Data Due Diligence Questionnaire] (ADD LINK HERE)
-* [Sample Data Set] (ADD LINK HERE)
 * [Link to Corresponding ADX Trial Product/ Link to Corresponding ADX Paid Product] (ADD LINK HERE)
 
 ---
@@ -153,11 +150,10 @@ Examples of key data points include:
 ---
 ## Additional Information
 
-* [Data Schema] (ADD LINK HERE)
-* [Data Dictionary] (ADD LINK HERE)
+
 * [Data Source] (ADD LINK HERE)
 * [Data Due Diligence Questionnaire] (ADD LINK HERE)
-* [Sample Data Set] (ADD LINK HERE)
+
 * [Link to Corresponding ADX Trial Product/ Link to Corresponding ADX Paid Product] (ADD LINK HERE)
 
 ---
@@ -246,12 +242,10 @@ Provide an overview of how the raw data was engineered. Questions to answer:
 ---
 ## Additional Information
 
-* [Data Schema] (ADD LINK HERE)
-* [Data Dictionary] (ADD LINK HERE)
 * [Data Source] (ADD LINK HERE)
 * [Data Due Diligence Questionnaire] (ADD LINK HERE)
-* [Sample Data Set] (ADD LINK HERE)
-* [Link to Corresponding Trial Product/ Link to Corresponding Paid Product] (ADD LINK HERE)
+
+* [Link to Corresponding ADX Trial Product/ Link to Corresponding ADX Paid Product] (ADD LINK HERE)
 
 ---
 ## Pricing Information
@@ -314,20 +308,17 @@ Data Channels | Examples include web devices, mobile devices, CTV devices, offli
 
 
 ---
-## Dataset Specification
+## Data Set Specification
 The following are examples of data set specifications that you may include if applicable: 
 
-The datasets are updated at midnight EST daily.
+The data sets are updated at midnight EST daily.
 Custom data cuts are available if desired. 
 
 ---
 ## Additional Information
 
-* [Data Schema] (ADD LINK HERE)
-* [Data Dictionary] (ADD LINK HERE)
 * [Data Source] (ADD LINK HERE)
 * [Data Due Diligence Questionnaire] (ADD LINK HERE)
-* [Sample Data Set] (ADD LINK HERE)
 * [Link to Corresponding ADX Trial Product/ Link to Corresponding ADX Paid Product] (ADD LINK HERE)
 
 ---
@@ -389,19 +380,15 @@ Number of companies/brands covered | ADD INFO HERE
 ---
 Table format examples
  
-## Dataset(s) Inventory
+## Data Set(s) Inventory
 
 File Description | Format | Initial Size | Revision Frequency | Revision Type 
 ----|-----
-Data Dictionary | .PDF | 1 MB | N/A | N/A
+
 New Text Archives | .CSV | 100 GB | Hourly | Incremental
 Image Library | .JSON | 1.5 TB | Weekly | Incremental
 Ratings | .JSON | 50 MB | Every 5 Min | Republish 
-
-## Sample Data
-Date  |  Publisher | Title | Plays | Price 
-----|----
-MMDDYYYY | Publisher ABC | Game XYZ | XXXXXX | Free 
+ 
 
 ---
 ## Key Data Points
@@ -428,11 +415,9 @@ Examples of key data points include:
 ---
 ## Additional Information
 
-* [Data Schema] (ADD LINK HERE)
-* [Data Dictionary] (ADD LINK HERE)
 * [Data Source] (ADD LINK HERE)
 * [Data Due Diligence Questionnaire] (ADD LINK HERE)
-* [Sample Data Set] (ADD LINK HERE)
+
 * [Link to Corresponding ADX Trial Product/ Link to Corresponding ADX Paid Product] (ADD LINK HERE)
 
 ---
@@ -498,11 +483,9 @@ Number of companies/brands covered | YOUR INFO HERE
 ---
 ## Additional Information
 
-* [Data Schema] (ADD LINK HERE)
-* [Data Dictionary] (ADD LINK HERE)
 * [Data Source] (ADD LINK HERE)
 * [Data Due Diligence Questionnaire] (ADD LINK HERE)
-* [Sample Data Set] (ADD LINK HERE)
+
 * [Link to Corresponding ADX Trial Product/ Link to Corresponding ADX Paid Product] (ADD LINK HERE)
 
 ---
@@ -564,37 +547,22 @@ Key Words | YOUR INFO HERE
 Number of companies/brands covered | YOUR INFO HERE
 Data Channels | Examples include web devices, mobile devices, CTV devices, offline purchases, household data, B2B data
 
----
-## Tables
-If you'd like to preview the format of the data file, you can make a table and include an example such as:
-
-DMA | Category | Index (100 is baseline) | Cadence 
-----|-----
-DMA - New York City | Restaurant Transactions | 125 | Weekly 
-DMA - Chicago | Restaurant Transactions | 150 | Weekly  
-DMA - Los Angeles | Restaurant Transactions | 75 | Weekly  
-DMA - New York City | Grocery store foot traffic | 120 | Weekly 
-DMA - Chicago | Grocery store foot traffic | 90 | Weekly 
-DMA - Los Angeles | Grocery store foot traffic | 150 | Weekly 
 
 
 ---
-## Dataset Specification
+## Data Set Specification
 The following are examples of data set specifications that you can include if applicable: 
 
-The datasets are updated at midnight EST daily.
-The datasets are tied to a home address, and attributes correspond to the household level. 
+The data sets are updated at midnight EST daily.
+The data sets are tied to a home address, and attributes correspond to the household level. 
 Provider processes opt-outs on a daily basis and remove records from future files. 
 Custom data cuts are available if desired. 
 
 ---
 ## Additional Information
 
-* [Data Schema] (ADD LINK HERE)
-* [Data Dictionary] (ADD LINK HERE)
 * [Data Source] (ADD LINK HERE)
 * [Data Due Diligence Questionnaire] (ADD LINK HERE)
-* [Sample Data Set] (ADD LINK HERE)
 * [Link to Corresponding ADX Trial Product/ Link to Corresponding ADX Paid Product] (ADD LINK HERE)
 
 ---

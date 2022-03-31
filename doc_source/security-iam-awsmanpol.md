@@ -4,7 +4,7 @@ To add permissions to users, groups, and roles, it is easier to use AWS managed 
 
 AWS services maintain and update AWS managed policies\. You can't change the permissions in AWS managed policies\. Services occasionally add additional permissions to an AWS managed policy to support new features\. This type of update affects all identities \(users, groups, and roles\) where the policy is attached\. Services are most likely to update an AWS managed policy when a new feature is launched or when new operations become available\. Services do not remove permissions from an AWS managed policy, so policy updates won't break your existing permissions\.
 
-Additionally, AWS supports managed policies for job functions that span multiple services\. For example, the **ViewOnlyAccess** AWS managed policy provides read\-only access to many AWS services and resources\. When a service launches a new feature, AWS adds read\-only permissions for new operations and resources\. For a list and descriptions of job function policies, see [AWS managed policies for job functions](https://docs.aws.amazon.com/IAM/latest/UserGuide/access_policies_job-functions.html) in the *IAM User Guide*\.
+Additionally, AWS supports managed policies for job functions that span multiple services\. For example, the `ViewOnlyAccess` AWS managed policy provides read\-only access to many AWS services and resources\. When a service launches a new feature, AWS adds read\-only permissions for new operations and resources\. For a list and descriptions of job function policies, see [AWS managed policies for job functions](https://docs.aws.amazon.com/IAM/latest/UserGuide/access_policies_job-functions.html) in the *IAM User Guide*\.
 
 
 
@@ -188,6 +188,7 @@ This policy includes the following permissions:
                 "dataexchange:UntagResource",
                 "dataexchange:PublishDataSet",
                 "dataexchange:SendApiAsset",
+                "dataexchange:RevokeRevision",
                 "tag:GetTagKeys",
                 "tag:GetTagValues"
             ],
@@ -479,6 +480,7 @@ The following table provides details about updates to AWS managed policies for A
 
 | Change | Description | Date | 
 | --- | --- | --- | 
+|  [ AWSDataExchangeProviderFullAccess](#security-iam-awsmanpol-awsdataexchangeproviderfullaccess) – Update to existing policy  |  Added `dataexchange:RevokeRevision`, a new permission to revoke a revision\.  | March 15, 2022 | 
 |  [ AWSDataExchangeProviderFullAccess](#security-iam-awsmanpol-awsdataexchangeproviderfullaccess) and [ AWSDataExchangeFullAccess](#security-iam-awsmanpol-awsdataexchangefullaccess) – Update to existing policies  |  Added `apigateway:GET`, a new permission to retrieve an API asset from Amazon API Gateway\.  | December 3, 2021 | 
 | [ AWSDataExchangeProviderFullAccess](#security-iam-awsmanpol-awsdataexchangeproviderfullaccess) and [ AWSDataExchangeSubscriberFullAccess](#security-iam-awsmanpol-awsdataexchangesubscriberfullaccess) – Update to existing policies |  Added `dataexchange:SendApiAsset`, a new permission to send a request to an API asset\.  | November 29, 2021 | 
 |  [ AWSDataExchangeProviderFullAccess](#security-iam-awsmanpol-awsdataexchangeproviderfullaccess) and [ AWSDataExchangeFullAccess](#security-iam-awsmanpol-awsdataexchangefullaccess) – Update to existing policies  |  Added `redshift:AuthorizeDataShare`, `redshift:DescribeDataSharesForProducer`, and` redshift:DescribeDataShares`, new permissions to authorize access to and create Amazon Redshift data sets\.  | November 1, 2021 | 

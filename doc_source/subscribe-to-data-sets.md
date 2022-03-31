@@ -12,7 +12,7 @@ At a high level, this is how to subscribe to data products using AWS Data Exchan
 
 1. **Subscriber uses the product** – You have access to the product data sets according to the terms of the data subscription agreement\. You can export the associated assets to Amazon Simple Storage Service \(Amazon S3\) or you can use jobs with a signed URL\. For more information, see [Jobs in AWS Data Exchange](jobs.md)\.
 
-1. **Request new data products** – If you are not able to find a product in the catalog, you can use the **Request data product page** in the AWS Data Exchange console to inform AWS of your interest\. AWS will use this information to work with the data provider and try to get that data added to the catalog\.
+1. **Request a data product recommendation** – If you are not able to find a product in the catalog, you can use the **Request data product page** in the AWS Data Exchange console to request personalized recommendations from the AWS Data Exchange Data Discovery Team\.
 
 **Note**  
 When subscribing to data products from some non\-US sellers, you might also receive a tax invoice from the seller\. For more information, see [Tax Help \- AWS Marketplace Sellers](http://aws.amazon.com/tax-help/marketplace/)\.
@@ -20,7 +20,7 @@ When subscribing to data products from some non\-US sellers, you might also rece
 ## Related topics<a name="related-topics-subscribers"></a>
 + [Product subscriptions](product-subscriptions.md)
 + [Getting started as a subscriber](subscriber-getting-started.md)
-+ [Subscribing to a product](subscribing-to-product.md)
++ [Subscribe to and access a product](subscribing-to-product.md)
 + [Subscription verification for subscribers](subscription-verification-sub.md)
 + [Sharing license subscriptions in an organization](organizations-sharing.md)
 + [Bring Your Own Subscription \(BYOS\) offers ](subscribe-to-byos-offer.md)

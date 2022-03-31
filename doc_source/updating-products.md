@@ -2,6 +2,18 @@
 
 The following sections describe how to update your products\. The instructions are written with the assumption that you're a provider who is familiar with [Data in AWS Data Exchange](data-sets.md)\. After you publish a product, you can edit the product's details and its public offer\. You can also update the underlying data sets by publishing new revisions to subscribers\. For more information, see [Revisions](data-sets.md#revisions)\.
 
+**Topics**
++ [Updating product and offer details](#update-product-details)
++ [Updating a data dictionary](#update-data-dictionary)
++ [Updating a sample](#update-sample)
++ [Updating custom metadata](#update-custom-metadata)
++ [Publishing a new data set revision using automatic revision publishing](#dynamically-updated-products)
++ [Publishing a new data set revision using manual revision publishing](#manual-publish-revision)
++ [Unpublish a product](#unpublish-product)
++ [Removing a revision](#remove-revision)
++ [Migrating an existing product to automatic revision publishing](#migrate-product)
++ [Revoking revisions](#revoking-revisions)
+
 ## Updating product and offer details<a name="update-product-details"></a>
 
 After you publish a product, you can use the AWS Data Exchange console to edit the product details\. You can also edit the product's public or custom offers and change the offer terms\. When you update your product's offer terms, subscribers with an active subscription keep their existing offer terms as long as their subscription is active\. Subscribers who have chosen auto\-renewals use the new offer terms\.
@@ -12,7 +24,7 @@ Keep the following in mind when you update products:
 
 **To update a product, data set, or offer details**
 
-1. Open your web browser and go to the [AWS Data Exchange console](https://console.aws.amazon.com/dataexchange)\.
+1. Open your web browser and sign in to the [AWS Data Exchange console](https://console.aws.amazon.com/dataexchange)\.
 
 1. From the left navigation pane, under **Publish data**, choose **Products**\.
 
@@ -20,17 +32,73 @@ Keep the following in mind when you update products:
 
 1. From **Product details**, choose **Edit**, and then follow the instructions to edit the product\.
 
-1. From **Data sets**:
+1. From **Data sets**, under **Sensitive information**, choose **Edit**, and then follow the instructions to edit the information\.
 
-   1. Under **Sensitive information**, choose **Edit**, and then follow the instructions to edit the information\.
+1. From **Data evaluation**, update the data dictionary or sample by selecting the option button next to the data dictionary or sample **Name** and then choosing **Actions**\. For more information, see [Updating a data dictionary](#update-data-dictionary) and [Updating a sample](#update-sample)\.
 
-1. If your product is a public offer, from **Public offer**, choose **Edit**, and then follow the instructions to edit the public oﬀer\.
-
-1. If your product is a public offer, from **Custom offers**, choose **Edit**, and then follow the instructions to edit the custom oﬀer\.
-
-1. If your product is a private offer, from **Private offers**, choose **Edit**, and then follow the instructions to edit the private offer\.
+1. Configure your offer, depending on the offer type:
+   + If your product is a public offer, from **Public offer**, choose **Edit**, and then follow the instructions to edit the public oﬀer\.
+   + If your product is a custom offer, from **Custom offers**, choose **Edit**, and then follow the instructions to edit the custom oﬀer\.
+   + If your product is a private offer, from **Private offers**, choose **Edit**, and then follow the instructions to edit the private offer\.
 
 1. Choose **Update**\.
+
+## Updating a data dictionary<a name="update-data-dictionary"></a>
+
+You can update a data dictionary by first removing the existing data dictionary and then uploading a new one\.
+
+**To update a data dictionary**
+
+1. Open your web browser and sign in to the [AWS Data Exchange console](https://console.aws.amazon.com/dataexchange)\.
+
+1. From the left navigation pane, under **Publish data**, choose **Products**\.
+
+1. From **Products**, choose the product you want to update and confirm its status is **Published**\.
+
+1. Choose the **Data evaluation** tab\.
+
+1. Under **Data dictionary and samples**, expand the data set by choosing the plus icon, and then choose the data dictionary by selecting the option button next to the data dictionary **Name**\.
+
+   1. Choose **Actions**, and then **Remove data dictionary**\.
+
+      The data dictionary is removed\.
+
+   1. Select the option button next to the data set, choose **Actions**, and then **Upload data dictionary**\.
+
+   1. Choose **Add file**\.
+
+   1. Select a new data dictionary and then click **Open**\.
+
+   1. Choose **Upload**\.
+
+1. \(Optional\) Choose the data dictionary by selecting the option button next to the data dictionary **Name**, choose **Actions**, and then choose **Download data dictionary \(CSV\)** to download the data dictionary to your computer\.
+
+## Updating a sample<a name="update-sample"></a>
+
+**To update a sample**
+
+1. Open your web browser and sign in to the [AWS Data Exchange console](https://console.aws.amazon.com/dataexchange)\.
+
+1. From the left navigation pane, under **Publish data**, choose **Products**\.
+
+1. From **Products**, choose the product you want to update and confirm its status is **Published**\.
+
+1. Choose the **Data evaluation** tab\.
+
+1. Under **Data dictionary and samples**, select the option button next to a data set\.
+
+1. Choose **Actions**, and then choose **Add samples**\.
+
+   1. Choose **Upload samples**\.
+
+   1. Select a new sample from your computer, and then choose **Open**\.
+
+   1. Enter an optional **Description**, and then choose **Add**\.
+
+1. \(Optional\) Select the option button next to the sample **Name**, choose **Actions**, and then choose one of the following actions:
+   + **Download selected sample**
+   + **Preview sample \(CSV only\)**
+   + **Remove selected sample**
 
 ## Updating custom metadata<a name="update-custom-metadata"></a>
 
@@ -38,7 +106,7 @@ After you publish a product, you can use the AWS Data Exchange console to edit t
 
 **To update custom metadata**
 
-1. Open your web browser and go to the AWS Data Exchange console\.
+1. Open your web browser and sign in to the AWS Data Exchange console\.
 
 1. From the left navigation pane, under **Publish data**, choose **Products**\.
 
@@ -61,11 +129,11 @@ You can use the AWS Data Exchange console or the AWS Marketplace Catalog API to 
 In the following procedure, you create and finalize a new revision for a data set that has already been published using the AWS Data Exchange console\. The data set revision is then automatically published to all products the data set belongs to\. For more information, see [Revisions](data-sets.md#revisions)\.
 
 **Important**  
-Any revision that is part of a product is immutable and can't be edited, changed, or deleted\. If you need to remove published content for compliance reasons, contact [ AWS Support](https://console.aws.amazon.com/support/home#/case/create?issueType=customer-service) or send an email message to [dataexchangehelp@amazon\.com](mailto://dataexchangehelp@amazon.com)\.
+A provider can revoke subscriber access to a revision and then delete the assets of the revision using the console or the AWS Data Exchange API\. For more information, see [Revoking revisions](#revoking-revisions)\.
 
 **To publish a new data set revision to a product**
 
-1. Open your web browser and go to the [AWS Data Exchange console](https://console.aws.amazon.com/dataexchange)\.
+1. Open your web browser and sign in to the [AWS Data Exchange console](https://console.aws.amazon.com/dataexchange)\.
 
 1. On the left side navigation pane, under **Publish data**, choose **Owned data sets**\.
 
@@ -79,7 +147,7 @@ Any revision that is part of a product is immutable and can't be edited, changed
 
    1. \(Optional\) Under **Add tags – optional**, add tags associated with the resource\.
 
-   1. Choose **Create**\.
+   1. Choose **Create revision**\.
 
       Your new revision is created\.
 
@@ -111,14 +179,14 @@ You can dynamically update your data sets in a number of ways\. Here are three e
 ## Publishing a new data set revision using manual revision publishing<a name="manual-publish-revision"></a>
 
 **Important**  
-Beginning July 22, 2021, new and existing providers have the ability to automatically publish revisions to data sets\. All new products on AWS Data Exchange default to automatic revision publishing\. If you have created existing products on AWS Data Exchange before July 22, 2021, you need to migrate them to automatic revision publishing\.  
+As of July 22, 2021, new and existing providers can automatically publish revisions to data sets\. All new products on AWS Data Exchange default to automatic revision publishing\. If you have created existing products on AWS Data Exchange before July 22, 2021, you need to migrate them to automatic revision publishing\.  
 For more information, see [Migrating an existing product to automatic revision publishing](#migrate-product)\.
 
 In the following procedure, you create, finalize, and manually publish a new revision for a data set that has already been published using the AWS Data Exchange console\. For more information, see [Revisions](data-sets.md#revisions)\.
 
 **To manually publish a data set revision to a product**
 
-1. Open your web browser and go to the [AWS Data Exchange console](https://console.aws.amazon.com/dataexchange)\.
+1. Open your web browser and sign in to the [AWS Data Exchange console](https://console.aws.amazon.com/dataexchange)\.
 
 1. On the left side navigation pane, under **Publish data**, choose **Owned data sets**\.
 
@@ -169,9 +237,9 @@ Keep the following in mind when you unpublish a product:
 
 **To unpublish a product**
 
-1. Open your web browser and go to the [AWS Data Exchange console](https://console.aws.amazon.com/dataexchange)\.
+1. Open your web browser and sign in to the [AWS Data Exchange console](https://console.aws.amazon.com/dataexchange)\.
 
-1. From the left navigation pane, under **Publish data products**, choose **Products**\.
+1. From the left navigation pane, under **Publish data**, choose **Products**\.
 
 1. From **Products**, choose the product you want to remove\. Make sure its status is **Published**\.
 
@@ -183,12 +251,16 @@ After you complete these steps, your product's status is **Unpublished**\. An un
 
 ## Removing a revision<a name="remove-revision"></a>
 
-Any revision published to a product is immutable and can't be edited, changed, or deleted, unless it needs to be removed for compliance reasons\. Contact [ AWS Support](https://console.aws.amazon.com/support/home#/case/create?issueType=customer-service) or send an email message to [dataexchangehelp@amazon\.com](mailto://dataexchangehelp@amazon.com) for help\.
+A provider can revoke subscriber access to a revision and then delete the assets of the revision using the console or the AWS Data Exchange API\. For more information, see [Revoking revisions](#revoking-revisions)\.
+
+You can edit or delete a revision after it's finalized, but before you add it to a product\. For more information, see the following topics:
++ [Edit a revision](publishing-products.md#edit-api-revision)
++ [Delete a revision](publishing-products.md#delete-api-revision)
 
 ## Migrating an existing product to automatic revision publishing<a name="migrate-product"></a>
 
 **Important**  
-Beginning July 22, 2021, new and existing providers have the ability to automatically publish revisions to data sets\. All new products on AWS Data Exchange default to automatic revision publishing\. If you have created existing products on AWS Data Exchange before July 22, 2021, you need to migrate them to automatic revision publishing\.  
+As of July 22, 2021, new and existing providers can automatically publish revisions to data sets\. All new products on AWS Data Exchange default to automatic revision publishing\. If you have created existing products on AWS Data Exchange before July 22, 2021, you need to migrate them to automatic revision publishing\.  
 If you have existing products, you can migrate your existing products from manual revision publishing to automatic revision publishing\. Automatic revision publishing simplifies the data set revision publishing process by making your revision immediately available to subscribers when you finalize it\.
 
 **Important**  
@@ -196,11 +268,15 @@ The AWS Identity and Access Management \(IAM\) permission `dataexchange:StartCha
 
 After you have migrated all of your existing products, any future products you create will use automatic revision publishing\.
 
-## Migrating a single product<a name="migrate-existing-product"></a>
+**Topics**
++ [Migrating a single product](#migrate-existing-product)
++ [Migrating all products](#migrate-all-products)
+
+### Migrating a single product<a name="migrate-existing-product"></a>
 
 **To migrate a single existing product to automatic revision publishing**
 
-1. Open your web browser and go to the [AWS Data Exchange console](https://console.aws.amazon.com/dataexchange)\.
+1. Open your web browser and sign in to the [AWS Data Exchange console](https://console.aws.amazon.com/dataexchange)\.
 
 1. From the left navigation pane, under **Publish data**, choose **Products**\.
 
@@ -214,11 +290,11 @@ After you have migrated all of your existing products, any future products you c
 
 1. Repeat for any remaining products\.
 
-## Migrating all products<a name="migrate-all-products"></a>
+### Migrating all products<a name="migrate-all-products"></a>
 
 **To migrate all existing products to automatic revision publishing**
 
-1. Open your web browser and go to the [AWS Data Exchange console](https://console.aws.amazon.com/dataexchange)\.
+1. Open your web browser and sign in to the [AWS Data Exchange console](https://console.aws.amazon.com/dataexchange)\.
 
 1. From the left navigation pane, under **Publish data**, choose **Products**\.
 
@@ -227,3 +303,136 @@ After you have migrated all of your existing products, any future products you c
 1. Click **Create support ticket**\. 
 
 1. Fill out your support ticket request, and the AWS Data Exchange team will migrate all products in your account\.
+
+## Revoking revisions<a name="revoking-revisions"></a>
+
+As a provider, you can revoke subscriber access to a specific revision at any time\. This action is typically done by providers for compliance reasons\. Revoking a revision doesn't delete the underlying assets\. After you have revoked the revision, all subscribers receive an Amazon EventBridge \(formerly known as CloudWatch Events\) notification that the revision has been revoked\. Subscribers can then view the reason for the revoked revision on the AWS Data Exchange console\. Subscribers can’t export or query the data within a revoked revision\.
+
+To be able to revoke revisions, providers who manage their own IAM policies must add `dataexchange:RevokeRevision` as a new action\. Providers who use the [AWS Data Exchange managed policies](https://docs.aws.amazon.com/data-exchange/latest/userguide/security-iam-awsmanpol.html) don't need to make any changes\.
+
+After a revision is revoked, you can delete the assets of the revision by using the console or the AWS Data Exchange `DeleteAsset` API operation\. 
+
+**Topics**
++ [Revoking a revision \(AWS CLI\)](#revoke-rev-sdk)
++ [Revoking a single revision as a provider \(console\)](#revoke-rev-single)
++ [Revoking multiple revisions as a provider \(console\)](#revoke-rev-multi)
++ [Editing a revocation reason as a provider \(console\)](#edit-revoked-rev)
++ [Viewing revoked revisions as a subscriber \(console\)](#view-revoked-rev)
+
+### Revoking a revision \(AWS CLI\)<a name="revoke-rev-sdk"></a>
+
+**To revoke a revision \(AWS CLI\)**
+
+1. Use the `revoke-revision` command to revoke a revision\. 
+
+   ```
+   $ aws dataexchange revoke-revision \
+   --data-set-id $DATA_SET_ID \
+   --revision-id $REVISION_ID \
+   --comment 'Revoking Revision Example'
+   
+   {
+   "Id": "ab7859881EXAMPLEdd3e8a4b88fc6a8d",
+   "Arn": "arn:aws:dataexchange:us-east-1:427362365172:data-sets/$DATA_SET_ID/revisions/$REVISION_ID",
+   "Comment": "Revoking Revision Example",
+   "CreatedAt": "2022-03-08T18:54:20.746Z",
+   "UpdatedAt": "2022-03-09T20:28:53.105Z",
+   "DataSetId": "24d30f8446a878237c35d011e7b22d0b",
+   "Finalized": true,
+   "Revoked": true,
+   "RevokedAt": "2022-03-09T20:28:53.105Z",
+   "RevocationComment": "revoking revision example"
+   }
+   ```
+
+1. After a revision is revoked, you can delete the assets of the revision using the AWS Data Exchange `DeleteAsset` API operation\. 
+
+### Revoking a single revision as a provider \(console\)<a name="revoke-rev-single"></a>
+
+**To revoke revision as a provider \(console\)**
+
+1. Open your web browser and sign in to the [AWS Data Exchange console](https://console.aws.amazon.com/dataexchange)\.
+
+1. In the left side navigation pane, for **Publish data**, choose **Owned data sets**\.
+
+1. In **Owned data sets**, choose the data set that has the revision you want to revoke\.
+
+1. On the **Revisions** tab, under **Revisions**, choose the revision\.
+
+1. On the revision page, under **Revision overview**, for **Actions**, choose **Revoke**\.
+
+1. In the **Revoke revision** dialog box, enter a short description of your reason for revoking the revision\. Subscribers will see this description\.
+
+1. Choose **Revoke**\.
+
+   The **Status** of the revision is set to **Revoked**\.
+**Warning**  
+This revokes the revision and all of its assets\. Subscribers can view the reason for revocation but can’t access or export the assets\. This action can't be undone\.
+
+1. After a revision is revoked, you can delete the assets of the revision by navigating to the revision page, selecting the assets you want to delete in the **Imported assets** table, and then choosing **Delete**\.
+
+To edit the reason for a revoked revision, see [Editing a revocation reason as a provider \(console\)](#edit-revoked-rev)\.
+
+### Revoking multiple revisions as a provider \(console\)<a name="revoke-rev-multi"></a>
+
+**To revoke multiple revisions as a provider \(console\)**
+
+1. Open your web browser and sign in to the [AWS Data Exchange console](https://console.aws.amazon.com/dataexchange)\.
+
+1. In the left side navigation pane, for **Publish data**, choose **Owned data sets**\.
+
+1. In **Owned data sets**, choose the data set that has the revisions you want to revoke\.
+
+1. On the **Revisions** tab, choose up to 10 revisions\.
+
+1. Choose **Revoke**\.
+
+1. In the **Revoke \{x\} revisions** dialog box, enter a short description of your reason for revoking the revisions\. Subscribers will see this description\. Then, choose **Revoke**\.
+
+   The **Status** of the revisions are set to **Revoked**\.
+**Warning**  
+This revokes the revisions and all of the assets\. Subscribers can view the reason for revocation but can’t access or export the assets\. This action can't be undone\.
+
+1. After a revision is revoked, you can delete the assets of the revision by navigating to the revision page, selecting the assets you want to delete in the **Imported assets** table, and then choosing **Delete**\.
+
+To edit the reason for a revoked revision, see [Editing a revocation reason as a provider \(console\)](#edit-revoked-rev)\.
+
+### Editing a revocation reason as a provider \(console\)<a name="edit-revoked-rev"></a>
+
+As a provider, you can edit the reason for the revocation after the revision has been revoked\.
+
+**To edit a revocation revision as a provider \(console\)**
+
+1. Open your web browser and sign in to the [AWS Data Exchange console](https://console.aws.amazon.com/dataexchange)\.
+
+1. In the left side navigation pane, for **Publish data products**, choose **Owned data sets**\.
+
+1. In **Owned data sets**, choose the data set that has the revision you revoked\.
+
+1. On the **Revisions** tab, choose the revoked revision\.
+
+1. On the revision page, choose **Edit revocation reason**\.
+
+1. In the **Edit revocation revision** dialog box, enter a short description of your reason for revoking the revision\.
+
+1. Choose **Save**\.
+
+   The **Status** of the revision is set to **Revoked**\.
+
+   The updated revocation reason is displayed on the revision page\.
+
+### Viewing revoked revisions as a subscriber \(console\)<a name="view-revoked-rev"></a>
+
+**To view a revoked revision as a subscriber \(console\)**
+
+1. Open your web browser and sign in to the [AWS Data Exchange console](https://console.aws.amazon.com/dataexchange)\.
+
+1. From the left navigation pane, under **My subscriptions**, choose **Entitled data**\.
+
+1. Under **Products**, choose a product, and then expand the data set under the product to see a list of revisions\.
+
+1. On the data set page, under the **Revisions** tab, view the **Status** of the revision \(**Published** or **Revoked**\)\.
+
+1. Choose a revision\.
+
+1. View the revision reason on the top of the revision detail page\.

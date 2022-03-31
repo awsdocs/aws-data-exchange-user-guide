@@ -14,6 +14,7 @@ This topic provides detailed information about each event listed in the followin
 | Adds a data set to a product and publishes it | Data Sets Published to Product | [Events for adding data sets](#events-add-data-sets) | 
 | Adds an Amazon Redshift data set to a product and publishes it | Redshift Data Shares Data Sets Published To Product | [Events for adding Amazon Redshift datashare data sets ](#events-add-RS-data-sets) | 
 | Adds a data set revision to a product and publishes it | Revision Published To Data Set | [Events for adding revisions](#events-add-revisions) | 
+| Revokes revision to a product | Revision Revoked | [Events for revoking revisions](#events-revoke-revisions) | 
 | Adds an Amazon Redshift data set revision to a product and publishes it | Revision Published To Redshift Data Shares Data Set | [Events for adding Amazon Redshift datashare data set revisions](#events-add-RS-revision) | 
 | Takes an action on their Amazon Redshift resources that might remove access from a subscriber | Action Performed On Redshift Data Share By Provider | [Events for an action performed on an Amazon Redshift resource](#events-RS-action) | 
 | Takes an action on their Amazon Redshift resources that removes access from a subscriber | Redshift Data Share Access Lost | [Events for losing access to an Amazon Redshift datashare](#events-RS-lost-access) | 
@@ -100,6 +101,33 @@ The following is an example event body for an added revision\.
         "RevisionIds": [
             "3afc623EXAMPLE099e6fcc8EXAMPLEe7"
         ]
+    }
+}
+```
+
+## Events for revoking revisions<a name="events-revoke-revisions"></a>
+
+When a provider revokes a revision to a product and publishes it, the subscriber receives an event with the following detail type: `Revision Revoked`\. 
+
+The following is an example event body for a revoked revision\.
+
+```
+{
+    "version": "0",
+    "id": "dc529cb6-2e23-4c5f-d020-EXAMPLE92231",
+    "detail-type": "Revision Revoked",
+    "source": "aws.dataexchange",
+    "account": "123456789012",
+    "time": "2022-02-17T21:25:06Z",
+    "region": "us-east-1",
+    "resources": [
+        "aae4c2cdEXAMPLE54f9369dEXAMPLE66"
+     ],
+    "detail": {
+        "RevisionIds": [
+            "3afc623EXAMPLE099e6fcc8EXAMPLEe7"
+        ],
+    "RevocationComment": "example revocation comment"
     }
 }
 ```

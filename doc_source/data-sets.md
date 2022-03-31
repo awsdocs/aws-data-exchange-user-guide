@@ -87,7 +87,7 @@ A revision is a *container* for one or more assets\.
 You use revisions to update data in Amazon S3\. For example, you can group a collection of \.csv ﬁles or a single \.csv ﬁle and a dictionary to create a revision\. As new data is available, you create revisions and add assets\. After you create and finalize the revision using the AWS Data Exchange console, that revision will be immediately available to subscribers\. For more information, see [Publishing a new product](publishing-products.md)\.
 
 **Important**  
-Beginning July 22, 2021, new and existing providers have the ability to automatically publish revisions to data sets\. All new products on AWS Data Exchange default to automatic revision publishing\. If you have created existing products on AWS Data Exchange before July 22, 2021, you need to migrate them to automatic revision publishing\.  
+As of July 22, 2021, new and existing providers can automatically publish revisions to data sets\. All new products on AWS Data Exchange default to automatic revision publishing\. If you have created existing products on AWS Data Exchange before July 22, 2021, you need to migrate them to automatic revision publishing\.  
 For more information, see [Migrating an existing product to automatic revision publishing](updating-products.md#migrate-product)\.
 
 **Note**  
@@ -108,7 +108,12 @@ Revisions have the following parameters:
 + `Finalized` – Either true or false\. Used to indicate whether the revision is finalized\.
 + `Id` – The unique identifier for the revision generated when it's created\.
 + `Arn` – A unique identifier for an AWS resource name\.
-+ `CreatedAt` and `UpdatedAt` – Date and timestamps for the creation and last update of the revision\. Entitled revisions are created at the time of publishing\.
++ `CreatedAt` – Date and timestamp for the creation of the revision\. Entitled revisions are created at the time of publishing\.
++ `UpdatedAt` – Date and timestamp for the last update of the revision\.
++ `Revoked` – A status indicating that subscribers' access to the revision was revoked\.
++ `RevokedAt` – Date and timestamp indicating when subscriber access to the revision was revoked\.
++ `RevocationComment` – A required comment to inform subscribers of the reason their access to the revision was revoked\. The minimum required character length is 10\. This field can be between 10 and 512 characters long\.
++ `SourceID` – The revision ID of the owned revision corresponding to the entitled revision being viewed\. This parameter is returned when a revision owner is viewing the entitled copy of its owned revision\. 
 
 **Example revision resource**  
 

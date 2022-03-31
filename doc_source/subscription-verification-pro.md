@@ -42,7 +42,7 @@ The subscriber information you collect through subscription verification must be
 
 **To approve a subscription request**
 
-1. Open your web browser and go to the [AWS Data Exchange console](https://console.aws.amazon.com/dataexchange)\.
+1. Open your web browser and sign in to the [AWS Data Exchange console](https://console.aws.amazon.com/dataexchange)\.
 
 1. From the left navigation pane, under **Publish data**, choose **Subscription verification**\.
 
@@ -56,7 +56,7 @@ You can approve a subscription request for a product containing APIs\. You can a
 
 **To approve a subscription request for a product containing APIs**
 
-1. Open your web browser, and go to the [AWS Data Exchange console](https://console.aws.amazon.com/dataexchange)\.
+1. Open your web browser, and sign in to the [AWS Data Exchange console](https://console.aws.amazon.com/dataexchange)\.
 
 1. From the left navigation pane, under **Publish data**, choose **Subscription verification**\.
 
@@ -78,13 +78,13 @@ You can add additional key\-value pairs if necessary by choosing **Add** and the
 
    1.  Select the subscription, and choose **Edit custom metadata** to edit, add, or remove the key\-value pairs for this subscription\.
 **Note**  
-If you add three or more key\-value pairs, the **Custom metadata for APIs** column in the **Public and custom subscriptions** table displays the first key\-value pair, and then displays a number of key\-value pairs underneath the first key\-value pair\. For example: **`keyExample-valueExample` \+2 more**
+If you add three or more key\-value pairs, the **Custom metadata for APIs** column in the **Public and custom subscriptions** table displays the first key\-value pair, and then displays the number of key\-value pairs underneath the first key\-value pair\. For example: **`keyExample-valueExample` \+2 more**
 
 ### Declining requests<a name="decline-request"></a>
 
 **To decline a subscription request**
 
-1. Open your web browser and go to the [AWS Data Exchange console](https://console.aws.amazon.com/dataexchange)\.
+1. Open your web browser and sign in to the [AWS Data Exchange console](https://console.aws.amazon.com/dataexchange)\.
 
 1. From the left navigation pane, under **Publish data**, choose **Subscription verification**\.
 

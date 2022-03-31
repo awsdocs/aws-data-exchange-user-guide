@@ -21,7 +21,7 @@ If you are the provider, follow these steps to create the BYOS offer\.
 
 **To create a BYOS offer**
 
-1. Open your web browser and go to the [AWS Data Exchange console](https://console.aws.amazon.com/dataexchange)\. Sign in and choose the product for the BYOS offer\.
+1. Open your web browser and sign in to the [AWS Data Exchange console](https://console.aws.amazon.com/dataexchange)\. Sign in and choose the product for the BYOS offer\.
 
 1. Choose **BYOS offers** to open the wizard\.
 

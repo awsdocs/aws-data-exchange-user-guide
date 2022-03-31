@@ -2,7 +2,7 @@
 
 As a subscriber, you might want to migrate your existing data subscriptions to AWS Data Exchange\. Bring your own subscription \(BYOS\) functionality allows you to migrate and fulfill existing subscriptions with participating data providers at no additional cost\.
 
-With BYOS offers, any billing relationship between providers and subscribers continues\. BYOS offers are not subject to fulfillment fees\. As a subscriber, you receive an AWS Marketplace invoice for the subscription with no charge\.
+With BYOS offers, any billing relationship between providers and subscribers continues\. BYOS offers are not subject to fulfillment fees\. As a subscriber, you receive an AWS Marketplace invoice for the subscription with no charge for a fulfilment fee\.
 
 Because the subscription lifecycle starts outside of AWS Data Exchange, the workflow for migrating the existing subscriptions to AWS Data Exchange using BYOS requires collaboration between the provider and subscriber\.
 

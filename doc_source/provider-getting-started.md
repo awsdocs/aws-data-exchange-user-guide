@@ -60,7 +60,7 @@ You can't change the AWS account that you use to list a product on AWS Marketpla
 
 1. From your web browser, open the [AWS Marketplace Management Portal](http://aws.amazon.com/marketplace/management/tour/)\.
 
-1. Choose **Sign Up as a Seller** to open the registration wizard\.
+1. Choose **Register now** to open the registration wizard\.
 
 1. Confirm your company or full name, and review the Terms and Conditions\. If you agree to them, choose **I have read and agree to these terms**\.
 

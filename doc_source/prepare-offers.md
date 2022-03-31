@@ -55,7 +55,7 @@ You can view all of the subscriptions for any of your products through the **Pro
 
 **To view subscriptions for a product**
 
-1. Open your web browser and go to the [AWS Data Exchange console](https://console.aws.amazon.com/dataexchange)\.
+1. Open your web browser and sign in to the [AWS Data Exchange console](https://console.aws.amazon.com/dataexchange)\.
 
 1. From the left navigation pane, expand **Publish data** and choose **Products**\.
 
@@ -73,7 +73,7 @@ You can choose to filter to currently active subscriptions or to archived \(expi
 
 **To view subscriptions for a specific offer**
 
-1. Open your web browser and go to the [AWS Data Exchange console](https://console.aws.amazon.com/dataexchange)\.
+1. Open your web browser and sign in to the [AWS Data Exchange console](https://console.aws.amazon.com/dataexchange)\.
 
 1. From the left navigation pane, expand **Publish data** and choose **Products**\.
 

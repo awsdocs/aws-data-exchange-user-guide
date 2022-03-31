@@ -28,7 +28,7 @@ The **Offer expiration date** is the date by which the subscriber must accept th
 The expiration date must be before the second payment\.  
 If you need to expire an offer already created prior to the expiry date, you can return to the offer page, and choose **Expire**\. This will expire the offer for all potential subscribers\.
 
-1. Provide US sales tax and use settings, data subscription agreement, auto\-renewal settings, and support information\.
+1. Provide US sales tax and use tax settings, data subscription agreement, auto\-renewal settings, and support information\.
 
 1. Choose **Next**\. If you selected **Renewed private offer**, you must select the check box to indicate that you acknowledge the terms of the renewed private offer\. 
 

@@ -1,7 +1,7 @@
 # AddDataSets<a name="add-data-sets"></a>
 
 **Important**  
-Beginning July 22, 2021, new and existing providers have the ability to automatically publish revisions to data sets\. All new products on AWS Data Exchange default to automatic revision publishing\. If you have created existing products on AWS Data Exchange before July 22, 2021, you need to migrate them to automatic revision publishing\.  
+As of July 22, 2021, new and existing providers can automatically publish revisions to data sets\. All new products on AWS Data Exchange default to automatic revision publishing\. If you have created existing products on AWS Data Exchange before July 22, 2021, you need to migrate them to automatic revision publishing\.  
 For more information, see [Migrating an existing product to automatic revision publishing](updating-products.md#migrate-product)\.
 
 **Note**  
@@ -53,7 +53,7 @@ Before you begin, you need AWS Identity and Access Management \(IAM\) permission
    }
    ```
 
-1. Choose **Review policy**\.
+1. Choose **Next: Review**\.
 
 1. Provide a name for the policy \(for example, **CatalogAPIFullAccess**\), and then choose **Create Policy**\.
 

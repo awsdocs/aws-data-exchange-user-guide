@@ -5,10 +5,14 @@ The following topics describe the process of publishing a new product on AWS Dat
 **Topics**
 + [Publishing a product containing file\-based data](#publish-data-product)
 + [Publishing a product containing APIs](#publish-API-product)
-+ [Publishing a product containing Amazon Redshift datasets](#publish-Redshift-product)
++ [Publishing a product containing Amazon Redshift data sets](#publish-Redshift-product)
+
+The following video explains more about how to publish a new data product on AWS Data Exchange\.
+
+[![AWS Videos](http://img.youtube.com/vi/https://www.youtube.com/embed/T8SevK9mMa0/0.jpg)](http://www.youtube.com/watch?v=https://www.youtube.com/embed/T8SevK9mMa0)
 
 **Important**  
-Beginning July 22, 2021, new and existing providers have the ability to automatically publish revisions to data sets\. All new products on AWS Data Exchange default to automatic revision publishing\. If you have created existing products on AWS Data Exchange before July 22, 2021, you need to migrate them to automatic revision publishing\.   
+As of July 22, 2021, new and existing providers can automatically publish revisions to data sets\. All new products on AWS Data Exchange default to automatic revision publishing\. If you have created existing products on AWS Data Exchange before July 22, 2021, you need to migrate them to automatic revision publishing\.   
 For more information, see [Migrating an existing product to automatic revision publishing](updating-products.md#migrate-product)\.
 
 **Note**  
@@ -46,9 +50,9 @@ Data sets in AWS Data Exchange are dynamic and are versioned using revisions, wi
 
 **To create a data set**
 
-1. Open your web browser and go to the [AWS Data Exchange console](https://console.aws.amazon.com/dataexchange)\.
+1. Open your web browser and sign in to the [AWS Data Exchange console](https://console.aws.amazon.com/dataexchange)\.
 
-1.  On the left side navigation pane, under **Publish data**, choose **Owned data sets**\.
+1.  In the left side navigation pane, under **Publish data**, choose **Owned data sets**\.
 
 1. In **Owned data sets**, choose **Create data set** to open the **Data set creation steps** wizard\.
 
@@ -58,7 +62,7 @@ Data sets in AWS Data Exchange are dynamic and are versioned using revisions, wi
 
 1. \(Optional\) Under **Add tags – optional**, add tags\.
 
-1. Choose **Create**\. 
+1. Choose **Create data set**\. 
 
 ### Step 3: Create a revision<a name="create-revision"></a>
 
@@ -72,13 +76,13 @@ In the following procedure, you create a revision after you’ve created a data 
 
    1. \(Optional\) Choose **Delete** to delete the data set\.
 
-1. On the **Revisions** section, choose **Create revision**\.
+1. In the **Revisions** section, choose **Create revision**\.
 
-1. Under **Revision settings**, provide an optional comment for your revision that describes the purpose of the revision\. 
+1. Under **Define revision**, provide an optional comment for your revision that describes the purpose of the revision\. 
 
 1. \(Optional\) Under **Add tags – optional**, add tags associated with the resource\.
 
-1. Choose **Create**\.
+1. Choose **Create revision**\.
 
 1. Review, edit, or delete your changes from the previous step\. 
 
@@ -88,7 +92,7 @@ In the following procedure, you create a revision after you’ve created a data 
 
 **To import assets to the revision**
 
-1. Under the **Imported assets** section of the data set details page, choose either **Import from Amazon S3** or **Upload** \(to upload from your computer\), depending on where the data assets for the data set are currently stored\.
+1. Under the **Jobs** section of the data set details page, choose either **Import from Amazon S3** or **Upload** \(to upload from your computer\), depending on where the data assets for the data set are currently stored\.
 
 1. Follow the prompts, depending on your selection\. A job is started to import your asset into your data set\. 
 
@@ -96,9 +100,9 @@ In the following procedure, you create a revision after you’ve created a data 
 
 1. If you have more data to add, repeat Step 1\.
 
-1. Under **Revision overview**, review your revision and its assets\. 
+1. In **Revision overview**, review your revision and its assets\. 
 
-1. Choose **Finalize**\.
+1. Choose **Finalize revision**\.
 
 You have successfully finalized a revision for a data set\. 
 
@@ -112,7 +116,7 @@ You can edit or delete a revision before you add it to a product\.
 
 **To edit the revision after you’ve finalized it**
 
-1. On the **Revision overview**, choose **De\-finalize**\.
+1. In **Revision overview**, choose **De\-finalize**\.
 
    You see a message that the revision is no longer in the finalized state\.
 
@@ -120,13 +124,13 @@ You can edit or delete a revision before you add it to a product\.
 
 1. Make your changes, and then choose **Update**\.
 
-1. Review your changes and then choose **Finalize**\.
+1. Review your changes, and then choose **Finalize**\.
 
 #### Delete a revision<a name="delete-revision"></a>
 
 **To delete the revision after you’ve finalized it**
 
-1. On the **Revision overview**, choose **Delete**\.
+1. In **Revision overview**, choose **Delete**\.
 
 1. Type **Delete** in the **Delete revision** dialog box, and then choose **Delete**\.
 
@@ -139,47 +143,81 @@ After you've created at least one data set and finalized a revision with assets,
 
 **To publish a new product**
 
-1. From the left navigation pane of the [AWS Data Exchange console](https://console.aws.amazon.com/dataexchange), under **Publish data**, choose **Products**\.
+1. In the left navigation pane of the [AWS Data Exchange console](https://console.aws.amazon.com/dataexchange), under **Publish data**, choose **Products**\.
 
 1. From **Products**, choose **Publish new product** to open the **Publish new product** wizard\.
 
 1. In the **Product visibility** section, choose your product's **Product visibility options** and **Sensitive information** configuration, and then choose **Next**\. For more information, see [Product visibility](product-details.md#product-visibility) and [Sensitive categories of information](product-details.md#sensitive-information)\.
 
-1. In the **Define product** section, enter information about your product, including name, logo, support contact, web address, categories, and descriptions, and then choose **Next**\. For more information, see [Product details](product-details.md)\.
-
-1. In the **Add data** section, select the check box next to the data sets you want to add\.
+1. In the **Add data** section, under **Owned data sets**, select the check boxes next to the data sets you want to add, and then choose **Add selected**\.
 **Note**  
-The data sets you choose must have a finalized revision\. Data sets without finalized revisions won't be added\.
+The data sets you choose must have a finalized revision\. Data sets without finalized revisions can't be added\.
 
-   1. Choose **Add selected**, and then scroll to **Selected data sets** to review your selection\.
+   1. Scroll to **Selected data sets** to review your selections\. 
+
+      You can review the **Name** of the data set, the **Type** of data set, and the timestamp of when the data set was **Last updated**\.
 
    1. Scroll to **Select revision access rules**, choose the revision access rules that you want to set for data sets included in this product, and then choose **Next**\. For more details, see [Revision access rules](product-details.md#best-practices-revisions)\.
 
-1. If you are creating a public offer, in the **Add public offer** section, configure your offer\. All AWS Data Exchange products with visibility set to **Public** require a public offer\. 
+1. In the **Define product** section, under **Product overview**, enter information about your product, including the **Product name**, **Product logo**, **Support contact** information, and **Product categories**\. 
 
-   1. Choose your **Pricing and access duration** options for the subscription\.
+   For more information, see [Product details](product-details.md)\.
 
-      Choose your US sales tax settings, data subscription agreement \(DSA\), and refund policy\. 
+1. \(Optional\) In the **Deﬁne product** section, under **Data dictionaries and samples – optional**, choose a data set by selecting the option button next to the data set name and then choose **Edit**\.
 
-   1. \(Optional\) Set **Subscription verification**, which enables you to control who can subscribe to this product\. For more information, see [Subscription verification for providers](subscription-verification-pro.md)\.
+   1. In the **Edit** dialog box, under **Upload data dictionary**, choose **Add file** to upload a new data dictionary\. 
 
-   1. Choose your **Oﬀer auto\-renewal** option\. For more information, see [Creating an offer for AWS Data Exchange products](prepare-offers.md)\.
+      You can choose one data dictionary, in \.csv format, with a maximum size of 1 MB\.
 
-   1. Choose **Next**\.
+   1. Choose a saved data dictionary from your computer, and then choose **Open**\.
 
-1. If you are creating a private offer, configure the offer details in the **Add custom offer** section\.
+      The data dictionary \.csv file appears on the **Edit** dialog box\.
+**Note**  
+Your data dictionary must conform to the AWS Data Exchange data dictionary template\. If you don’t have a saved data dictionary to upload, you can choose the links to download and modify the **blank data dictionary template** or the **example data dictionary**, and then upload it\.
 
-   1. In the **Subscriber account information** section, add at least one subscriber account to which you want to extend the offer\.
+   1. Choose **Data dictionary preview** to preview it\.
 
-   1. Choose your **Pricing and access duration** options for the subscription\.
+   1. Under **Samples \- optional**, choose **Upload samples**, choose a sample from your computer, and then choose **Open**\. 
 
-   1. Choose the **Offer expiration date** by which the subscriber must accept the offer\.
+       The samples appear on the **Edit** dialog box\.
+**Note**  
+You can upload up to 10 samples with a maximum size of 50 MB\. Samples in \.csv format can be previewed\.
 
-   1. Choose your US sales tax settings, data subscription agreement \(DSA\), and refund policy\.
+   1. Enter a description for each sample that will be visible on the product detail page\.
 
-   1. Choose your **Oﬀer auto\-renewal** option\. For more information, see [Creating an offer for AWS Data Exchange products](prepare-offers.md)\.
+   1. Choose **Save**\.
 
-   1. Choose **Next**\.
+1. Under **Product definition**, enter a **Short description** and a **Long description** of your product\.
+
+   If you want to use a template for your long description, select **Apply template**, choose your template type, and then fill out the template with your specific product details\.
+
+1. Choose **Next**\.
+
+1. Configure your offer\.
+   + If you're creating a public offer, in the **Add public offer** section, configure your offer\. All AWS Data Exchange products with visibility set to **Public** require a public offer\. 
+
+     1. Choose your **Pricing and access duration** options for the subscription\.
+
+     1. Choose your US sales tax settings, data subscription agreement \(DSA\), and refund policy\. 
+
+     1. \(Optional\) Set **Subscription verification**, which enables you to control who can subscribe to this product\. For more information, see [Subscription verification for providers](subscription-verification-pro.md)\.
+
+     1. Choose your **Oﬀer auto\-renewal** option\. For more information, see [Creating an offer for AWS Data Exchange products](prepare-offers.md)\.
+
+     1. Choose **Next**\.
+   + If you're creating a private offer, configure the offer details in the **Add custom offer** section\.
+
+     1. In the **Subscriber account information** section, add at least one subscriber account to which you want to extend the offer\.
+
+     1. Choose your **Pricing and access duration** options for the subscription\.
+
+     1. Choose the **Offer expiration date** by which the subscriber must accept the offer\.
+
+     1. Choose your US sales tax settings, data subscription agreement \(DSA\), and refund policy\.
+
+     1. Choose your **Oﬀer auto\-renewal** option\. For more information, see [Creating an offer for AWS Data Exchange products](prepare-offers.md)\.
+
+     1. Choose **Next**\.
 
 1. In the **Review & publish** section, review your product information and then expand the **Product page preview** to see how it will look after it’s published\.
 
@@ -196,7 +234,7 @@ You can copy a public, private, published, or unpublished product\. Custom oﬀe
 
 **To copy a product**
 
-1. Open your web browser and go to the [AWS Data Exchange console](https://console.aws.amazon.com/dataexchange)\.
+1. Open your web browser and sign in to the [AWS Data Exchange console](https://console.aws.amazon.com/dataexchange)\.
 
 1. From the left navigation pane, under **Publish data**, choose **Products**\.
 
@@ -206,7 +244,7 @@ You can copy a public, private, published, or unpublished product\. Custom oﬀe
 
 1. Continue through the **Publish a new product** workflow, with details already filled in, based on the product you chose in Step 3\. For more information, see [Step 5: Publish a new product](#publish-products)\.
 **Important**  
-Beginning July 22, 2021, new and existing providers have the ability to automatically publish revisions to data sets\. All new products on AWS Data Exchange default to automatic revision publishing\. If you have created existing products on AWS Data Exchange before July 22, 2021, you need to migrate them to automatic revision publishing\.  
+As of July 22, 2021, new and existing providers can automatically publish revisions to data sets\. All new products on AWS Data Exchange default to automatic revision publishing\. If you have created existing products on AWS Data Exchange before July 22, 2021, you need to migrate them to automatic revision publishing\.  
 For more information, see [Migrating an existing product to automatic revision publishing](updating-products.md#migrate-product)\.  
 If you are copying an existing product that you created before July 22, 2021, you will see two options under **Revision publishing**: **Automatically publish revisions** or **Manually publish revisions**\. We recommend that you choose the first option, to automatically publish revisions\.
 
@@ -237,7 +275,7 @@ The process has the following steps:
 
 Before you can publish a product containing APIs, you must meet the following prerequisites:
 + Before you can use any AWS service, including AWS Data Exchange, you must sign up for AWS and create an AWS Identity and Access Management \(IAM\) user account\. For more information, see [Setting up AWS Data Exchange](setting-up.md)\.
-+ To create products on AWS Data Exchange, you must register your AWS account as an AWS Marketplace Seller\. Use this account so create your data sets\. The account with the API Gateway resource doesn't need to be in the same account that is creating the data sets\.
++ To create products on AWS Data Exchange, you must register your AWS account as an AWS Marketplace Seller\. Use this account to create your data sets\. The account with the API Gateway resource doesn't need to be in the same account that is creating the data sets\.
 + Your REST API must be on Amazon API Gateway with an integration that uses an appropriate request and response model for accessing your data, such as Amazon DynamoDB or AWS Lambda\. For more information, see [Developing a REST API in API Gateway](https://docs.aws.amazon.com/apigateway/latest/developerguide/rest-api-develop.html) and [Working with REST APIs](https://docs.aws.amazon.com/apigateway/latest/developerguide/apigateway-rest-api.html) in the *Amazon API Gateway Developer Guide*\.
 **Note**  
 Only public API Gateway APIs are supported\.
@@ -339,9 +377,9 @@ You use either the AWS Data Exchange console or the AWS Command Line Interface t
 
 **To create an API data set \(console\)**
 
-1. Open your web browser and go to the [AWS Data Exchange console](https://console.aws.amazon.com/dataexchange)\.
+1. Open your web browser and sign in to the [AWS Data Exchange console](https://console.aws.amazon.com/dataexchange)\.
 
-1.  On the left side navigation pane, under **Publish data**, choose **Owned data sets**\.
+1. On the left side navigation pane, under **Publish data**, choose **Owned data sets**\.
 
 1. In **Owned data sets**, choose **Create data set** to open the **Data set creation steps** wizard\.
 
@@ -452,11 +490,11 @@ You use either the AWS Data Exchange console or the AWS CLI to add assets to a r
 
 **To add assets to the revision \(console\)**
 
-1. Under the **API assets** section of the data set details page, choose **Add**\.
+1. Under the **API assets** section of the data set details page, choose **Add API stage**\.
 
 1. Under **Select API stage**, for **Amazon API Gateway API**, enter an API in the input box or choose one of the following from the drop\-down list:
-   + **API in another AWS account** \- this is a cross account API that you have been given permission to access\.
-   + **In this AWS account** \- this is an API in your AWS account\.
+   + **API in another AWS account** – this is a cross account API that you have been given permission to access\.
+   + **In this AWS account** – this is an API in your AWS account\.
 
    1. If you chose **API in another AWS account**, enter the API ID and the API **Stage name** in the input boxes\.
 
@@ -642,41 +680,77 @@ You use the AWS Data Exchange console or the AWS Marketplace Catalog API to publ
 
 1. In the **Product visibility** section, choose your product's **Product visibility options** and **Sensitive information** configuration, and then choose **Next**\. For more information, see [Product visibility](product-details.md#product-visibility) and [Sensitive categories of information](product-details.md#sensitive-information)\.
 
-1. In the **Define product** section, enter information about your product, including name, logo, support contact, web address, categories, and descriptions, and then choose **Next**\. For more information, see [Product details](product-details.md)\.
-
-1. In the **Add data** section, select the check box next to the data sets you want to add\.
+1. In the **Add data** section, under **Owned data sets**, select the check box\(es\) next to the data set\(s\) you want to add, and then choose **Add selected**\.
 **Note**  
 The data sets you choose must have a finalized revision\. Data sets without finalized revisions won't be added\.
 
-   1. Choose **Add selected**, and then scroll to **Selected data sets** to review your selection\.
+   1. Scroll to **Selected data sets** to review your selection\(s\)\. 
+
+      You can review the **Name** of the data set, the **Type** of data set, and the timestamp of when the data set was **Last updated**\.
 
    1. Scroll to **Select revision access rules**, choose the revision access rules that you want to set for data sets included in this product, and then choose **Next**\. For more details, see [Revision access rules](product-details.md#best-practices-revisions)\.
 
-1. If you are creating a public offer, in the **Add public offer** section, configure your offer\. All AWS Data Exchange products with visibility set to **Public** require a public offer\. 
+1. 
 
-   1. Choose your **Pricing and access duration** options for the subscription\.
+   In the **Define product** section, under **Product overview**, enter information about your product, including the **Product name**, **Product logo**, **Support contact** information, and **Product categories**\. 
 
-   1. Choose your US sales tax settings, data subscription agreement \(DSA\), and refund policy\.
+   For more information, see [Product details](product-details.md)\.
 
-   1. \(Optional\) Set **Subscription verification**, which enables you to control who can subscribe to this product\. For more information, see [Subscription verification for providers](subscription-verification-pro.md)\.
+1. \(Optional\) In the **Deﬁne product** section, under **Data dictionaries and samples – optional**, choose a data set by selecting the option button next to the data set name and then choose **Edit**\.
 
-   1. Choose your **Oﬀer auto\-renewal** option\. For more information, see [Creating an offer for AWS Data Exchange products](prepare-offers.md)\.
+   1. In the **Edit** dialog box, choose **Upload** to upload a new data dictionary\. 
 
-   1. Choose **Next**\.
+      You can choose one data dictionary, in \.csv format, with a maximum size of 1 MB\.
 
-1. If you are creating a private offer, configure the offer details in the **Add custom offer** section\.
+   1. Choose a saved data dictionary from your computer and then choose **Open**\.
 
-   1. In the **Subscriber account information** section, add at least one subscriber account to which you want to extend the offer\.
+      The data dictionary \.csv file appears on the **Edit** dialog box\.
+**Note**  
+Your data dictionary must conform to the AWS Data Exchange data dictionary template\. If you don’t have a saved data dictionary to upload, you can choose the links to download and modify the **blank data dictionary template** or the **example data dictionary**, and then upload it\.
 
-   1. Choose your **Pricing and access duration** options for the subscription\.
+   1. Choose **Data dictionary preview** to preview it\.
 
-   1. Choose the **Offer expiration date** by which the subscriber must accept the offer\.
+   1. Under **Samples \- optional**, choose **Upload samples**, choose a sample from your computer, and then choose **Open**\. 
 
-   1. Choose your US sales tax settings, data subscription agreement \(DSA\), and refund policy\.
+       The samples appear on the **Edit** dialog box\.
+**Note**  
+You can upload up to 10 samples with a maximum size of 50 MB\. Samples in \.csv format can be previewed\.
 
-   1. Choose your **Oﬀer auto\-renewal** option\. For more information, see [Creating an offer for AWS Data Exchange products](prepare-offers.md)\.
+   1. Enter a description for each sample that will be visible on the product detail page\.
 
-   1. Choose **Next**\.
+   1. Choose **Save**\.
+
+1. Under **Product definition**, enter a **Short description** and a **Long description** of your product\.
+
+   If you want to use a template for your long description, select **Apply template**, choose your template type, and then fill out the template with your specific product details\.
+
+1. Choose **Next**\.
+
+1. Configure your offer\.
+   + If you are creating a public offer, in the **Add public offer** section, configure your offer\. All AWS Data Exchange products with visibility set to **Public** require a public offer\. 
+
+     1. Choose your **Pricing and access duration** options for the subscription\.
+
+     1. Choose your US sales tax settings, data subscription agreement \(DSA\), and refund policy\. 
+
+     1. \(Optional\) Set **Subscription verification**, which enables you to control who can subscribe to this product\. For more information, see [Subscription verification for providers](subscription-verification-pro.md)\.
+
+     1. Choose your **Oﬀer auto\-renewal** option\. For more information, see [Creating an offer for AWS Data Exchange products](prepare-offers.md)\.
+
+     1. Choose **Next**\.
+   + If you are creating a private offer, configure the offer details in the **Add custom offer** section\.
+
+     1. In the **Subscriber account information** section, add at least one subscriber account to which you want to extend the offer\.
+
+     1. Choose your **Pricing and access duration** options for the subscription\.
+
+     1. Choose the **Offer expiration date** by which the subscriber must accept the offer\.
+
+     1. Choose your US sales tax settings, data subscription agreement \(DSA\), and refund policy\.
+
+     1. Choose your **Oﬀer auto\-renewal** option\. For more information, see [Creating an offer for AWS Data Exchange products](prepare-offers.md)\.
+
+     1. Choose **Next**\.
 
 1. In the **Review & publish** section, review your product information and then expand the **Product page preview** to see how it will look after it’s published\.
 
@@ -693,7 +767,7 @@ You can copy a public, private, published, or unpublished product\. Custom oﬀe
 
 **To copy a product**
 
-1. Open your web browser and go to the [AWS Data Exchange console](https://console.aws.amazon.com/dataexchange)\.
+1. Open your web browser and sign in to the [AWS Data Exchange console](https://console.aws.amazon.com/dataexchange)\.
 
 1. From the left navigation pane, under **Publish data**, choose **Products**\.
 
@@ -703,11 +777,11 @@ You can copy a public, private, published, or unpublished product\. Custom oﬀe
 
 1. Continue through the **Publish a new product** workflow, with details already filled in, based on the product you chose in Step 3\. For more information, see [Step 5: Publish a new product](#publish-products)\.
 **Important**  
-Beginning July 22, 2021, new and existing providers have the ability to automatically publish revisions to data sets\. All new products on AWS Data Exchange default to automatic revision publishing\. If you have created existing products on AWS Data Exchange before July 22, 2021, you need to migrate them to automatic revision publishing\.  
+As of July 22, 2021, new and existing providers can automatically publish revisions to data sets\. All new products on AWS Data Exchange default to automatic revision publishing\. If you have created existing products on AWS Data Exchange before July 22, 2021, you need to migrate them to automatic revision publishing\.  
 For more information, see [Migrating an existing product to automatic revision publishing](updating-products.md#migrate-product)\.  
 If you are copying an existing product that you created before July 22, 2021, you will see two options under **Revision publishing**: **Automatically publish revisions** or **Manually publish revisions**\. We recommend that you choose the first option, to automatically publish revisions\.
 
-## Publishing a product containing Amazon Redshift datasets<a name="publish-Redshift-product"></a>
+## Publishing a product containing Amazon Redshift data sets<a name="publish-Redshift-product"></a>
 
 ### Overview<a name="publish-Redshift-product-overview"></a>
 
@@ -749,7 +823,7 @@ An Amazon Redshift data set includes AWS Data Exchange datashares for Amazon Red
 
 **To create an Amazon Redshift data set**
 
-1. Open your web browser and go to the [AWS Data Exchange console](https://console.aws.amazon.com/dataexchange)\.
+1. Open your web browser and sign in to the [AWS Data Exchange console](https://console.aws.amazon.com/dataexchange)\.
 
 1.  On the left side navigation pane, under **Publish data**, choose **Owned data sets**\.
 
@@ -775,7 +849,7 @@ In the following procedure, you create a revision after you’ve created a data 
 
    1. \(Optional\) Choose **Delete** to delete the data set\.
 
-1. On the **Revisions and jobs** section, choose **Create revision**\.
+1. On the **Revisions** section, choose **Create revision**\.
 
 1. Under **Define revision**, provide an optional comment for your revision that describes the purpose of the revision\. 
 
@@ -791,9 +865,9 @@ In the following procedure, you create a revision after you’ve created a data 
 
 **To add assets to the revision**
 
-1. Under the **Amazon Redshift datashares** section of the data set details page, choose **Add datashares**\.
+1. Under the **AWS Data Exchange datashares for Amazon Redshift** section of the data set details page, choose **Add datashares**\.
 
-1. Under **AWS Data Exchange datashares for Amazon Redshift**, select the datashares and then choose **Add**\.
+1. Under **AWS Data Exchange datashares for Amazon Redshift**, select the datashares and then choose **Add datashare\(s\)**\.
 **Note**  
 You can add up to 20 datashares to a revision\.
 
@@ -823,39 +897,79 @@ After you've created at least one data set and finalized a revision with assets,
 
 1. In the **Product visibility** section, choose your product's **Product visibility options** and **Sensitive information** configuration, and then choose **Next**\. For more information, see [Product visibility](product-details.md#product-visibility) and [Sensitive categories of information](product-details.md#sensitive-information)\.
 
-1. In the **Define product** section, enter information about your product, including name, logo, support contact, web address, categories, and descriptions, and then choose **Next**\. For more information, see [Product details](product-details.md)\.
-
-1. In the **Add data** section, select the check box next to the data sets you want to add\.
+1. In the **Add data** section, under **Owned data sets**, select the check box\(es\) next to the data set\(s\) you want to add, and then choose **Add selected**\.
 **Note**  
 The data sets you choose must have a finalized revision\. Data sets without finalized revisions won't be added\.
 
-   1. Choose **Add selected**, and then scroll to **Selected data sets** to review your selection\.
+   1. Scroll to **Selected data sets** to review your selection\(s\)\. 
 
-   1. Scroll to **Select revision access rules**, choose the revision access rules that you want to set for data sets included in this product, and then choose **Next**\. For more details, see [Revision access rules](product-details.md#best-practices-revisions)\.
+      You can review the **Name** of the data set, the **Type** of data set, and the timestamp of when the data set was **Last updated**\.
 
-1. If you are creating a public offer, in the **Add public offer** section, configure your offer\. All AWS Data Exchange products with visibility set to **Public** require a public offer\. 
+   1. Scroll to **Select revision access rules**, choose the revision access rules that you want to set for data sets included in this product, and then choose **Next**\. 
 
-   1. Choose your price and subscription durations, US sales tax settings, data subscription agreement, and refund policy\. For more information, see [Creating an offer for AWS Data Exchange products](prepare-offers.md)\.
+      For more details, see [Revision access rules](product-details.md#best-practices-revisions)\.
 
-   1. \(Optional\) Set **Subscription verification**, which enables you to control who can subscribe to this product\. For more information, see [Subscription verification for providers](subscription-verification-pro.md)\.
+1. In the **Define product** section, under **Product overview**, enter information about your product, including the **Product name**, **Product logo**, **Support contact** information, and **Product categories**\. 
 
-   1. Choose your **Oﬀer auto\-renewal** option\. For more information, see [Creating an offer for AWS Data Exchange products](prepare-offers.md)\.
+   For more information, see [Product details](product-details.md)\.
 
-   1. Choose **Next**\.
+1. \(Optional\) In the **Deﬁne product** section, under **Data dictionaries and samples – optional**, choose a data set by selecting the option button next to the data set name and then choose **Edit**\.
 
-1. If you are creating a private offer, configure the offer details in the **Add custom offer** section\.
+   For more information, see [Data dictionaries](product-details.md#data-dictionaries-pro) and [Samples](product-details.md#samples-pro)\.
 
-   1. In the **Subscriber account information** section, add at least one subscriber account to which you want to extend the offer\.
+   1. In the **Edit** dialog box, under **Upload data dictionary**, choose **Add file** to upload a new data dictionary\. 
 
-   1. Choose your **Pricing and access duration** options for the subscription\.
+      You can choose one data dictionary, in \.csv format, with a maximum size of 1 MB\.
 
-   1. Choose the **Offer expiration date** by which the subscriber must accept the offer\.
+   1. Choose a saved data dictionary from your computer and then choose **Open**\.
 
-   1. Choose your US sales tax settings, data subscription agreement \(DSA\), and refund policy\.
+      The data dictionary \.csv file appears on the **Edit** dialog box\.
+**Note**  
+Your data dictionary must conform to the AWS Data Exchange data dictionary template\. If you don’t have a saved data dictionary to upload, you can choose the links to download and modify the **blank data dictionary template** or the **example data dictionary**, and then upload it\.
 
-   1. Choose your **Oﬀer auto\-renewal** option\. For more information, see [Creating an offer for AWS Data Exchange products](prepare-offers.md)\.
+   1. Choose **Data dictionary preview** to preview it\.
 
-   1. Choose **Next**\.
+   1. Under **Samples \- optional**, choose **Upload samples**, choose a sample from your computer, and then choose **Open**\. 
+
+       The samples appear on the **Edit** dialog box\.
+**Note**  
+You can upload up to 10 samples with a maximum size of 50 MB\. Samples in \.csv format can be previewed\.
+
+   1. Enter a description for each sample that will be visible on the product detail page\.
+
+   1. Choose **Save**\.
+
+1. Under **Product definition**, enter a **Short description** and a **Long description** of your product\.
+
+   If you want to use a template for your long description, select **Apply template**, choose your template type, and then fill out the template with your specific product details\.
+
+1. Choose **Next**\.
+
+1. Configure your offer\.
+   + If you are creating a public offer, in the **Add public offer** section, configure your offer\. All AWS Data Exchange products with visibility set to **Public** require a public offer\. 
+
+     1. Choose your **Pricing and access duration** options for the subscription\.
+
+     1. Choose your US sales tax settings, data subscription agreement \(DSA\), and refund policy\. 
+
+     1. \(Optional\) Set **Subscription verification**, which enables you to control who can subscribe to this product\. For more information, see [Subscription verification for providers](subscription-verification-pro.md)\.
+
+     1. Choose your **Oﬀer auto\-renewal** option\. For more information, see [Creating an offer for AWS Data Exchange products](prepare-offers.md)\.
+
+     1. Choose **Next**\.
+   + If you are creating a private offer, configure the offer details in the **Add custom offer** section\.
+
+     1. In the **Subscriber account information** section, add at least one subscriber account to which you want to extend the offer\.
+
+     1. Choose your **Pricing and access duration** options for the subscription\.
+
+     1. Choose the **Offer expiration date** by which the subscriber must accept the offer\.
+
+     1. Choose your US sales tax settings, data subscription agreement \(DSA\), and refund policy\.
+
+     1. Choose your **Oﬀer auto\-renewal** option\. For more information, see [Creating an offer for AWS Data Exchange products](prepare-offers.md)\.
+
+     1. Choose **Next**\.
 
 1. In the **Review & publish** section, review your product information and then expand the **Product page preview** to see how it will look after it’s published\.
 
@@ -872,7 +986,7 @@ You can copy a public, private, published, or unpublished product\. Custom oﬀe
 
 **To copy a product**
 
-1. Open your web browser and go to the [AWS Data Exchange console](https://console.aws.amazon.com/dataexchange)\.
+1. Open your web browser and sign in to the [AWS Data Exchange console](https://console.aws.amazon.com/dataexchange)\.
 
 1. From the left navigation pane, under **Publish data**, choose **Products**\.
 

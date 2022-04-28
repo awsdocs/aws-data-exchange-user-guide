@@ -12,11 +12,13 @@ The following procedure shows how to browse the AWS Data Exchange catalog to fin
 
 1. Open and sign in to the [AWS Data Exchange console](https://console.aws.amazon.com/dataexchange)\.
 
-1. From the left navigation pane, choose **Browse catalog**\.
+1. From the left navigation pane, under **Discover data products**, choose **Browse catalog**\.
 
 1. From the search bar, enter **AWS Data Exchange for APIs** and press **Enter**\. 
 
 1. Choose the **AWS Data Exchange for APIs \(Test Product\)** and view its details page\.
+
+   1. \(Optional\) To download the sample, choose the **Data dictionary and samples** tab, choose the option button next to the sample name \(**ADX for APIs sample\.json**\), and then choose **Download**\.
 
 1. In the top right corner, choose **Continue to subscribe**\. 
 

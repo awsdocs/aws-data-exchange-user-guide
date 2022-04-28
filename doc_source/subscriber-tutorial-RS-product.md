@@ -17,9 +17,21 @@ The following procedure shows how to browse the AWS Data Exchange catalog to fin
 
 1. Open and sign in to the [AWS Data Exchange console](https://console.aws.amazon.com/dataexchange)\.
 
-1. From the left navigation pane, choose **Browse catalog**\.
+1. From the left navigation pane, under **Discover data products**, choose **Browse catalog**\.
 
-1. From the search bar, enter **Worldwide Event Attendance \(Test Product\)** and press **Enter**\. Choose the product to view its details page\.
+1. From the search bar, enter **Worldwide Event Attendance \(Test Product\)** and press **Enter**\. 
+
+1. Choose the **Worldwide Event Attendance \(Test Product\)** to view its details page\.
+
+   1. \(Optional\) To view the data dictionary, scroll down to the product **Overview** section to see the data dictionary under **Data dictionaries**\.
+
+   1. \(Optional\) To download the data dictionary, choose the **Data dictionary and samples** tab, choose the option button next to **Data dictionary**, and then choose **Download**\.
+
+   1. \(Optional\) To preview the sample, choose the option button next to the sample name \(**Worldwide Event Attendance Sample\.csv**\), and then choose **Preview sample \(CSV only\)**\.
+
+   1. \(Optional\) To download the sample, choose the option button next to the sample name \(**Worldwide Event Attendance Sample\.csv**\), and then choose **Download**\.
+
+      If you are previewing the sample, you can also choose **Download** in the sample preview dialog box\.
 
 1. In the top right corner, choose **Continue to subscribe**\. 
 

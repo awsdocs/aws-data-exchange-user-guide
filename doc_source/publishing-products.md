@@ -9,7 +9,7 @@ The following topics describe the process of publishing a new product on AWS Dat
 
 The following video explains more about how to publish a new data product on AWS Data Exchange\.
 
-[![AWS Videos](http://img.youtube.com/vi/https://www.youtube.com/embed/T8SevK9mMa0/0.jpg)](http://www.youtube.com/watch?v=https://www.youtube.com/embed/T8SevK9mMa0)
+[![AWS Videos](http://img.youtube.com/vi/https://www.youtube.com/embed/6yrzgHPsEA8/0.jpg)](http://www.youtube.com/watch?v=https://www.youtube.com/embed/6yrzgHPsEA8)
 
 **Important**  
 As of July 22, 2021, new and existing providers can automatically publish revisions to data sets\. All new products on AWS Data Exchange default to automatic revision publishing\. If you have created existing products on AWS Data Exchange before July 22, 2021, you need to migrate them to automatic revision publishing\.   

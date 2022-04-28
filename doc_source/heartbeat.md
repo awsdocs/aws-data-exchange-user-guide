@@ -52,9 +52,17 @@ The following procedure shows how to browse the AWS Data Exchange catalog to fin
 
 1. Open and sign in to the [AWS Data Exchange console](https://console.aws.amazon.com/dataexchange)\.
 
-1. From the left navigation pane, choose **Browse catalog**\.
+1. From the left navigation pane, under **Discover data products**, choose **Browse catalog**\.
 
-1. From the search bar, enter **AWS Data Exchange Heartbeat** and press **Enter**\. Choose the product to view its details page\.
+1. From the search bar, enter **AWS Data Exchange Heartbeat** and press **Enter**\.
+
+1. Choose the **AWS Data Exchange Heartbeat** product to view its details page\.
+
+   1. \(Optional\) To view the data dictionary, scroll down to the product **Overview** section to see the data dictionary under **Data dictionaries**\.
+
+   1. \(Optional\) To download the data dictionary, choose the **Data dictionary and samples** tab, choose the option button next to **Data dictionary**, and then choose **Download**\.
+
+   1. \(Optional\) To download the sample, choose the option button next to the sample name \(**Heartbeat manifest sample\.json**\), and then choose **Download**\.
 
 1. In the top right corner, choose **Continue to subscribe**\. 
 

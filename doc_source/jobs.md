@@ -319,6 +319,10 @@ You can export up to 100 assets in a single job\.
 + [Exporting assets to an S3 bucket as a subscriber \(console\)](#export-asset-s3-console-sub)
 + [Exporting assets to an S3 bucket as a provider \(console\)](#export-asset-s3-console-prov)
 
+The following video explains more about how to export assets from AWS Data Exchange\.
+
+[![AWS Videos](http://img.youtube.com/vi/https://www.youtube.com/embed/VpIdwc3zLlo/0.jpg)](http://www.youtube.com/watch?v=https://www.youtube.com/embed/VpIdwc3zLlo)
+
 #### Exporting assets to an S3 bucket \(AWS SDKs\)<a name="export-assets-s3-prog"></a>
 
 **To export assets to an S3 bucket \(AWS SDKs\)**
@@ -474,6 +478,10 @@ If the provider has marked a product as containing protected health information 
 + [Automatically exporting revisions to an S3 bucket as a subscriber](#auto-export-rev-s3-console-sub)
 + [Key patterns when exporting revisions](#revision-export-keypatterns)
 
+The following video explains more about how to export assets from AWS Data Exchange \(starting at 2:18\)\.
+
+[![AWS Videos](http://img.youtube.com/vi/https://www.youtube.com/embed/VpIdwc3zLlo/0.jpg)](http://www.youtube.com/watch?v=https://www.youtube.com/embed/VpIdwc3zLlo)
+
 ### Exporting revisions to an S3 bucket \(AWS SDKs\)<a name="export-rev-s3-prog"></a>
 
 **To export a revision to an S3 bucket \(AWS SDKs\)**
@@ -553,6 +561,9 @@ To automatically export revisions to an S3 bucket of your choice, your S3 bucket
 #### Prerequisites for S3 bucket policy permissions<a name="auto-export-rev-s3-bucket-policy-prereq"></a>
 
 Before you can automatically export revisions to an S3 bucket, your S3 bucket must have a bucket policy with permissions set to allow AWS Data Exchange to export data into it\. The following procedures provide information about how to either edit your existing S3 bucket policy or create an S3 bucket policy with these permissions\.
+
+**Important**  
+To verify that the prerequisites for S3 bucket policy permissions are met, an object with the naming format `_ADX-TEST-ACCOUNTID#` is added to the S3 bucket during the automatic export process\.
 
 **Topics**
 + [Editing an existing S3 bucket policy](#bucket-policy-prereq-existing-s3-bucket-policy)
@@ -666,7 +677,11 @@ To automatically export revisions to an S3 bucket of your choice, your S3 bucket
 
    The Amazon S3 bucket destination appears on the **Revisions** tab under **Auto\-export job destinations**\.
 
-   A job is started to automatically export your revision\. After the job is ﬁnished, the **State** ﬁeld in the **Jobs** section is updated to **Completed**\.
+   A job is started to automatically export your revision\. 
+
+   To verify that the prerequisites for S3 bucket policy permissions are met, an object with the naming format `_ADX-TEST-ACCOUNTID#` is added to the S3 bucket\.
+
+   After the job is ﬁnished, the **State** ﬁeld in the **Jobs** section is updated to **Completed**\.
 
    To add another destination, choose **Actions**, and then **Add auto\-export job destination**\.
 
@@ -699,6 +714,8 @@ To automatically export revisions to an S3 bucket of your choice, your S3 bucket
 1. The Amazon S3 object key defaults to the key pattern `{Revision.CreatedAt}/{Asset.Name}`\. 
 
    For more information about key patterns, see [Key patterns when exporting revisions](#revision-export-keypatterns)\.
+
+   To verify that the prerequisites for S3 bucket policy permissions are met, an object with the naming format `_ADX-TEST-ACCOUNTID#` is added to the S3 bucket\.
 
 ### Key patterns when exporting revisions<a name="revision-export-keypatterns"></a>
 

@@ -19,6 +19,10 @@ As a subscriber, you can accept a private offer as follows\.
 
 1. Select the offer to which you want to subscribe\.
 
+   1. Under **Custom offers**, view the **API metered costs** \(if included\)\.
+
+   1. \(Optional\) In the **Metered cost calculator**, choose **Select metered cost** and enter the number of units to display an example of the cost\.
+
 1. Choose **Continue to subscribe**\.
 
 1. Review the terms of the offer, the payment schedule, the data subscription agreement, and the included data sets\.

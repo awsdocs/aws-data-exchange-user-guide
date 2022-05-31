@@ -133,7 +133,14 @@ To practice subscribing to and accessing a product containing APIs, see the [Tut
 
 If you subscribe to a paid product, you're billed on your AWS bill\. You get access to all entitled data sets\. For more information, see [Subscribing to data products on AWS Data Exchange](subscribe-to-data-sets.md)\.
 
-**To subscribe to the product containing APIs**
+A provider might include metered costs to their product containing APIs\. If a provider decreases metered costs, the price decrease goes into effect immediately\. If the provider increases metered costs, and you're an existing subscriber, the price increase goes into effect on the first day of the month, 90 days after the price increase was submitted OR upon renewal \(whichever is sooner\)\. An email is sent to existing subscribers when the price change is submitted\. 
+
+**Example**  
+A provider submits a metered cost price increase on May 10\. Existing subscribers receive an email about the price change\. The price increase goes into effect on September 1\.
+
+
+
+**To subscribe to a product containing APIs**
 
 1. Open and sign in to the [AWS Data Exchange console](https://console.aws.amazon.com/dataexchange)\.
 
@@ -147,9 +154,13 @@ If you subscribe to a paid product, you're billed on your AWS bill\. You get acc
 
 1. Select a product containing APIs, and view its details page\.
 
-   The information on the details page includes a product description, the provider's contact information, and the details of the product's public offer\. The public offer information includes price and durations, the data subscription agreement, and the refund policy\. You can also view the names of the data sets included in the product and the AWS Regions in which they are available\.
+   The information on the product details page includes a product description, the provider's contact information, and the details of the product's public offer\. The public offer information includes price and durations, metered costs \(if included\), the data subscription agreement, and the refund policy\. You can also view the names of the data sets included in the product and the AWS Regions in which they are available\.
 
    If the provider has issued a custom offer to your account \(for example, a [private offer](subscribe-to-private-offer.md) or [Bring Your Own Subscription \(BYOS\) offer](subscribe-to-byos-offer.md)\), you see those details, too\.
+
+   1. Under **Public offer**, view the **API metered costs** \(if included\)\.
+
+   1. \(Optional\) In the **Metered cost calculator**, choose **Select metered cost** and then enter the number of units to display an example of the cost\.
 
 1. In the top right corner, choose **Continue to subscribe**\. 
 

@@ -1,6 +1,8 @@
 # Subscription verification for providers<a name="subscription-verification-pro"></a>
 
-As a provider, you have the option to enable subscription verification for your data product\. When enabled, potential subscribers must complete a form about who they are and what they intend to do with the data before they can subscribe\. You must review and approve each request from prospective subscribers\.
+As a provider, when you create a new public product, you have the option to enable subscription verification on the **Add public offer** section of the **Publish new product** page\. 
+
+When the verification option is enabled, potential subscribers must complete a form about who they are and what they intend to do with the data before they can subscribe\. You must review and approve each request from prospective subscribers\. For more information about how to enable subscription verification for your product, see [Publishing a new product](publishing-products.md)\.
 
 **Note**  
 Subscription verification is automatically enabled for all public products from Extended Provider Program providers that contain non\-public, personal information\.
@@ -17,9 +19,11 @@ The subscriber must enter information in each field, but AWS Data Exchange doesn
 
 If you change the product offer terms after a subscriber makes the request, the terms for that subscriber reflect the terms as they were at the time of the request, not the updated terms\. Examples of changes to terms include the price, refund policy, or data subscription agreement\. If you changed the product offer terms after the request was submitted, a message is displayed in the approval pane of the AWS Data Exchange console to indicate there is a difference between current terms and the terms in place when the request was made\. 
 
-The AWS Data Exchange console maintains a history of requests\. You control when you delete the subscriber’s contact details and personally identifiable information \(PII\)\.
+The AWS Data Exchange console maintains a history of requests\. You control when you delete the subscriber’s contact details and personally identifiable information \(PII\)\. For more information about how to view the request history, see [Viewing subscription verification requests](#view-requests)\.
 
- You can view, approve, or decline all subscription verification requests for all of your products on the **Subscription verification** page under **Publish data** on the AWS Data Exchange console\. 
+You can also edit the subscription verification option after the product is published\. For more information, see [Editing a subscription verification request](#edit-requests)\.
+
+ You can view, approve, or decline all subscription verification requests for all of your products on the **Subscription verification** page under **Publish data** on the AWS Data Exchange console\. For more information, see [Approve or decline requests](#approve-or-decline-requests)\.
 
 **Note**  
 Each subscription request is uniquely identified using its ID\. The ID is visible to both the provider and the subscriber\. You can use the subscription request ID in your communications with the subscriber\.
@@ -30,6 +34,38 @@ You will receive an email message to your AWS account email address to notify yo
 
 **Note**  
 You will not receive email notifications for subscription request status changes that you have initiated yourself \(for example, when you approve a subscription\)\.
+
+## Viewing subscription verification requests<a name="view-requests"></a>
+
+After you publish a public offer with subscription verification, you can view the subscription verification requests\.
+
+**To view subscription verification requests**
+
+1. Open your web browser and sign in to the [AWS Data Exchange console](https://console.aws.amazon.com/dataexchange)\.
+
+1. From the left navigation pane, under **Publish data**, choose **Subscription verification**\.
+
+1. From **Subscription veriﬁcation**:
+
+   1. Choose **View pending requests** to view all pending requests\.
+
+   1. Choose **View history** to view all other requests\.
+
+## Editing a subscription verification request<a name="edit-requests"></a>
+
+You can choose to require subscription verification for a product’s public offer after you have published it\.
+
+**To edit a subscription verification request**
+
+1. Open your web browser and sign in to the [AWS Data Exchange console](https://console.aws.amazon.com/dataexchange)\.
+
+1. From the left navigation pane, under **Publish data**, choose **Products**\.
+
+1. From **Public offer**, choose **Edit**\.
+
+1. Scroll down to **Subscription verification**, and for the question **Do you want to require subscription verification for this product’s public offer?** choose either **Yes** or **No**\.
+
+1. Choose **Update**\.
 
 ## Approve or decline requests<a name="approve-or-decline-requests"></a>
 

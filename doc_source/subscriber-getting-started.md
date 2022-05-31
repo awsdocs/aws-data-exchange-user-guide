@@ -54,9 +54,21 @@ If you're unable to ﬁnd a product in the catalog, you can request personalized
 
 1. In the left side navigation pane, under **Discover data products**, choose **Request data product**\.
 
-1. Enter specific details about the product you want\.
+1. On the **Request data product** page, for **Details**, enter a **Data description**\.
 
-1. \(Optional\) Expand the **Additional details** and complete the fields as directed\.
+1. \(Optional\) Expand **Additional details \- optional** and complete the fields as directed\.
+
+   1. Select one or more **Product categories**\.
+
+   1. Enter an **Example data product URL**\.
+
+   1. For **Data set type**, choose from **Amazon S3 object**, **Amazon API Gateway API**, or **Amazon Redshift datashare**\.
+
+   1. Enter specific details about the product you want including **Delivery cadence**, **Example data product URL**, **Subscription start date**, **Subscription length**, and **Subscription budget**\.
+
+   1. If the **Data set type** you chose is Amazon API Gateway API, under **Subscription budget**, select **Including metered costs**\. 
+
+1. For **Data providers**, choose from a list of **Existing providers** or enter the name of **Other providers**\. Then indicate whether you have an existing relationship with the providers\.
 
 1. Choose **Submit**\.
 

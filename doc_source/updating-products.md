@@ -1,6 +1,6 @@
 # Updating products<a name="updating-products"></a>
 
-The following sections describe how to update your products\. The instructions are written with the assumption that you're a provider who is familiar with [Data in AWS Data Exchange](data-sets.md)\. After you publish a product, you can edit the product's details and its public offer\. You can also update the underlying data sets by publishing new revisions to subscribers\. For more information, see [Revisions](data-sets.md#revisions)\.
+The following sections describe how to update your AWS Data Exchange products\. The instructions assume that you're a provider who is familiar with [Data in AWS Data Exchange](data-sets.md)\. After you publish a product, you can edit the product's details and its public offer\. You can also update the underlying data sets by publishing new revisions to subscribers\. For more information, see [Revisions](data-sets.md#revisions)\.
 
 **Topics**
 + [Updating product and offer details](#update-product-details)
@@ -21,6 +21,16 @@ After you publish a product, you can use the AWS Data Exchange console to edit t
 Keep the following in mind when you update products:
 + You can't remove or edit a subscription duration in your offers\. This ensures that existing subscribers retain the ability to renew\. If you no longer want to offer a specific subscription duration, you can unpublish your existing product and then publish a new product\. For more information, see [Unpublish a product](#unpublish-product)\.
 + You can't remove data sets from a product after it is published, regardless of how many subscribers have subscribed to your product\.
++ If you're updating the metered costs for a product that contains APIs:
+  + A metered costs price decrease appears immediately on the product detail page for new subscribers\.
+**Warning**  
+If you undo a price decrease for metered costs, you are increasing the price for metered costs\. See the following point for more information about metered costs price increases\.
+  + A metered costs price increase will go into effect on the first day of the month, 90 days after the price increase is submitted for existing subscribers OR upon renewal \(whichever is sooner\)\. The email is sent to existing subscribers when the price change is submitted\. The price increase appears on the product detail page immediately for new subscribers\.  
+**Example**  
+
+    You submit a metered costs price increase on May 10\. Existing subscribers receive an email about the price change\. The price increase goes into effect on September 1\.
+**Warning**  
+You can't undo a price increase \(because that action decreases the price\) before the price increase goes into effect for existing subscribers\.
 
 **To update a product, data set, or offer details**
 
@@ -30,7 +40,17 @@ Keep the following in mind when you update products:
 
 1. From **Products**, choose the product you want to update\. Make sure its status is **Published**\.
 
-1. From **Product details**, choose **Edit**, and then follow the instructions to edit the product\.
+1. From **Product details**:
+   + If you're editing a public offer, choose the **Public offer** tab, choose **Edit**, and then follow the instructions to edit the product\.
+   + If you're editing a private offer, choose the **Custom offers** tab, choose the option button next to the private offer that you want to edit, choose **Edit**, and then follow the instructions to edit the product\.
+
+   1. For products containing APIs with metered costs, in **Metered costs – optional**, select the option button next to the **Type** of metered costs that you want to edit, and then choose **Edit**\.
+
+   1. In the **Edit metered cost** dialog box, update the **Price / unit** or **Description**\.
+
+   1. Choose **Update**\.
+
+      The updated metered costs appears under **Metered costs – optional**\.
 
 1. From **Data sets**, under **Sensitive information**, choose **Edit**, and then follow the instructions to edit the information\.
 

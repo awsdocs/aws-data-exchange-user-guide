@@ -6,6 +6,8 @@ As a subscriber, you can find and subscribe to thousands of products from qualif
 
 For providers, AWS Data Exchange eliminates the need to build and maintain any data delivery, entitlement, or billing technology\. Providers in AWS Data Exchange have a secure, transparent, and reliable channel to reach AWS customers and grant existing customers their subscriptions more efficiently\. The process for becoming an AWS Data Exchange provider requires a few steps to determine eligibility\. For more information, see [Providing data products on AWS Data Exchange](providing-data-sets.md)\.
 
+In addition, anyone, with or without an AWS account, can find and use publicly available data sets that are part of the [Open Data on AWS](https://aws.amazon.com/opendata/) program\. For more information, see [Using Open Data on AWS data sets](open-data.md)\.
+
 **Topics**
 + [What is an AWS Data Exchange product?](#data-exchange-products)
 + [Malware prevention](#ensuring-safe-data)

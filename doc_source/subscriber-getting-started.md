@@ -172,6 +172,6 @@ After you discover a product in the AWS Data Exchange catalog and determine that
 If you subscribe to a paid product, you are billed on your AWS bill\. You get access to the entitled data set\. For more information, see [Subscribing to data products on AWS Data Exchange](subscribe-to-data-sets.md)\.
 
 For more information about how to subscribe to products containing different types of data sets, see the following: 
-+ [Subscribing to and accessing a product containing file\-based data](subscribing-to-product.md#subscribing-to-data-product)
++ [Subscribe to and access a product containing file\-based data](subscribing-to-product.md#subscribing-to-data-product)
 + [Subscribe to and access a product containing APIs](subscribing-to-product.md#subscribing-to-API-product)
 + [Subscribe to and access a product containing Amazon Redshift data sets](subscribing-to-product.md#subscribing-to-Redshift-product)

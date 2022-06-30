@@ -3,7 +3,7 @@
 The following topics describe the process of subscribing to and accessing a product on AWS Data Exchange using the AWS Data Exchange console\.
 
 **Topics**
-+ [Subscribing to and accessing a product containing file\-based data](#subscribing-to-data-product)
++ [Subscribe to and access a product containing file\-based data](#subscribing-to-data-product)
 + [Subscribe to and access a product containing APIs](#subscribing-to-API-product)
 + [Subscribe to and access a product containing Amazon Redshift data sets](#subscribing-to-Redshift-product)
 + [Viewing and downloading a data dictionary \(if included\)](#view-download-dictionaries)
@@ -12,7 +12,7 @@ The following topics describe the process of subscribing to and accessing a prod
 By subscribing to a product, you agree that your use of the product is subject to the provider's offer terms including pricing information and Data Subscription Agreement\.  
 You also agree and acknowledge that AWS may share information about the transaction \(including your payment terms and product usage metrics\) with the respective seller, reseller, or underlying provider, as applicable, in accordance with the [AWS Privacy Notice](https://aws.amazon.com/privacy/)\. AWS will issue invoices and collect payments from you on behalf of the provider through your AWS account\. Your use of AWS services remains subject to the AWS Customer Agreement or other agreement with AWS governing your use of such services\.
 
-## Subscribing to and accessing a product containing file\-based data<a name="subscribing-to-data-product"></a>
+## Subscribe to and access a product containing file\-based data<a name="subscribing-to-data-product"></a>
 
 The following topics describe the complete process of subscribing to and accessing a product containing file\-based data on AWS Data Exchange by using the AWS Data Exchange console\. 
 
@@ -136,7 +136,7 @@ If you subscribe to a paid product, you're billed on your AWS bill\. You get acc
 A provider might include metered costs to their product containing APIs\. If a provider decreases metered costs, the price decrease goes into effect immediately\. If the provider increases metered costs, and you're an existing subscriber, the price increase goes into effect on the first day of the month, 90 days after the price increase was submitted OR upon renewal \(whichever is sooner\)\. An email is sent to existing subscribers when the price change is submitted\. 
 
 **Example**  
-A provider submits a metered cost price increase on May 10\. Existing subscribers receive an email about the price change\. The price increase goes into effect on September 1\.
+For example, assume that a provider submits a metered cost price increase on May 10\. Existing subscribers receive an email about the price change\. The price increase goes into effect on September 1\.
 
 
 

@@ -16,6 +16,7 @@ Amazon's trademarks and trade dress may not be used in
 ## Contents
 + [What is AWS Data Exchange?](what-is.md)
 + [Setting up AWS Data Exchange](setting-up.md)
++ [Using Open Data on AWS data sets](open-data.md)
 + [Subscribing to data products on AWS Data Exchange](subscribe-to-data-sets.md)
    + [Product subscriptions](product-subscriptions.md)
    + [Getting started as a subscriber](subscriber-getting-started.md)

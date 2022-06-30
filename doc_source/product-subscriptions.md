@@ -5,6 +5,9 @@ All AWS Data Exchange products are subscription\-based\. When you subscribe to a
 **Important**  
 The data subscription agreement \(DSA\) sets forth the provider’s terms and conditions for the data product\. The use of any data product subscribed to on AWS Data Exchange must also be in compliance with the AWS Customer Agreement or other agreement governing your use of AWS services\.
 
+**Note**  
+Data products that are part of the [Open Data on AWS](https://aws.amazon.com/opendata/) program are free for anyone to use and do not require a subscription\. For more information, see [Using Open Data on AWS data sets](open-data.md)\. 
+
 Each product's public offer terms can contain one or more price and duration combinations\. When you subscribe to a product, you can choose the duration of the subscription\. You can also choose whether you would like to enable auto\-renewal for that subscription, if the provider has enabled it for the product\.
 
 **Important**  
@@ -39,7 +42,7 @@ Each revision may contain all the data for the data set \(updated for the revisi
 
 When you subscribe to a product, you have access to all data sets in the product\. When the data provider creates the offer, they give you access to 0 or more historical revisions, up to all historical revisions\. They can also give you access to future revisions that are made available during your subscription period\. The terms of the subscription are shown on the product details page in the AWS Data Exchange console\.
 
-After you subscribe to a product containing Amazon S3 objects, you can manually export each revision or asset individually, or you can select to automatically export new revisions to your Amazon S3 buckets \(up to 5 buckets maximum\) when the provider publishes new revisions\. For more information, see [Subscribing to and accessing a product containing file\-based data](subscribing-to-product.md#subscribing-to-data-product)\. For more information about how to export revisions, see [Exporting revisions](jobs.md#exporting-revisions)\.
+After you subscribe to a product containing Amazon S3 objects, you can manually export each revision or asset individually, or you can select to automatically export new revisions to your Amazon S3 buckets \(up to 5 buckets maximum\) when the provider publishes new revisions\. For more information, see [Subscribe to and access a product containing file\-based data](subscribing-to-product.md#subscribing-to-data-product)\. For more information about how to export revisions, see [Exporting revisions](jobs.md#exporting-revisions)\.
 
 After you subscribe to a product containing an Amazon API Gateway API, you can view and invoke the data provider's API\. For more information, see [Subscribe to and access a product containing APIs](subscribing-to-product.md#subscribing-to-API-product)\.
 

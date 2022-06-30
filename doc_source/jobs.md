@@ -26,8 +26,8 @@ Jobs have the following properties:
   + Import from signed URL
   + Import from Amazon API Gateway API
   + Import from an AWS Data Exchange datashare for Amazon Redshift
-  + Export from Amazon S3
-  + Export from signed URL
+  + Export to Amazon S3
+  + Export to signed URL
 + **Amazon Resource Name \(ARN\)** – A unique identifier for AWS resources\.
 + **Job state** – The job states are `WAITING`, `IN_PROGRESS`, `COMPLETED`, `CANCELLED`, `ERROR`, or `TIMED_OUT`\. When a job is created, it's in the `WAITING` state until the job is started\.
 + **Job details** – Details of the operation to be performed by the job, such as export destination details or import source details\.

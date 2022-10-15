@@ -1,66 +1,50 @@
-# AWS Data Exchange User Guide 
+# AWS Data Exchange Help Panel Help Panel
 
 -----
 *****Copyright &copy; Amazon Web Services, Inc. and/or its affiliates. All rights reserved.*****
 
 -----
-Amazon's trademarks and trade dress may not be used in 
-     connection with any product or service that is not Amazon's, 
-     in any manner that is likely to cause confusion among customers, 
-     or in any manner that disparages or discredits Amazon. All other 
-     trademarks not owned by Amazon are the property of their respective
-     owners, who may or may not be affiliated with, connected to, or 
-     sponsored by Amazon.
+Amazon's trademarks and trade dress may not be used in
+connection with any product or service that is not Amazon's,
+in any manner that is likely to cause confusion among customers,
+or in any manner that disparages or discredits Amazon. All other
+trademarks not owned by Amazon are the property of their respective
+owners, who may or may not be affiliated with, connected to, or
+sponsored by Amazon.
 
 -----
 ## Contents
-+ [What is AWS Data Exchange?](what-is.md)
-+ [Setting up AWS Data Exchange](setting-up.md)
-+ [Using Open Data on AWS data sets](open-data.md)
-+ [Subscribing to data products on AWS Data Exchange](subscribe-to-data-sets.md)
-   + [Product subscriptions](product-subscriptions.md)
-   + [Getting started as a subscriber](subscriber-getting-started.md)
-   + [Subscribe to and access a product](subscribing-to-product.md)
-   + [Subscription verification for subscribers](subscription-verification-sub.md)
-   + [Sharing license subscriptions in an organization](organizations-sharing.md)
-   + [Bring Your Own Subscription (BYOS) offers](subscribe-to-byos-offer.md)
-   + [Private products and offers](subscribe-to-private-offer.md)
-   + [Managing subscriptions](managing-subscriptions.md)
-   + [Tutorial: Subscribe to AWS Data Exchange Heartbeat on AWS Data Exchange](heartbeat.md)
-   + [Tutorial: Subscribe to AWS Data Exchange for APIs (Test Product) on AWS Data Exchange](subscriber-tutorial-api-product.md)
-   + [Tutorial: Subscribe to Worldwide Event Attendance (Test Product) on AWS Data Exchange](subscriber-tutorial-RS-product.md)
-+ [Providing data products on AWS Data Exchange](providing-data-sets.md)
-   + [Publishing guidelines](publishing-guidelines.md)
-   + [Product details](product-details.md)
-   + [Getting started as a provider](provider-getting-started.md)
-   + [Publishing a new product](publishing-products.md)
-   + [Product description templates](product-description-templates.md)
-   + [Updating products](updating-products.md)
-   + [Creating an offer for AWS Data Exchange products](prepare-offers.md)
-      + [Creating custom offers](create-custom-offers.md)
-         + [Create private offers](private-offer-configuration.md)
-         + [Create Bring Your Own Subscription offers](create-byos-offers.md)
-   + [Subscription verification for providers](subscription-verification-pro.md)
-   + [Provider financials on AWS Marketplace](provider-financials.md)
-+ [Data in AWS Data Exchange](data-sets.md)
-+ [Jobs in AWS Data Exchange](jobs.md)
-+ [AWS Data Exchange quotas](limits.md)
-+ [Security](security.md)
-   + [Data protection in AWS Data Exchange](data-protection.md)
-   + [Identity and access management in AWS Data Exchange](auth-access.md)
-      + [Access control](access-control.md)
-      + [AWS Data Exchange API permissions: actions and resources reference](api-permissions-ref.md)
-      + [AWS managed policies for AWS Data Exchange](security-iam-awsmanpol.md)
-   + [Logging and monitoring in AWS Data Exchange](logging-and-monitoring.md)
-      + [Monitoring](monitoring-overview.md)
-      + [Amazon EventBridge events](cloudwatch-events.md)
-      + [Logging AWS Data Exchange API calls with AWS CloudTrail](logging-api-calls-with-cloudtrail.md)
-   + [Compliance validation for AWS Data Exchange](compliance-program-info.md)
-   + [Resilience in AWS Data Exchange](disaster-recovery-resiliency.md)
-   + [Infrastructure security in AWS Data Exchange](infrastructure-security.md)
-   + [AWS Data Exchange and interface VPC endpoints (AWS PrivateLink)](vpc-interface-endpoints.md)
-+ [Using AWS Data Exchange with the AWS Marketplace Catalog API](appendices.md)
-   + [AddRevisions](add-revisions.md)
-   + [AddDataSets](add-data-sets.md)
-+ [Document history for AWS Data Exchange](doc-history.md)
-+ [AWS glossary](glossary.md)
++ [Create data set](hp-create-data-set.md)
++ [Add datashares](hp-add-datashares.md)
++ [Data sets](hp-catalog-product-data-sets.md)
++ [Data set type](hp-catalog-subscribe-data-set-type.md)
++ [Data set details](hp-data-set-details-overview.md)
++ [Data set type](hp-data-set-type.md)
++ [Add data](hp-publish-add-data.md)
++ [Amazon Redshift datashares](hp-revision-details-RS-datashares.md)
++ [Browse catalog](hp-browse-catalog.md)
++ [My product offers](hp-my-product-offers.md)
++ [Request data product](hp-request-data-product.md)
++ [Subscriptions](hp-subscriptions-page.md)
++ [Entitled data](hp-entitled-data-page.md)
++ [Subscription requests](hp-subscription-requests-page.md)
++ [Products](hp-products-page.md)
++ [Subscription verification](hp-subscription-verification-page.md)
++ [Data set creation steps](hp-data-set-creation-steps.md)
++ [Owned data sets](hp-owned-data-sets.md)
++ [Help](hp-help-panel.md)
++ [Product detail page](hp-catalog-product-detail-page.md)
++ [Product subscription page](hp-catalog-product-subscription-page.md)
++ [Entitled data sets](hp-product-entitled-data-sets.md)
++ [API assets](hp-entitled-data-revision-api-assets.md)
++ [API assets page](hp-entitled-data-asset-page.md)
++ [Data set](hp-owned-data-sets-data-set.md)
++ [Create revision](hp-owned-data-sets-create-revision.md)
++ [Revision](hp-owned-data-sets-revision-page.md)
++ [Add API stage](hp-owned-data-sets-add-api-stage.md)
++ [Select API stage](hp-owned-data-sets-select-api-stage.md)
++ [Open API 3.0 specification](hp-owned-data-sets-open-api-spec.md)
++ [API asset page](hp-owned-data-sets-asset-page.md)
++ [Publish new product](hp-products-publish-new-product.md)
++ [Data dictionary and samples](hp-product-view-data-dictionaries.md)
++ [Data sets included with your subscription](hp-catalog-product-post-sub-page.md)

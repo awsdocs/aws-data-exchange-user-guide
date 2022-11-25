@@ -13,9 +13,9 @@ For more information, see [Interface VPC endpoints \(AWS PrivateLink\)](https://
 
 Before you set up an interface VPC endpoint for AWS Data Exchange, ensure that you review [Interface endpoint properties and limitations](https://docs.aws.amazon.com/vpc/latest/userguide/vpce-interface.html#vpce-interface-limitations) in the *Amazon VPC User Guide*\. 
 
-AWS Data Exchange supports making calls to all of its API operations from your VPC\. 
+AWS Data Exchange supports making calls to all of its API operations from your VPC, with the exception of `SendAPIAsset` as noted above\. 
 
-VPC endpoint policies are not supported for AWS Data Exchange\. By default, full access to AWS Data Exchange is allowed through the endpoint\. For more information, see [Controlling access to services with VPC endpoints](https://docs.aws.amazon.com/vpc/latest/userguide/vpc-endpoints-access.html) in the *Amazon VPC User Guide*\.
+By default, full access to AWS Data Exchange is allowed through the endpoint\. You can restrict what access is allowed by using VPC endpoint policies.  For more information, see the [VPC endpoint policy section](#creating-a-vpc-endpoint-policy-for-aws-data-exchangea-namevpc-endpoint-policy) lower down the document, and [Controlling access to services with VPC endpoints](https://docs.aws.amazon.com/vpc/latest/userguide/vpc-endpoints-access.html) in the *Amazon VPC User Guide*\.
 
 ## Creating an interface VPC endpoint for AWS Data Exchange<a name="vpc-endpoint-create"></a>
 
